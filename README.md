@@ -242,6 +242,7 @@ python setup/datahub/deploy_datahub.py
 | [**Cleanup Guide**](docs/CLEANUP_GUIDE.md) | Resource cleanup |
 | [**Complete Guide**](docs/guides/COMPLETE_GUIDE.md) | Comprehensive user guide |
 | [**Hive Metastore Guide**](docs/guides/HIVE_METASTORE_GUIDE.md) | Data lake metadata |
+| [**JupyterHub Storage**](docs/guides/JUPYTERHUB_STORAGE_GUIDE.md) | File storage & uploads |
 | [**Architecture**](docs/architecture/) | Technical details |
 | [**Setup Details**](setup/README.md) | Setup folder guide |
 
