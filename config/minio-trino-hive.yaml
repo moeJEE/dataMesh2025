@@ -1,0 +1,564 @@
+# ==============================================================================
+# Advanced Data Mesh Stack: Minio + Trino + Hive Metastore
+# Federated SQL queries across all data sources
+# ==============================================================================
+
+---
+# ==============================================================================
+# MINIO - S3-Compatible Object Storage
+# ==============================================================================
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: minio-pvc
+  namespace: data-platform
+  labels:
+    app: minio
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: datamesh-storage
+  resources:
+    requests:
+      storage: 10Gi
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minio-credentials
+  namespace: data-platform
+type: Opaque
+stringData:
+  access-key: minioadmin
+  secret-key: minioadmin
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minio
+  namespace: data-platform
+  labels:
+    app: minio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minio
+  template:
+    metadata:
+      labels:
+        app: minio
+    spec:
+      containers:
+      - name: minio
+        image: minio/minio:latest
+        args:
+        - server
+        - /data
+        - --console-address
+        - ":9001"
+        env:
+        - name: MINIO_ROOT_USER
+          valueFrom:
+            secretKeyRef:
+              name: minio-credentials
+              key: access-key
+        - name: MINIO_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: minio-credentials
+              key: secret-key
+        ports:
+        - containerPort: 9000
+          name: api
+        - containerPort: 9001
+          name: console
+        volumeMounts:
+        - name: minio-storage
+          mountPath: /data
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "400m"
+        livenessProbe:
+          httpGet:
+            path: /minio/health/live
+            port: 9000
+          initialDelaySeconds: 30
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /minio/health/ready
+            port: 9000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+      volumes:
+      - name: minio-storage
+        persistentVolumeClaim:
+          claimName: minio-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio
+  namespace: data-platform
+  labels:
+    app: minio
+spec:
+  type: NodePort
+  selector:
+    app: minio
+  ports:
+  - port: 9000
+    targetPort: 9000
+    nodePort: 30900
+    name: api
+  - port: 9001
+    targetPort: 9001
+    nodePort: 30901
+    name: console
+
+---
+# ==============================================================================
+# HIVE METASTORE - Metadata Management
+# ==============================================================================
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hive-metastore-config
+  namespace: data-platform
+data:
+  metastore-site.xml: |
+    <?xml version="1.0"?>
+    <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+    <configuration>
+      <property>
+        <name>metastore.thrift.uris</name>
+        <value>thrift://hive-metastore:9083</value>
+      </property>
+      <property>
+        <name>metastore.task.threads.always</name>
+        <value>org.apache.hadoop.hive.metastore.events.EventCleanerTask</value>
+      </property>
+      <property>
+        <name>metastore.expression.proxy</name>
+        <value>org.apache.hadoop.hive.metastore.DefaultPartitionExpressionProxy</value>
+      </property>
+      <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:postgresql://hive-postgres:5432/metastore</value>
+      </property>
+      <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>org.postgresql.Driver</value>
+      </property>
+      <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>hive</value>
+      </property>
+      <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>hivepassword</value>
+      </property>
+      <property>
+        <name>fs.s3a.access.key</name>
+        <value>minioadmin</value>
+      </property>
+      <property>
+        <name>fs.s3a.secret.key</name>
+        <value>minioadmin</value>
+      </property>
+      <property>
+        <name>fs.s3a.endpoint</name>
+        <value>http://minio:9000</value>
+      </property>
+      <property>
+        <name>fs.s3a.path.style.access</name>
+        <value>true</value>
+      </property>
+    </configuration>
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: hive-postgres-pvc
+  namespace: data-platform
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: datamesh-storage
+  resources:
+    requests:
+      storage: 2Gi
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hive-postgres
+  namespace: data-platform
+  labels:
+    app: hive-postgres
+spec:
+  serviceName: hive-postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hive-postgres
+  template:
+    metadata:
+      labels:
+        app: hive-postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:14-alpine
+        env:
+        - name: POSTGRES_USER
+          value: hive
+        - name: POSTGRES_PASSWORD
+          value: hivepassword
+        - name: POSTGRES_DB
+          value: metastore
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: postgres-storage
+          mountPath: /var/lib/postgresql/data
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
+      volumes:
+      - name: postgres-storage
+        persistentVolumeClaim:
+          claimName: hive-postgres-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hive-postgres
+  namespace: data-platform
+spec:
+  selector:
+    app: hive-postgres
+  ports:
+  - port: 5432
+    targetPort: 5432
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hive-metastore
+  namespace: data-platform
+  labels:
+    app: hive-metastore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hive-metastore
+  template:
+    metadata:
+      labels:
+        app: hive-metastore
+    spec:
+      initContainers:
+      - name: wait-for-postgres
+        image: busybox:1.35
+        command: ['sh', '-c', 'until nc -z hive-postgres 5432; do echo waiting for postgres; sleep 2; done;']
+      containers:
+      - name: metastore
+        image: apache/hive:3.1.3
+        command:
+        - /opt/hive/bin/hive
+        - --service
+        - metastore
+        env:
+        - name: SERVICE_NAME
+          value: metastore
+        - name: DB_DRIVER
+          value: postgres
+        - name: SERVICE_OPTS
+          value: "-Djavax.jdo.option.ConnectionDriverName=org.postgresql.Driver -Djavax.jdo.option.ConnectionURL=jdbc:postgresql://hive-postgres:5432/metastore -Djavax.jdo.option.ConnectionUserName=hive -Djavax.jdo.option.ConnectionPassword=hivepassword"
+        ports:
+        - containerPort: 9083
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "400m"
+        livenessProbe:
+          tcpSocket:
+            port: 9083
+          initialDelaySeconds: 60
+          periodSeconds: 20
+        readinessProbe:
+          tcpSocket:
+            port: 9083
+          initialDelaySeconds: 30
+          periodSeconds: 10
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hive-metastore
+  namespace: data-platform
+  labels:
+    app: hive-metastore
+spec:
+  selector:
+    app: hive-metastore
+  ports:
+  - port: 9083
+    targetPort: 9083
+
+---
+# ==============================================================================
+# TRINO - Federated SQL Query Engine
+# ==============================================================================
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: trino-coordinator-config
+  namespace: data-platform
+data:
+  node.properties: |
+    node.environment=production
+    node.data-dir=/data/trino
+    
+  config.properties: |
+    coordinator=true
+    node-scheduler.include-coordinator=false
+    http-server.http.port=8080
+    discovery.uri=http://trino-coordinator:8080
+    
+  jvm.config: |
+    -server
+    -Xmx1500M
+    -XX:+UseG1GC
+    -XX:G1HeapRegionSize=32M
+    -XX:+ExplicitGCInvokesConcurrent
+    -XX:+HeapDumpOnOutOfMemoryError
+    -XX:+ExitOnOutOfMemoryError
+    -Djdk.attach.allowAttachSelf=true
+    
+  log.properties: |
+    io.trino=INFO
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: trino-catalogs
+  namespace: data-platform
+data:
+  # Sales PostgreSQL catalog
+  sales.properties: |
+    connector.name=postgresql
+    connection-url=jdbc:postgresql://sales-postgres.sales-domain.svc.cluster.local:5432/sales_db
+    connection-user=sales_user
+    connection-password=SuperSecurePass123!
+    
+  # Marketing PostgreSQL catalog
+  marketing.properties: |
+    connector.name=postgresql
+    connection-url=jdbc:postgresql://marketing-postgres.marketing-domain.svc.cluster.local:5432/marketing_db
+    connection-user=marketing_user
+    connection-password=SuperSecurePass123!
+    
+  # Hive/Minio catalog
+  hive.properties: |
+    connector.name=hive
+    hive.metastore.uri=thrift://hive-metastore:9083
+    hive.s3.endpoint=http://minio:9000
+    hive.s3.path-style-access=true
+    hive.s3.aws-access-key=minioadmin
+    hive.s3.aws-secret-key=minioadmin
+    hive.non-managed-table-writes-enabled=true
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trino-coordinator
+  namespace: data-platform
+  labels:
+    app: trino
+    component: coordinator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trino
+      component: coordinator
+  template:
+    metadata:
+      labels:
+        app: trino
+        component: coordinator
+    spec:
+      containers:
+      - name: trino
+        image: trinodb/trino:442
+        ports:
+        - containerPort: 8080
+          name: http
+        volumeMounts:
+        - name: coordinator-config
+          mountPath: /etc/trino
+        - name: catalogs
+          mountPath: /etc/trino/catalog
+        resources:
+          requests:
+            memory: "1536Mi"
+            cpu: "400m"
+          limits:
+            memory: "2Gi"
+            cpu: "800m"
+        livenessProbe:
+          httpGet:
+            path: /v1/info
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /v1/info
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+      volumes:
+      - name: coordinator-config
+        configMap:
+          name: trino-coordinator-config
+      - name: catalogs
+        configMap:
+          name: trino-catalogs
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trino-coordinator
+  namespace: data-platform
+  labels:
+    app: trino
+spec:
+  type: NodePort
+  selector:
+    app: trino
+    component: coordinator
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30808
+    name: http
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: trino-worker-config
+  namespace: data-platform
+data:
+  node.properties: |
+    node.environment=production
+    node.data-dir=/data/trino
+    
+  config.properties: |
+    coordinator=false
+    http-server.http.port=8080
+    discovery.uri=http://trino-coordinator:8080
+    
+  jvm.config: |
+    -server
+    -Xmx1500M
+    -XX:+UseG1GC
+    -XX:G1HeapRegionSize=32M
+    -XX:+ExplicitGCInvokesConcurrent
+    -XX:+HeapDumpOnOutOfMemoryError
+    -XX:+ExitOnOutOfMemoryError
+    -Djdk.attach.allowAttachSelf=true
+    
+  log.properties: |
+    io.trino=INFO
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trino-worker
+  namespace: data-platform
+  labels:
+    app: trino
+    component: worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trino
+      component: worker
+  template:
+    metadata:
+      labels:
+        app: trino
+        component: worker
+    spec:
+      containers:
+      - name: trino
+        image: trinodb/trino:442
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: worker-config
+          mountPath: /etc/trino
+        - name: catalogs
+          mountPath: /etc/trino/catalog
+        resources:
+          requests:
+            memory: "1536Mi"
+            cpu: "400m"
+          limits:
+            memory: "2Gi"
+            cpu: "800m"
+        livenessProbe:
+          httpGet:
+            path: /v1/info
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /v1/info
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+      volumes:
+      - name: worker-config
+        configMap:
+          name: trino-worker-config
+      - name: catalogs
+        configMap:
+          name: trino-catalogs
+

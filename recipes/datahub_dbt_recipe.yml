@@ -1,0 +1,13 @@
+
+source:
+  type: dbt
+  config:
+    # Note: These paths need to be updated to point to your DBT project
+    manifest_path: "./target/manifest.json"
+    catalog_path: "./target/catalog.json"
+    target_platform: "postgres"
+    
+sink:
+  type: datahub-rest
+  config:
+    server: "http://localhost:8080"

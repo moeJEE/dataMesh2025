@@ -1,0 +1,1129 @@
+Data Mesh architecture — Open Self-server Data Plataform
+JupyterHub+Trino+Dbt+Grafana+Minio+Hive+Datahub
+Leandro Totino Pereira
+Leandro Totino Pereira
+
+
+Follow
+36 min read
+·
+Mar 2, 2023
+72
+
+
+
+
+Introduction
+The term data mesh was coined by Zhamak Dehghani in 2019 and is based on four fundamental principles that bundle well-known concepts:
+
+The domain ownership principle mandates the domain teams to take responsibility for their data. According to this principle, analytical data should be composed around domains, similar to the team boundaries aligning with the system’s bounded context. Following the domain-driven distributed architecture, analytical and operational data ownership is moved to the domain teams, away from the central data team.
+The data as a product principle projects a product thinking philosophy onto analytical data. This principle means that there are consumers for the data beyond the domain. The domain team is responsible for satisfying the needs of other domains by providing high-quality data. Basically, domain data should be treated as any other public API.
+The idea behind the self-serve data infrastructure platform is to adopt platform thinking to data infrastructure. A dedicated data platform team provides domain-agnostic functionality, tools, and systems to build, execute, and maintain interoperable data products for all domains. With its platform, the data platform team enables domain teams to seamlessly consume and create data products.
+The federated governance principle achieves interoperability of all data products through standardization, which is promoted through the whole data mesh by the governance group. The main goal of federated governance is to create a data ecosystem with adherence to the organizational rules and industry regulations.Source: https://www.datamesh-architecture.com
+Motivations
+Creating a data platform that allows users/data scientist to:
+
+Easy way to distribute data across multiple database servers
+Create their own scripts on central servers, schedule them, and retrieve data from multiple formats
+Code sharing via GitUsers can create data pipelines including tests to generate new target data.
+Create a central metadata catalog where users can find all information.
+Query any data in csv format and output it or new data in the same format.
+Press enter or click to view image in full size
+
+High Level Open Platform
+Considerations
+We will explain step by step literally with the help of pictures, i.e. we will print out the commands, configuration files and topologies to explain everything about the services.
+
+Since there are limited resources in my laptop, we tried to test the production environment as much as possible, so many features like authentication, secure connection, PVC/Storage classes were not used.
+
+In order not to waste time writing theory and fully focus on practice, we have taken many explanations from the Internet and referenced them with the source citation under the content/images.
+
+Requirements
+First, we will deploy some services that require Docker and k8s. The fastest way to do this is to install/setup k8s using the kubeadm tool.
+
+kubeadm performs the actions necessary to get a minimally viable cluster up and running. By design, it cares only about bootstrapping, not about provisioning machines. Likewise, installing various nice-to-have addons, like the Kubernetes Dashboard, monitoring solutions, and cloud-specific addons, is not in scope.
+
+
+Instead, we expect higher-level and more tailored tooling to be built on top of kubeadm, and ideally, using kubeadm as the basis of all deployments will make it easier to create conformant clusters. “Source https://kubernetes.io/docs/reference/setup-tools/kubeadm/”
+
+We are not going to explain how kubeadm Works like what your componentes and so on because our intention is just to set up a single node that contains all components of a master node and a kubelet (worker node) inside it.
+
+When installing kubeadm/kubernetes on a standalone node, we need to meet some requirements:Disable firewalld/iptables
+
+Disable swap — fstab
+Install docker
+Cri-dockerd
+We can run the command in the image below to fulfill the requirements:
+
+
+Some basics requirements to install k8s through kubeadm
+We need to set up a Docker repository to install the Docker service as well. To do this, we can run the following command:
+
+Press enter or click to view image in full size
+
+Installing docker
+You must enable docker service in systemd to initialize the service on boot:
+
+Press enter or click to view image in full size
+
+Enabling docker daemon on systemd
+We have to install an adapter called cri-dockerd developed by Mirantis company which provides a shim for Docker Engine that allows control Docker via the Kubernetes Container Runtime Interface.
+
+To do this, we need to create a directory as a workspace to download and unpack cri-dockerd in tar.gz format to get the cri-dockerd binary. After that, we need to move the cri-dockerd binary file and get the systemd configuration file to start it automatically by systemd.
+Follow the commands in the following figures:
+
+Press enter or click to view image in full size
+
+Installing cri-dockerd daemon
+
+Download cri-dockerd systemd files
+
+Enabling systemd files and starting it.
+After all the prerequisites are met, you can start installing Kubernetes. First, you should set up a Kubernetes repository and install Kubeadm, Kubectl, and Kubelet (see figure below):
+
+Press enter or click to view image in full size
+
+Installing kubeadm
+After all kubeadm components are installed we just have to set up the cluster using kubeadm command with –apiserver-advertise-address ${hostname –i } and –cri-socket { cri-dockerd docker file location}.
+
+
+Initialing simple k8s cluster through kubeadm CLI
+if the command ends with a message like the one shown below, it means that everything has been set up correctly:
+
+Press enter or click to view image in full size
+
+Kubeadm cluster creation output
+We now have Kubernetes installed, but we have a Kubernetes cluster with only a single master node that is not acting as a worker. So we need to delete control-plane taint so that the master node becomes responsible for scheduling pods/services etc. We need a cni plugin to create an overlay network:
+
+Press enter or click to view image in full size
+
+Deploying cni plugin and check if all pods are up and running
+Wait a few minutes until everything is up and running. We can track progress by viewing the status of the pods and checking that everything is running.
+
+Press enter or click to view image in full size
+
+Checking all pods in Running state
+MYSQL
+
+We need to install a mysql database to serve queries from the jupyterhub stack and act as a data backend, and then we need to set up two instances of mysql daemons on different ports.
+
+Since we are setting up everything on the same machine, it is recommended to set it up separately (outside of k8s) to create a separate layer and avoid some unusual conditions like (oom, concurrency resources, etc).
+
+Press enter or click to view image in full size
+
+Installing Mysql
+Once the mysql package is installed, we can set up mysqld and change your port by adding port=3307 to /etc/my.cnf.d/server.cnf and starting the daemon with the systemctl command.
+
+
+Changing mysql port
+Press enter or click to view image in full size
+
+Checking if mysql daemon is running
+The mysql daemon starts and opens port 3307, which is used by the jupyterhub services. Therefore, we need to set up another instance of the mysqld daemon on a different port. We can do this by initializing the mysqld daemon with a different port with the -port 3308 flag, a different file socket location with -socket /var/lib/mysql2/mysql.sock, and a different data directory with -datadir /var/lib/mysql.
+
+Press enter or click to view image in full size
+
+Testing mysql access on port 3308
+To test if the two instances work, we can access the mysql database via a socket (see images below):
+
+Mysql Instance on port 3307
+
+Press enter or click to view image in full size
+
+Testing mysql access through default socket
+Mysql Instance on port 3308
+
+
+Testing mysql access through alternative socket
+We must create a user for jupyterhub stack access mysql database and grant the user access like image below:
+
+Press enter or click to view image in full size
+
+Grant jupyter user to access mysql instance
+We can test the connection to the mysql database with the user and password as follows:
+
+
+Testing jupyter mysql user access
+Helm
+
+If Kubernetes were an operating system, Helm would be the package manager. Ubuntu uses apt, CentOS uses yum, and Kubernetes uses helm.
+
+Helm deploys packaged applications to Kubernetes and structures them into charts. The charts contain all pre-configured application resources along with all the versions into one easily manageable package.
+
+Helm streamlines installing, upgrading, fetching dependencies, and configuring deployments on Kubernetes with simple CLI commands. Software packages are found in repositories or are created. “Source: https://phoenixnap.com/kb/what-is-helm”
+
+Press enter or click to view image in full size
+
+Helm architecture — Source: “https://phoenixnap.com/kb/what-is-helm”
+To install jupyterhub in the Kubernetes cluster, we need to install Helm to deploy it via the Helm graph. So we need to download the binaries and set up the jupyterhub repository.
+
+Once we have downloaded the binaries and set the location in the PATH variable, we can add the jupyterhub repository and run helm update the latest chart from repositories.
+
+We can browse the jupyterhub chart to make sure everything is there and verify that it ends up with a “jupyterhub/jupyterhub” chart output.
+
+Press enter or click to view image in full size
+
+Adding helm jupyterhub repository
+JupyterHub
+JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and resources without burdening the users with installation and maintenance tasks. Users — including students, researchers, and data scientists — can get their work done in their own workspaces on shared resources which can be managed efficiently by system administrators.
+
+JupyterHub runs in the cloud or on your own hardware, and makes it possible to serve a pre-configured data science environment to any user in the world. It is customizable and scalable, and is suitable for small and large teams, academic courses, and large-scale infrastructure. “ Source: https://jupyter.org/hub”.
+
+Jupyterhub Architecture
+JupyterHub is a multi-user server that manages and proxies multiple instances of the single-user IPython Jupyter notebook server.
+
+There are three basic processes involved:
+
+multi-user Hub (Python/Tornado)
+configurable http proxy (node-http-proxy)
+multiple single-user IPython notebook servers (Python/IPython/Tornado)
+The proxy is the only process that listens on a public interface. The Hub sits behind the proxy at /hub. Single-user servers sit behind the proxy at /user/[username].
+
+Press enter or click to view image in full size
+
+Jupyterhub hig-level architecture Source: https://speakerdeck.com/jhermann/jupyterhub-and-jupyter-notebook-a-view-under-the-hood?slide=16
+JupyterHub performs the following functions:
+
+The Hub launches a proxy
+The proxy forwards all requests to the Hub by default
+The Hub handles user login and spawns single-user servers on demand
+The Hub configures the proxy to forward URL prefixes to the single-user notebook servers
+For convenient administration of the Hub, its users, and services, JupyterHub also provides a REST API. ”Source: https://jupyterhub.readthedocs.io/en/latest/”
+
+We can check the API Documentation on url: https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
+
+
+API Documentation Source : https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
+From the user’s point of view, we can say that the flow has resumed:
+
+Press enter or click to view image in full size
+
+Press enter or click to view image in full size
+
+Jupyterhub architecture Source: https://z2jh.jupyter.org/en/stable/administrator/architecture.html
+1 — Users access the jupyterhub website and share their login credentials
+
+2 — Http proxy forwards the request to the hub service
+
+3 — The hub service verifies the credentials and allows or denies access based on the credentials.
+
+4 — After successful authentication, the hub service delegates the environment creation function to a user scheduler component.
+
+5 — The user scheduler will use a pre-configured spawner to create the user environment.
+
+6— The spawner will create the pod for the user environment (in our case, KubeSpawner)
+7 -The user will be redirected to access the Jupyter notebook pod
+
+Jupyter Configurations
+We can dive into helm’s internal configuration file to learn a bit more about what options are available for installing jupyterhub, how we can customize them, and what values are defaulted.
+
+To see the internal configurations of the helm tables, we need to run “helm pull jupyterhub/jupyterhub” to download the configurations in “.tgz” format and extract all the files from the .tgz file to see the whole structure of the helm tables.
+
+Press enter or click to view image in full size
+
+Directory helm structure
+The values.yml file in the jupyterhub directory contains the default value for jupyterhub deployment.
+
+
+Jupyterhub default helm parameters
+The Jupyter helm chart creates some custom resources on the Kubernetes cluster, such as Deployment, Services, Service Account, ConfigMaps, Secrets, ClusterRole, ClusterBinding, separated by components. The structure of the template is basically based on the Jupyter components as shown in the figure below:
+
+
+K8s Helm templates resources
+For example, if you want to know what permissions the useraccount of the scheduler service needs so that the components of the scheduler can work correctly:
+
+
+Service account permissions
+
+k8s Cluster Roles Bindings
+After we install jupyterhub, we need to see the same information in the k8s cluster resources:
+
+Press enter or click to view image in full size
+
+Getting ClusterRole after jupyterhub has deployed
+Press enter or click to view image in full size
+
+Getting ClusterRoleBindings after jupyterhub has deployed
+Jupyter deploy
+
+We need to set up a config.yml that contains some options that will be customized by values.yml. We see that the configurations are contained in the config.yml file that will customize our application. (Obs: We are not interested in setting up some security features like auth, crypt, and we should actually use the class PVC/Storage to persist data, but we are running out of memory so we could not test it.
+
+
+Helm chart custom values.
+The configuration is divided into four sessions: singleuser,hub,scheduling,cull.
+
+Singleuser: responsible for which pod type is deployed by the user scheduler via the spawner component.
+Hub: responsible for the hub component jupyterhub
+Scheduling: responsible for the user-scheduler component
+Cull: Periodically checks the idle time of user environments to clear them.
+Deploying the application is a straightforward process where you run a single command to install the chart:
+
+Press enter or click to view image in full size
+
+Installing JupyerHub
+We need to get the external port of the service, which is 31030 (see figure below):
+
+
+Jupyterhub services
+Check the output status column if the the value contains word deployed:
+
+
+Listing charts deployed
+Make sure all pods and deployments are running error free:
+
+Press enter or click to view image in full size
+
+Gettting jupyterHub pods
+OBS: Note that in the above output we have a “jupyter-teste9” pod, which means that we have already created a user environment teste9
+
+
+k8s deployments
+As we can see above, we have three deployments, one responsible for providing the hub service (or pod), one for the proxy, and another for the user scheduler.
+
+Custom Docker image
+By default, jupyterhub has jupyterhub/k8s-singleuser-sample set as the default image to run for all users. We have customized it to our needs to add more features to our deployment.
+
+This image uses a software called “tini” which has a lot of advantages:
+
+It protects you from software that accidentally creates zombie processes, which can (over time!) starve your entire system for PIDs (and make it unusable).
+It ensures that the default signal handlers work for the software you run in your Docker image. For example, with Tini, SIGTERM properly terminates your process even if you didn’t explicitly install a signal handler for it.
+It does so completely transparently! Docker images that work without Tini will work with Tini without any changes.
+We set up a Dockerfile to install some software like node,java,cron and some python packages to add a variety of features to the user’s environment.
+
+
+Custom Dockerfile for creating new image
+
+Creating new custom image
+Accessing JupyterHub
+Now that we have everything set up, we can access the jupyterhub address through the web browser:
+
+Press enter or click to view image in full size
+
+Accessing jupyterhub webpage
+As you mentioned, we are not interested in setting up jupyterhub authentication and a secure connection, so you should ignore the warning message.
+by default, jupyter uses a dummy authentication mechanism that any account can use to log in.
+When we log in, we should see the screen below:
+
+Press enter or click to view image in full size
+
+Jupyterhub main page
+On the left side we see all the files and there are some options to upload files, create directories and search for files. On the Startup tab we see what kind of kernel we can choose. If we choose the Bash kernel, we can execute any command as in a normal Linux shell.
+
+Press enter or click to view image in full size
+
+Jupyterhub bash terminal
+If we choose the Python kernel, we can use Jupyter Notebook to execute Python code line by line. This kernel is especially commonly used with pandas dataframe.
+
+Press enter or click to view image in full size
+
+Jupyter notebook
+Also, we can start Linux/scripts from the notebook by inserting the character “!” before the command.
+
+Press enter or click to view image in full size
+
+Running commands,scripts from notebook
+Trino
+
+Trino is an apache 2.0 licensed, distributed SQL query engine, which was forked from the original Presto project whose Github repo was called PrestoDB. As such, it was designed from the ground up for fast queries against any amount of data. It supports any types of data sources including relational and non-relational sources via its connector architecture.”Source: https://ahana.io/answers/what-is-trino-and-what-are-its-frequently-asked-questions-faq/”
+
+
+History
+In 2012, Martin Traverso, David Philips, Dain Sundstrom and Eric Hwang at Facebook started the development of Presto to address performance, scalability and extensibility needs for analytics at Facebook. Before Presto existed at Facebook, all data analysis relied on Hive, which was not suitable for interactive queries at Facebook’s scale. Facebook’s Hive data warehouse was 250 petabytes in size and needed to handle hundreds of users issuing tens of thousands of queries each day. Hive started to hit its limit and did not provide the ability to query other data sources within Facebook.
+
+Presto was designed from the ground up to run fast queries at scale. Instead of creating a new system to move data into, Presto was designed to read the data from where it is stored via its pluggable connector system. In 2013, the initial version of Presto was rolled out in production at Facebook and, by the fall of the same year, Presto was officially open sourced by Facebook. After seeing its success at Facebook, Presto was adopted by other large web-scale companies like Netflix, Linkedin, Treasure Data and more.
+
+After PrestoDB was donated to the Linux Foundation, Presto SQL saw a seismic shift. The original developers, contributors, and people involved with Presto DB moved to develop Presto SQL.
+
+This was quite a significant development in the Presto story and a massive controversy in the open-source software development community.
+
+After years of not enforcing the Presto Trademark, The Linux Foundation took steps that forced the Presto SQL project to immediately remove all uses of the Presto trademark and rebrand at the end of 2020.The result was still the same project with a new name, Trino, and a new bunny mascot.
+
+Since the split from the Presto moniker, Trino (Presto SQL) has continually gained more popularity, adoption, and contributions compared to the original Presto DB.
+
+Architecture
+Federated query enables data analysts, engineers, and data scientists to execute SQL queries across data stored in relational, non-relational, object, and custom data sources. With federated query, customers can submit a single SQL query and analyze data from multiple sources running on-premises or hosted on the cloud.
+
+Trino consists of two types of nodes, coordinator and worker nodes. The coordinator plans, and schedules the processing of SQL queries. The queries are submitted by users directly or with connected SQL reporting tools. The workers actually carry out more of the processing by reading the data from the source or performing various operations within the task(s) they are assigned.
+
+Following some companies have been using it on “https://trino.io/users.html”
+
+Press enter or click to view image in full size
+
+Trino high level architecture — Source: Trino: The Definitive Guide.
+Press enter or click to view image in full size
+
+Creating Qyery plan Source: Trino: The Definitive Guide.
+Once a logical query plan is generated, the coordinator then converts this to a distributed query plan that maps actions into stages that contain tasks to be run on nodes. Stages model the sequence of events and a directed acyclic graph (DAG). Source: Trino: The Definitive Guide.
+
+Press enter or click to view image in full size
+
+Task Management distributed acrros workers
+The coordinator then schedules tasks over the worker nodes as efficiently as possible, depending on the physical layout and distribution of the data. Source: Trino: The Definitive Guide.
+
+Press enter or click to view image in full size
+
+Spliting tasks and distributed it to multiple workers Source: Trino: The Definitive Guide.
+Data is split and distributed across the worker nodes to provide inter-node parallelism.
+
+Press enter or click to view image in full size
+
+Input and Output tasks Source: Trino: The Definitive Guide.
+Once this data arrives at the worker node, it is further divided and processed in parallel. Workers submit the processed data back to the coordinator. Finally, the coordinator provides the results of the query to the user.
+
+Installing Trino
+Now that we have learned the theory/architecture/history of trino, we need to install it. As a first step, we need to download the trino package (.tar.gz) from the trino website:
+
+Press enter or click to view image in full size
+
+Once we get the trino package we have to extract it, notice we are using trino version 406 which at the moment is the latest one.
+
+
+Trino package extracted into trino-server-406 directory
+After the file has been unpacked , go to the trino-server directory and run the “ls” command to familiarize yourself with the trino directory structure.
+
+
+Trino directory structure
+The /etc directory was not created when we unpacked, so we have to create it manually. Note that we set the port from 8080 to 2020 and set the node as coordinator and worker:
+
+Press enter or click to view image in full size
+
+Setting up trino server
+Recall that we have two mysql instances running on ports 3307 and 3308, so we will set up the catalogs based on these two databases.
+We will name the catalog mariadb(instance1 — port 3307) and mariadb2(instance2 — port 3308).
+
+Press enter or click to view image in full size
+
+Setting the first mariadb catalog
+
+Setting the second mariadb catalog
+Once all catalogs are set,we can switch to the catalog directory
+
+
+We also need to set the JVM options. The following configuration was simply copied from the trino website.
+
+
+Setting JVM options
+The last thing we need to do before starting trino is to configure the node properties:
+
+Press enter or click to view image in full size
+
+Setting cluster node information
+Finally everything is prepared so that we can start the trino. We have two ways to start the program, one is to run it in the foreground and the other in the background.
+
+Running trino as background process:
+
+
+Running trino as background process
+Running trino as foreground process:
+
+Press enter or click to view image in full size
+
+Running trino as foreground process
+We can check if the trino process opened the port 2020:
+
+Press enter or click to view image in full size
+
+Ensuring if the port 2020 is listening
+Trino Overview
+We can open the browser and access the trino 2020 port, we can use any username:
+
+Press enter or click to view image in full size
+
+Trino WebPage
+On the home page you can view useful information/statistics about the operation of trino, such as running queries, active workers, number of queries in the queue.
+
+Press enter or click to view image in full size
+
+Trino main page
+If you access the number one Active Worker panel, you can see the information about our node:
+
+Press enter or click to view image in full size
+
+Trino Worker list
+Now let us play with it a little bit and do some queries. So we need to download a trino cli:
+
+Press enter or click to view image in full size
+
+Downloading trino cli
+
+Moving trino cli to PATH directory
+After downloading the trino cli and setting the permissions correctly, we can connect to the trino database and perform a query to mariadb (which is the catalog name mariadb, in other words, the instance running on port 3307).
+
+
+Testing trino CLI
+We can check some statistics from queries on trino statistics page:
+
+Press enter or click to view image in full size
+
+Query details list Page
+Press enter or click to view image in full size
+
+Especific query informations
+Press enter or click to view image in full size
+
+Informations about the task plan
+Press enter or click to view image in full size
+
+Information about tasks performance
+If we have a problem with trino in the future, we can look for problems in the trino log directory:
+
+Press enter or click to view image in full size
+
+Trino logs directory
+Trino has a wide range of plug-ins. Below is a list of plug-ins that are included in the default installation:
+
+
+Trino plugins available
+We added the trino cli to the Docker image so that we can run trino in our notebook from jupyterhub:
+
+Press enter or click to view image in full size
+
+Testing trino cli from jupyterhub terminal
+Minio
+Minio is an open source distributed object storage server written in Go, designed for Private Cloud infrastructure providing S3 storage functionality. It is the best server which is suited for storing unstructured data such as photos, videos, log files, backups, and containers. ”Source: https://www.xenonstack.com/insights/minio”.
+
+Installation
+We need to have an object store so that users can upload their files and then have Hive Metastore track them.
+
+Installing minio is easy and we can install it directly with the rpm command:
+
+
+Installing Minio server
+After the installation we can start the minio server with the command belllow:
+
+
+Starting minio server
+Access the Minio website via port 9000 and enter the default credentials for logging in to Minio: “Username: minioadmin and Password: minioadmin”:
+
+Press enter or click to view image in full size
+
+Minio webpage
+To get access to the bucket we must create a access key :
+
+Press enter or click to view image in full size
+
+Creating minio accesskey
+Press enter or click to view image in full size
+
+Creating minio accesskey
+Press enter or click to view image in full size
+
+Creating minio accesskey
+Once the access_key and secret_key are created we need to create our bucket named teste:
+
+Press enter or click to view image in full size
+
+Creating teste bucket
+We can install the s3 browser and set it to connect to our bucket “teste”:
+
+Bucket Testing
+Press enter or click to view image in full size
+
+S3 brownser configuration
+Press enter or click to view image in full size
+
+Checking teste bucket is available
+Let’s upload some files to test the access:
+
+Press enter or click to view image in full size
+
+Uploading test file into the teste bucket
+Hive Metastore
+The Hive metastore is simply a relational database. It stores metadata related to the tables/schemas you create to easily query big data stored in S3/HDFS. When you create a new Hive table, the information related to the schema (column names, data types) is stored in the Hive metastore relational database. Other information like input/output formats, partitions, S3/HDFS locations are all stored in the metastore.Source: https://www.stackchief.com/blog/The%20Apache%20Hive%20Metastore
+
+Get Leandro Totino Pereira’s stories in your inbox
+Join Medium for free to get updates from this writer.
+
+Enter your email
+Subscribe
+We can see how the services works along each other:
+
+
+High level trino+hive metastore + mariaDB _ minio Source: https://bitsondatadev.medium.com/a-gentle-introduction-to-the-hive-connector-771918ffb220
+
+Installation
+To install Hive Metastore, we first need to download the Hive package from the Internet:
+
+
+Apache Hive package download
+Press enter or click to view image in full size
+
+Extracting hive package
+We must move the extracted hive directory to /usr/local/
+
+
+Moving Apache hive /usr/local/metastore directory
+Apache Hive requires some libraries from Hadoop. Therefore, download the Hadoop package and repeat the process you performed with the Hive package:
+
+
+Download hadoop package
+
+Extracting Hadoop package
+
+Moving extracted package to /usr/local/hadoop directory
+After extraction, we can move the specific Hadoop lib to the Hive directory:
+
+
+Moving some hadoop libs to metastore directory
+Hive needs jre to run, so we need to export HADOOP_HOME and set JAVA _HOME.
+
+
+exporting JAVA_HOME and HADOOP_HOME variable
+We have to download the mysql connector and move the lib to Hive lib directory making Hive reach out the mysql database.
+
+
+Download mysql-connector
+We will use our first mysql instance to create a metastore database, so we need to get mysql permissions that allow the user hive access:
+
+
+Granting hive mysql permissions.
+Testing the hive username for accessing the mysql instance:
+
+
+Testing hive mysql user access
+Hive needs some information to get access to the mysql and s3 bucket, so we need to create the hive-site.xml configuration in the /usr/local/metastore/conf/ directory.
+
+
+Hive metastore configuration file
+After setting up the hive-site.xml, we can create the database and tables with the following command:
+
+
+Creating metastore table
+If the output ends with “schema completed”, it means that the database and table have been created.
+
+Press enter or click to view image in full size
+
+Schematool output
+Once the database/tables are created, we can launch Hive Metastore
+
+Press enter or click to view image in full size
+
+Starting hive metastore
+Check if the hive port is listening
+
+
+Ensuring hive port is listening
+Hive Trino Catalog
+Once the hive metastore is set up, we can set up a new trino catalog named hive and then restart trino:
+
+
+Trino Hive catalog
+Trino + Hive Testing
+In the jupyterhub user environment we can access the trino database and create a schema/table from the s3 bucket:
+
+
+Creating trino schema from s3/monion location
+Now let us upload some files to query via trino cli:
+
+
+S3 data file example
+
+S3 data file example
+Press enter or click to view image in full size
+
+checking if the file upload successfully
+Once the file is successfully uploaded, we can query the table/file:
+
+
+Querying hive pessoas table/schema
+Let us upload another file and run the query again:
+
+Press enter or click to view image in full size
+
+Uploading second file tominio/s3
+Press enter or click to view image in full size
+
+Ensuring if query is returning data from two s3 files
+Note that the output combines the information from both files in the s3 bucket and intentionally includes a line NULL, which we will use later.
+
+Trino GUI
+Download and install the dbeaver software and configure it as described below:
+Search for trino and select the rabbit logo:
+
+
+Dbeaver Adding Database GUI
+On the next screen we need to specify the trino address and login :
+
+
+Dbeaver Address/Credentials Configuration GUI
+After you click on the Finish button, you will see all the catalog → schemas → tables available on trino:
+
+
+Dbever structure tree
+We can check the table information:
+
+Press enter or click to view image in full size
+
+Table/schemas attributes
+We can also check the table data:
+
+Press enter or click to view image in full size
+
+Table/schema content
+And selecting data from table:
+
+Press enter or click to view image in full size
+
+Querying from Dbeaver GUI
+DBT
+DBT is a transformation workflow that helps you get more work done while producing higher quality results. You can use dbt to modularize and centralize your analytics code, while also providing your data team with guardrails typically found in software engineering workflows. Collaborate on data models, version them, and test and document your queries before safely deploying them to production, with monitoring and visibility.
+
+DBT compiles and runs your analytics code against your data platform, enabling you and your team to collaborate on a single source of truth for metrics, insights, and business definitions. This single source of truth, combined with the ability to define tests for your data, reduces errors when logic changes, and alerts you when issues arise.
+
+Press enter or click to view image in full size
+
+DBT workflow example Source: https://www.getdbt.com/
+We can see some user´s case on: https://www.getdbt.com/success-stories/
+
+DBT Configuration
+We did install python env directory with dbt package installed in docker image so on user environment we can activate the env and run dbt — version:
+
+
+Activating python virtual envrionment and listing DBT versions/plugins installed
+We can start by creating our first dbt project with the dbt init command. We give it the name ‘demo’ and select the default dbt plugin we want to use in this project, in our scenario the plugin trino:
+
+Press enter or click to view image in full size
+
+Creating our first dbt project
+Inside the dbt project, we need to have a file named dbt_project.yml and overwrite the models tree with the content described below:
+
+
+Modifying materialized to incremental in DBT configuration file
+We created a profiles.yml file and added all the information about catalogs/schemas so that dbt can access trino catalogs:
+
+Press enter or click to view image in full size
+
+Confiiguring dbt profiles making DBT querying trino catalogs.
+To make sure that the connection is ok, we can run the command dbt debug + profilename:
+
+Press enter or click to view image in full size
+
+Testing DBT profile connections
+When creating a dbt project, a default profile is created in ~/.dbt/profiles.yml and na sample models that we can remove to clean up the project:
+
+
+Removing default profile
+
+Removing default example DBT models
+DBT models
+Once the files are deleted, we can start building our first dbt model. The basic dbt model is divided into 2 main files: .sql and .yml.
+
+In our scenario, we create the model named pessoas (people in English). First we go to the .yml file, which is responsible for the schema/testing of the model.
+
+Press enter or click to view image in full size
+
+Creating our first DBT model definitions
+Now we need to create a .sql file that is responsible for selecting the data we want. For example, we can run several queries to get the desired data.
+
+Press enter or click to view image in full size
+
+Creating our first custom data joining two source of data.
+Recall that we intentionally inserted a line NULL in our file and that we have a rule in our model that does not allow a null value, so let us test if it works:
+
+
+Checking the NULL in the query output
+DBT test
+Press enter or click to view image in full size
+
+dbt test command catching Null exception
+It actually works as expected. Note that dbt complains about the null value. Remove the null line and run the program again:
+
+
+Querying again after we have removed the NULL line from s3/minio file
+Press enter or click to view image in full size
+
+Running again the DBT test command catching no errors
+It works like a charm, so I got some documentation on the options available for testing:
+
+Press enter or click to view image in full size
+
+DBT options available for testing data
+DBT run
+Press enter or click to view image in full size
+
+DBT run targetting trino-mariadb2
+Press enter or click to view image in full size
+
+Checking data deployed by dbt direcly on mysql
+Press enter or click to view image in full size
+
+Checking data deployed by dbt direcly on trino
+If you run the program again, the same data will be displayed. This happens because dbt deletes and recreates the table by default. So if we want to be incremental, we can change the behavior of dbt. To change this behavior to incremental, we just need to set the materialized parameter in pessoas.sql to ‘incremental’:
+
+
+Changing materialized to incremental
+If we run the process again, we find that all entries are now incremental:
+
+
+Table being populate incrementally by DBT
+Now we should see that the data in the table has been incremented:
+
+Press enter or click to view image in full size
+
+Querying data from trino cli
+We can run batch queries from trino cli and choose from many output formats.
+
+Press enter or click to view image in full size
+
+Exporting trino query output to cli CSV format
+Run with the CSV_HEADER_ option UNQUOTED:
+
+Press enter or click to view image in full size
+
+Exporting trino query output to cli CSV format including headers
+Output formats available:
+
+Press enter or click to view image in full size
+
+Trino CLI output formats Source: https://trino.io/docs/current/client/cli.html
+DBT docs
+Good documentation for your dbt models will help downstream consumers discover and understand the datasets which you curate for them.
+
+dbt provides a way to generate documentation for your dbt project and render it as a website. The documentation for your project includes:
+
+Information about your project: including model code, a DAG of your project, any tests you’ve added to a column, and more.
+Information about your data warehouse: including column data types, and table sizes. This information is generated by running queries against the information schema.
+Importantly, dbt also provides a way to add descriptions to models, columns, sources, and more, to further enhance your documentation. Source: https://docs.getdbt.com/docs/collaborate/documentation
+
+we can execute the following command to generate the json docs files:
+
+Press enter or click to view image in full size
+
+Generating DBT json doc files
+The command creates three files inside target dir: catalog, manifest , credentials.json. Then, run dbt docs serve to use these .json files to populate a local website.
+
+Instead running in a local web server we can export theses file and publish it on centralized one so lets install nginx and copy the file to permit user access:
+
+Once nginx is up and running we can move the file from target directory to the nginx default root directory:
+
+Press enter or click to view image in full size
+
+Installing Nginx
+
+Starting nginx service
+Press enter or click to view image in full size
+
+Testing nginx connection
+Once nginx is up and running we can move the file from the target directory to the nginx default root directory:
+
+
+Getting generated doc files
+
+Upload them to default page nginx directory
+Now try to open the page from your web browser accessing 80 port.
+
+Press enter or click to view image in full size
+
+DBT doc page
+We can see a lot of useful information about our data like attributes, type,code,data lineage, etc.
+
+Visualization
+We can tests some visualization tool to get data directly from the database target so lets install grafana and configure Mysql datasource:
+
+Press enter or click to view image in full size
+
+Installing Grafana server
+
+Starting grafana server
+Press enter or click to view image in full size
+
+Configuring mysql datasource
+As our data is normal text information lets create a table panel:
+
+Press enter or click to view image in full size
+
+Adding grafana Panel
+
+Adding Grafana Table Graph
+Change the Data source to Mysql created previously:
+
+
+Selecting Mysql Datasource
+Fill up the options below to query our mysql table data.Once we complete it, the data automatically will start appearing in our table graph.
+
+Press enter or click to view image in full size
+
+querying pessoas table
+Let’s create another simple stats graph to count number of lines:
+
+
+Adding stat graph
+Press enter or click to view image in full size
+
+Querying number of lines
+Press enter or click to view image in full size
+
+Both graphs configured successfully
+Jupyterhub Extensions
+JupyterHub provides various extensions to increase the user data manipulation so we choose to work with two interesting extensions: Jupyter Git and scheduling extensions.
+
+Git extension
+We are able to manage git actions through jupyter git extensions so let’s create our first dbt git repository to demonstrate the main features available in that extension..
+
+FIrst of all, select the git options tab and hit the options “Initialize a Repository” to initialize the current directory git repository:
+
+
+Git root repository directory
+
+Initialing git repository
+
+Initialing git repository 2
+
+Initialing git repository 3
+As soon as we created our first git repository locally, let’s create the remote one, logging in with your account and creating a repository.
+
+Press enter or click to view image in full size
+
+Creating a Git remote repository
+Then we have to create a token permitting access to the repository from jupyterhub
+
+Press enter or click to view image in full size
+
+Creating access tokens 1
+Press enter or click to view image in full size
+
+Creating access tokens 2
+Press enter or click to view image in full size
+
+Creating access tokens 3
+When the token creation is done we can continue configuring our environment adding a remote git repository:
+
+
+Setting our remote git repository
+We can add all untracked files to be managed by git repository hitting the + button.
+
+
+Adding untracked files to be manage by git repository
+As all files tracked by git repository we can commit all files which have been tracked.
+
+
+Our first git commit
+After we hit the button “COMMIT” the jupyter git extension is going to ask about commiter informations.
+
+
+Informing Commiter basic information
+Finally we can push our first commit to the remote selecting the “Push to Remote”
+
+
+Pushing data to remote repository
+Then, we should inform our git remote credentials (email + token):
+
+
+Supplying your credentials
+If the push task complete successfully we can check our repository files in the github repository page:
+
+Press enter or click to view image in full size
+
+Verifying pushed files on Github
+From git extension we can manage our branches as well:
+
+Press enter or click to view image in full size
+
+Managing git branches
+Scheduling extension
+We can create scheduled jobs to run periodically over time using cron syntax.This process is pretty straight forward and doesn’t need any learning curve except knowing cron syntax.
+
+First we have to select the file which we wanna get scheduled and press the right button of the mouse and select Schedule option.
+
+
+Scheduling Script file
+Then we should inform the command we want to run and the periodicity in cron format.In our scenario , we are going to run the dbt test and if the test run successfully then it will run dbt run command.Once filled with all the information we can press the “Schedule button”.
+
+
+Scheduling custom script to run every minute
+
+We can check all schedule jobs on tab Cron Scheduler -> Show cronjobs:
+
+
+Accessing “show cronjobs” options
+if we want we can see the logs of all schedule jobs or delete them hitting onView and X button respectively:
+
+
+Script cron scheduled list
+Press enter or click to view image in full size
+
+Displaying script logs
+We can also run a full data pipeline using airflow/stepfunctions,git actions services to start the data pipeline from git dbt reposotiry code.
+
+Datahub
+DataHub is a 3rd generation Metadata Platform that enables Data Discovery, Collaboration, Governance, and end-to-end Observability that is built for the Modern Data Stack. DataHub employs a model-first philosophy, with a focus on unlocking interoperability between disparate tools & systems.”Source: https://datahubproject.io/docs/architecture/architecture”
+
+
+DataHub is a modern data catalog built to enable end-to-end data discovery, data observability, and data governance. This extensible metadata platform is built for developers to tame the complexity of their rapidly evolving data ecosystems and for data practitioners to leverage the total value of data within their organization.
+
+”Source: https://datahubproject.io/docs/features”
+
+Press enter or click to view image in full size
+
+Source: https://datahubproject.io/
+
+Datahub Motivations
+As the operator of the world’s largest professional network and the Economic Graph, LinkedIn’s Data team is constantly working on scaling its infrastructure to meet the demands of our ever-growing big data ecosystem. As the data grows in volume and richness, it becomes increasingly challenging for data scientists and engineers to discover the data assets available, understand their provenances, and take appropriate actions based on the insights. To help us continue scaling productivity and innovation in data alongside this growth, we created a generalized metadata search and discovery tool, DataHub.”Source: https://engineering.linkedin.com/blog/2019/data-hub”
+
+DataHub Architecture
+Press enter or click to view image in full size
+
+Datahub Overview Source:https://datahubproject.io/
+Source: https://datahubproject.io/docs/architecture/architecture
+
+Press enter or click to view image in full size
+
+Datahub Architecture Source: https://datahubproject.io/docs/architecture/architecture
+Datahub UI — a React.js app
+Datahub Frontend — A Java app with Play Framework
+Datahub GMS — A Java backend app
+Datahub Metadata Change Event (MCE) Consumer App — a Kafka consumer app
+Datahub Metadata Audit Event (MAE) Consumer App — a Kafka consumer app
+Source:https://liangjunjiang.medium.com/deploy-open-source-datahub-fd597104512b
+
+Client Tier
+
+User can send metadata from various sources including dbt,hive,trino, mysql etc and they can choose to push them or pull then:
+
+Pull Method: It can be set up through webUI informing the source type , address, credentials and periodicity.Once setup we can run the ingestion source making the datahub connect to the source to get the metadata.Ex: Trino data ingestion we are going to setup later.
+
+Push Method: Users can send their metadata directly to datahub through scripts periodically.Datahub cli has the “datahub ingestion” parameter which has many sources available to send metadata.Ex The dbt sources we are going to send by datahub ingestion cli
+
+App Tier
+
+The App tier has three main components: two of them for metadata ingestion and WebUI.
+
+We can input data using Graphql/RestAPI or Kafka(AVRO format) through the pull/push way already explained above and we have a WebUI providing a nice way for users to manage their metadata.
+
+Persistence Tier
+
+The persistent tier is responsible for saving the metadata into two databases: Mysql and Elasticsearch.The Elasticsearch database is responsible for index/graph the metadata while Mysql is responsible for saving metadata data and managing datahub data.
+
+Kafka is used as a durable log that can be used to store inbound requests to update the Metadata Graph (Metadata Change Proposal), or as a change log detailing the updates that have been made to the Metadata Graph (Metadata Change Log).
+
+Resuming the architecture we have an ingestion server responsible for receiving the metadata from different types of sources providing two ways of receiving it by using Rest API/GraphQL and Avro Kafka messages. Then the metadata service is going to identify the data ingestion and related them and save persistent data to the database and index/graph the data for searching in the elasticsearch.
+
+Datahub Installation
+We are going to install datahub using docker-compose so lets install datahub.
+
+
+Installing Datahub
+After datahub installed we can run datahub docker quickstart command.In our first try we got some error to start it so we had to make some modifications on docker-compose inside the .datahub/quickstart directory.
+
+First we had to limit the memory of the datahub-gms container to 1g and we changed the mysql/zookeeper image to a specific version.
+
+
+Adding mem_limit paramenter to datahub-gms in the docker-compose file
+
+Modyfying mysql image to latest version in docker-compose file
+
+Modyfyimg zookeeper image version in docker-compose file
+Press enter or click to view image in full size
+
+Starting Docker compose
+While all components are getting started we had to restore an init database/tables on mysql container.
+
+
+Creating datahub mysql schema
+Datahub UI
+Once all component are up/running we can access the port 9002 and log in with datahub/datahub credentials:
+
+Press enter or click to view image in full size
+
+Datahub Login page
+As soon as we logged in we notice we have no metadata available so we need ingestion some from our sources.
+
+Press enter or click to view image in full size
+
+datahub main page
+We can access the ingestion option on top of page to set up our first ingestion.The ingestion can be made by datahub pull the sources and the sources can push to it. In our first ingestion we are going to pull trino getting it metadata.Select the option “Create new source” to create our first ingestion.
+
+Press enter or click to view image in full size
+
+Datahub ingestion page
+In the choose type step search by trino and hit the cute rabbit.
+
+Press enter or click to view image in full size
+
+Adding new Datahub ingestion
+The configure setup we can copy paste the yaml below or fill the fields:
+
+Press enter or click to view image in full size
+
+Datahub configuration ingestion .yml file
+Press enter or click to view image in full size
+
+Setting the ingestion by Datahub wizard menu
+In the Schedule ingestion page choose the periodicity we want to get the ingestion.
+
+Press enter or click to view image in full size
+
+Configuring the periodity of Datahub ingestion
+Inform the ingestion name in this step and hit the “Save & Run” button:
+
+Press enter or click to view image in full size
+
+Giving the ingestion name
+We can check the status of our first ingestion, if it is in running state we can keep up its progression.
+
+Press enter or click to view image in full size
+
+Checking ingestion job state
+Press enter or click to view image in full size
+
+Displaying ingestion job logs
+Once the ingestion is done we can come back at home page and see if there are some metadata.As we can see we have new data available
+
+Press enter or click to view image in full size
+
+Datahub main page with datasets and plataforms metadata logo
+Let’s drill the metadata down later and instead it lets ingest metadata from another source.To ingest dbt sources we should use push ingest.
+
+In our dbt project we can choose the datahub command to ingest our sources to do it we have to configure an yml file containing all the *json files in the target directory.
+
+
+Configuring Datahub DBT push ingestion
+After created the yml file we can run the datahub ingest command:
+
+Press enter or click to view image in full size
+
+Pushing DBT docs to Datahub
+We can check if our dbt source appeared on datahub sources page:
+
+Press enter or click to view image in full size
+
+Checking dbt ingestion source status
+Exploring data
+
+Finally we have all the data from our two datasource so let’s drill its down in our metadata.
+
+Press enter or click to view image in full size
+
+Datahub metadata types
+We can search in the home page and field,table name ,description of any data. So lets try with field apelido which we know we have it in pessoas2 table:
+
+We can check all the attributes from dbt sources and their tests/validations:
+
+Press enter or click to view image in full size
+
+Searching an specific metadata atribute
+Press enter or click to view image in full size
+
+Showing all attributes in pessoas models
+Press enter or click to view image in full size
+
+Checking what are the tests being made from dbt
+We can check their data lineage as well:
+
+Press enter or click to view image in full size
+
+Datahub/DBT Data lineage 1
+Press enter or click to view image in full size
+
+Datahub/DBT Data lineage 2
+— –
+
+We can get the dbt sql transformation to get the recent data:
+
+Press enter or click to view image in full size
+
+Showing the SQL query to create this data
+We can document any entity as well and the owner of the data:
+
+
+Datahub Extra Options

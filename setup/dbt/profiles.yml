@@ -1,0 +1,74 @@
+# ============================================================================
+# DBT Profiles Configuration - DataMeesh
+# Connections to Trino catalogs and target databases
+# ============================================================================
+
+datamesh:
+  target: dev
+  outputs:
+    
+    # Development environment - using Trino for federated queries
+    dev:
+      type: trino
+      method: none  # No authentication for demo
+      host: trino-coordinator.data-platform.svc.cluster.local
+      port: 8080
+      database: hive  # Default catalog
+      schema: default  # Default schema
+      threads: 4
+      http_scheme: http
+      session_properties:
+        query_max_run_time: "5m"
+        exchange_compression: true
+    
+    # Production target - PostgreSQL for transformed data
+    prod:
+      type: postgres
+      host: sales-postgres.sales-domain.svc.cluster.local
+      port: 5432
+      user: sales_user
+      password: SuperSecurePass123!
+      dbname: sales_db
+      schema: dbt_marts
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 10
+    
+    # Testing environment - dedicated schema
+    test:
+      type: postgres
+      host: sales-postgres.sales-domain.svc.cluster.local
+      port: 5432
+      user: sales_user
+      password: SuperSecurePass123!
+      dbname: sales_db
+      schema: dbt_test
+      threads: 2
+
+# Additional connection configs for direct access (not through Trino)
+sales_direct:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: sales-postgres.sales-domain.svc.cluster.local
+      port: 5432
+      user: sales_user
+      password: SuperSecurePass123!
+      dbname: sales_db
+      schema: public
+      threads: 4
+
+marketing_direct:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: marketing-postgres.marketing-domain.svc.cluster.local
+      port: 5432
+      user: marketing_user
+      password: SuperSecurePass123!
+      dbname: marketing_db
+      schema: public
+      threads: 4
+

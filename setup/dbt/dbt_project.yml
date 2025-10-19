@@ -1,0 +1,75 @@
+# ============================================================================
+# DBT Project Configuration - DataMeesh
+# Data transformations for Sales and Marketing domains
+# ============================================================================
+
+name: 'datamesh_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'datamesh'
+
+# Directory configuration
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configuration
+models:
+  datamesh_dbt:
+    # Staging models - load raw data
+    staging:
+      +materialized: view
+      +schema: staging
+      sales:
+        +tags: ['sales', 'staging']
+      marketing:
+        +tags: ['marketing', 'staging']
+    
+    # Marts - business logic transformations
+    marts:
+      +materialized: incremental
+      +schema: marts
+      +on_schema_change: 'fail'
+      
+      sales:
+        +tags: ['sales', 'marts']
+      
+      marketing:
+        +tags: ['marketing', 'marts']
+      
+      cross_domain:
+        +tags: ['cross_domain', 'marts']
+        +materialized: table
+
+# Test configuration
+tests:
+  +store_failures: true
+  +schema: dbt_test_failures
+
+# Documentation
+vars:
+  # Date range for incremental models
+  start_date: '2024-01-01'
+  
+  # Business rules
+  min_order_value: 100
+  high_value_threshold: 50000
+  
+  # Data quality thresholds
+  null_tolerance: 0.05
+  duplicate_tolerance: 0.01
+
+# Dispatch configuration for cross-database compatibility
+dispatch:
+  - macro_namespace: dbt
+    search_order: ['datamesh_dbt', 'dbt']
+

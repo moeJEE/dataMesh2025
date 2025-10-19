@@ -1,0 +1,132 @@
+# ============================================================================
+# Sales Domain - Source Definitions
+# ============================================================================
+
+version: 2
+
+sources:
+  - name: sales
+    description: Sales domain data from PostgreSQL
+    database: sales
+    schema: public
+    
+    tables:
+      - name: customers
+        description: Customer master data
+        columns:
+          - name: customer_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: customer_name
+            description: Company name
+            tests:
+              - not_null
+          
+          - name: email
+            description: Contact email
+            tests:
+              - unique
+          
+          - name: country
+            description: Customer country
+          
+          - name: industry
+            description: Industry vertical
+          
+          - name: created_at
+            description: Record creation timestamp
+            tests:
+              - not_null
+      
+      - name: products
+        description: Product catalog
+        columns:
+          - name: product_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: product_name
+            description: Product name
+            tests:
+              - not_null
+          
+          - name: category
+            description: Product category
+          
+          - name: price
+            description: Unit price
+            tests:
+              - not_null
+      
+      - name: orders
+        description: Sales orders
+        columns:
+          - name: order_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: customer_id
+            description: Foreign key to customers
+            tests:
+              - not_null
+              - relationships:
+                  to: source('sales', 'customers')
+                  field: customer_id
+          
+          - name: order_date
+            description: Order date
+            tests:
+              - not_null
+          
+          - name: total_amount
+            description: Total order value
+            tests:
+              - not_null
+      
+      - name: order_items
+        description: Order line items
+        columns:
+          - name: order_item_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: order_id
+            description: Foreign key to orders
+            tests:
+              - not_null
+              - relationships:
+                  to: source('sales', 'orders')
+                  field: order_id
+          
+          - name: product_id
+            description: Foreign key to products
+            tests:
+              - not_null
+              - relationships:
+                  to: source('sales', 'products')
+                  field: product_id
+          
+          - name: quantity
+            description: Quantity ordered
+            tests:
+              - not_null
+          
+          - name: unit_price
+            description: Price per unit
+            tests:
+              - not_null
+          
+          - name: subtotal
+            description: Line item total
+            tests:
+              - not_null
+

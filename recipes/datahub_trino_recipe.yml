@@ -1,0 +1,12 @@
+
+source:
+  type: trino
+  config:
+    host_port: "localhost:30808"
+    database: sales
+    username: ""
+    
+sink:
+  type: datahub-rest
+  config:
+    server: "http://localhost:8080"

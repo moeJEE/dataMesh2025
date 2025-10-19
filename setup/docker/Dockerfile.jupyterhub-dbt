@@ -1,0 +1,54 @@
+FROM jupyter/datascience-notebook:latest
+
+USER root
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    vim \
+    curl \
+    wget \
+    openjdk-11-jre-headless \
+    cron \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Switch to jovyan user
+USER jovyan
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    dbt-core==1.7.4 \
+    dbt-trino==1.7.1 \
+    dbt-postgres==1.7.4 \
+    trino==0.328.0 \
+    jupyterlab-git==0.44.0 \
+    jupyterlab_scheduler==0.6.4 \
+    psycopg2-binary==2.9.9 \
+    sqlalchemy==2.0.23 \
+    pandas==2.1.4 \
+    matplotlib==3.8.2 \
+    seaborn==0.13.0
+
+# Install Trino CLI
+RUN wget -q https://repo1.maven.org/maven2/io/trino/trino-cli/428/trino-cli-428-executable.jar \
+    -O /home/jovyan/.local/bin/trino \
+    && chmod +x /home/jovyan/.local/bin/trino
+
+# Install MinIO client
+RUN wget -q https://dl.min.io/client/mc/release/linux-amd64/mc \
+    -O /home/jovyan/.local/bin/mc \
+    && chmod +x /home/jovyan/.local/bin/mc
+
+# Create directories
+RUN mkdir -p /home/jovyan/.dbt \
+    && mkdir -p /home/jovyan/dbt_projects \
+    && mkdir -p /home/jovyan/notebooks
+
+# Add PATH
+ENV PATH="/home/jovyan/.local/bin:${PATH}"
+
+WORKDIR /home/jovyan
+
+CMD ["start-notebook.sh"]
+

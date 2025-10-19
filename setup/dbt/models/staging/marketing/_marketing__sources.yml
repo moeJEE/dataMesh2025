@@ -1,0 +1,106 @@
+# ============================================================================
+# Marketing Domain - Source Definitions
+# ============================================================================
+
+version: 2
+
+sources:
+  - name: marketing
+    description: Marketing domain data from PostgreSQL
+    database: marketing
+    schema: public
+    
+    tables:
+      - name: campaigns
+        description: Marketing campaigns
+        columns:
+          - name: campaign_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: campaign_name
+            description: Campaign name
+            tests:
+              - not_null
+          
+          - name: channel
+            description: Marketing channel
+            tests:
+              - not_null
+          
+          - name: budget
+            description: Campaign budget
+            tests:
+              - not_null
+          
+          - name: start_date
+            description: Campaign start date
+            tests:
+              - not_null
+          
+          - name: status
+            description: Campaign status
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['active', 'completed', 'paused', 'draft']
+      
+      - name: leads
+        description: Marketing qualified leads
+        columns:
+          - name: lead_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: email
+            description: Lead email
+            tests:
+              - not_null
+          
+          - name: lead_source
+            description: Source of lead
+            tests:
+              - not_null
+          
+          - name: lead_stage
+            description: Current stage in funnel
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['new', 'contacted', 'qualified', 'converted', 'lost']
+          
+          - name: lead_score
+            description: Lead scoring (0-100)
+            tests:
+              - not_null
+      
+      - name: campaign_metrics
+        description: Campaign performance metrics
+        columns:
+          - name: metric_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          
+          - name: campaign_id
+            description: Foreign key to campaigns
+            tests:
+              - not_null
+              - relationships:
+                  to: source('marketing', 'campaigns')
+                  field: campaign_id
+          
+          - name: impressions
+            description: Number of impressions
+          
+          - name: clicks
+            description: Number of clicks
+          
+          - name: conversions
+            description: Number of conversions
+
