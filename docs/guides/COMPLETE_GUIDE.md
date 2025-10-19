@@ -43,9 +43,15 @@
         ┌───────────────────┼───────────────────┐
         ▼                   ▼                   ▼
   ┌───────────┐       ┌───────────┐      ┌──────────┐
-  │   Sales   │       │ Marketing │      │  Minio   │
-  │PostgreSQL │       │PostgreSQL │      │Data Lake │
-  └───────────┘       └───────────┘      └──────────┘
+  │   Sales   │       │ Marketing │      │   HIVE   │
+  │PostgreSQL │       │PostgreSQL │      │Metastore │
+  └───────────┘       └───────────┘      └────┬─────┘
+                                               │
+                                         ┌─────▼─────┐
+                                         │   Minio   │
+                                         │Data Lake  │
+                                         │    (S3)   │
+                                         └───────────┘
 ```
 
 ---
@@ -110,9 +116,15 @@ kubectl get pods --all-namespaces
 - **Data**: 8 campaigns, 15 leads, performance metrics
 
 ### 3. **Data Platform** (`data-platform` namespace)
-- **Trino**: Federated SQL query engine
-- **Minio**: S3-compatible object storage
-- **Hive Metastore**: Metadata management
+- **Trino**: Federated SQL query engine (coordinator + worker)
+- **Minio**: S3-compatible object storage (data lake)
+- **Hive PostgreSQL**: Metadata database
+- **Hive Metastore**: Data lake metadata management (port 9083)
+
+**Trino Catalogs:**
+- `sales` → Sales PostgreSQL
+- `marketing` → Marketing PostgreSQL
+- `hive` → Minio data lake (via Hive Metastore)
 
 ### 4. **JupyterHub** (`jupyterhub` namespace)
 - **Hub**: Multi-user notebook server

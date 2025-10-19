@@ -22,8 +22,8 @@ setup/
 │   ├── deploy_jupyterhub.py       # Deploy JupyterHub
 │   └── jupyterhub-values.yaml     # Helm values
 │
-├── 🔮 trino/                       # Trino stack
-│   └── deploy_trino.py            # Deploy Trino + Minio + Hive
+├── 🔮 trino/                       # Federated query stack
+│   └── deploy_trino.py            # Deploy Trino + Minio + Hive Metastore
 │
 ├── 📊 grafana/                     # Grafana dashboards
 │   └── deploy_grafana.py          # Deploy Grafana + Nginx
@@ -120,10 +120,10 @@ python setup/verify_prerequisites.py
 
 Deploys the entire platform in one command:
 
-1. Core Kubernetes resources (Sales + Marketing)
+1. Core Kubernetes resources (Sales + Marketing PostgreSQL)
 2. Helm + JupyterHub
-3. Trino + Minio + Hive
-4. Grafana + Nginx
+3. Trino + Minio + Hive Metastore (federated queries + data lake)
+4. Grafana + Nginx (dashboards + DBT docs)
 5. Sample data
 
 **Usage:**
@@ -234,21 +234,29 @@ Features:
 
 ---
 
-### Trino Stack
+### Trino Stack (Federated Queries + Data Lake)
 
 **File:** `trino/deploy_trino.py`
 
-Deploys:
-- Trino Coordinator
-- Trino Worker
-- Minio (S3 storage)
-- Hive PostgreSQL
-- Hive Metastore
+**Deploys:**
+- **Trino Coordinator** - Query coordinator (port 30808)
+- **Trino Worker** - Query execution engine
+- **Minio** - S3-compatible data lake (ports 30900/30901)
+- **Hive PostgreSQL** - Metadata database
+- **Hive Metastore** - Data lake metadata service (port 9083)
 
-Enables:
-- Federated SQL queries
-- Cross-domain analytics
-- Data lake access
+**Enables:**
+- ✅ Federated SQL queries across all domains
+- ✅ Cross-domain analytics (Sales + Marketing)
+- ✅ Data lake access via Hive catalog
+- ✅ Three Trino catalogs: `sales`, `marketing`, `hive`
+
+**Connection:**
+```
+Trino → Hive Metastore → Minio (Data Lake)
+     → Sales PostgreSQL
+     → Marketing PostgreSQL
+```
 
 ---
 

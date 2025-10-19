@@ -70,9 +70,11 @@ python setup/deploy_complete_stack.py
 ```
 
 **Deploys:**
-- ✅ Core domains (Sales + Marketing)
-- ✅ JupyterHub (notebooks)
-- ✅ Trino (federated queries)
+- ✅ Core domains (Sales + Marketing PostgreSQL)
+- ✅ JupyterHub (notebooks + DBT)
+- ✅ Trino (federated SQL engine)
+- ✅ Minio (S3 data lake)
+- ✅ Hive Metastore (data lake metadata)
 - ✅ Grafana (dashboards)
 - ✅ Sample data
 
@@ -92,7 +94,7 @@ python setup/kubernetes/deploy_k8s.py
 python setup/helm/install_helm.py
 python setup/helm/deploy_jupyterhub.py
 
-# 3. Trino stack
+# 3. Trino + Minio + Hive stack
 python setup/trino/deploy_trino.py
 
 # 4. Grafana
@@ -147,6 +149,8 @@ marketing-domain    marketing-api-xxxxx                 1/1     Running
 data-platform       trino-coordinator-xxxxx             1/1     Running
 data-platform       trino-worker-xxxxx                  1/1     Running
 data-platform       minio-xxxxx                         1/1     Running
+data-platform       hive-postgres-0                     1/1     Running
+data-platform       hive-metastore-xxxxx                1/1     Running
 jupyterhub          hub-xxxxx                           1/1     Running
 jupyterhub          proxy-xxxxx                         1/1     Running
 monitoring          grafana-xxxxx                       1/1     Running

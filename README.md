@@ -19,6 +19,7 @@ A **production-grade Data Mesh platform** demonstrating modern data engineering:
 - ✅ **Data Transformation** - DBT for ELT pipelines
 - ✅ **Visualization** - Grafana dashboards
 - ✅ **Data Lake** - Minio S3-compatible storage
+- ✅ **Metadata Management** - Hive Metastore for data lake tables
 - ✅ **Metadata Catalog** - DataHub (optional, requires 10-12GB RAM)
 
 ---
@@ -135,9 +136,9 @@ DataMeesh/
             └────────────────┘
 ```
 
-### 2. Federated Queries (Trino)
+### 2. Federated Queries (Trino + Hive)
 
-Query across domains seamlessly:
+Query across domains and data lake seamlessly:
 
 ```sql
 -- Cross-domain: Marketing campaigns → Sales revenue
@@ -150,7 +151,16 @@ JOIN marketing.public.leads l ON c.campaign_id = l.campaign_id
 JOIN sales.public.customers cust ON l.email = cust.email
 JOIN sales.public.orders o ON cust.customer_id = o.customer_id
 GROUP BY 1;
+
+-- Query data lake via Hive Metastore
+SELECT * FROM hive.default.customer_events
+WHERE event_date = CURRENT_DATE;
 ```
+
+**Catalogs available:**
+- `sales` - Sales PostgreSQL
+- `marketing` - Marketing PostgreSQL  
+- `hive` - Minio data lake (via Hive Metastore)
 
 ### 3. Self-Service Analytics (JupyterHub)
 
@@ -189,13 +199,14 @@ Raw Data → DBT Staging → DBT Marts → Analytics
 | **Storage** | PostgreSQL (Sales) | Customer, Order data | 256MB |
 | **Storage** | PostgreSQL (Marketing) | Campaign, Lead data | 128MB |
 | **Query** | Trino | Federated queries | 3GB |
-| **Storage** | Minio | Data lake | 256MB |
+| **Storage** | Minio | Data lake (S3) | 256MB |
+| **Metadata** | Hive Metastore | Data lake metadata | 512MB |
 | **Analytics** | JupyterHub | Notebooks | 900MB |
 | **Transform** | DBT | Data pipelines | - |
 | **Visualization** | Grafana | Dashboards | 256MB |
 | **Catalog** | DataHub (optional) | Metadata | 2-3GB |
 
-**Total:** ~6GB (or ~9GB with DataHub)
+**Total:** ~6.5GB (or ~9GB with DataHub)
 
 ---
 
@@ -230,6 +241,7 @@ python setup/datahub/deploy_datahub.py
 | [**Deployment Guide**](docs/DEPLOYMENT_GUIDE.md) | Step-by-step deployment |
 | [**Cleanup Guide**](docs/CLEANUP_GUIDE.md) | Resource cleanup |
 | [**Complete Guide**](docs/guides/COMPLETE_GUIDE.md) | Comprehensive user guide |
+| [**Hive Metastore Guide**](docs/guides/HIVE_METASTORE_GUIDE.md) | Data lake metadata |
 | [**Architecture**](docs/architecture/) | Technical details |
 | [**Setup Details**](setup/README.md) | Setup folder guide |
 
@@ -342,6 +354,7 @@ MIT License - See LICENSE file for details
 Amazing open-source technologies:
 - [Kubernetes](https://kubernetes.io/)
 - [Trino](https://trino.io/)
+- [Apache Hive](https://hive.apache.org/)
 - [JupyterHub](https://jupyter.org/hub)
 - [DBT](https://www.getdbt.com/)
 - [Grafana](https://grafana.com/)
