@@ -7,6 +7,9 @@
 
 > Complete Data Mesh implementation with federated queries, self-service analytics, data transformation, and metadata management.
 
+📐 **[View Full Architecture Documentation →](docs/FINAL_ARCHITECTURE.md)**  
+👨‍💻 **[Read Data Scientist User Story →](docs/USER_STORY_ARCHITECTURE.md)**
+
 ---
 
 ## 🎯 What is DataMeesh?
