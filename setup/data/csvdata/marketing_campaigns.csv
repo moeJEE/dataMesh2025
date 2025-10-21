@@ -1,0 +1,51 @@
+campaign_id,campaign_name,channel,status,start_date,end_date,budget,impressions,clicks,conversions,ctr,conversion_rate,cost_per_click,roi
+CAMP-001,Back to School Campaign,Email,Completed,2024-01-30,2024-02-12,3753.9,65935,2265,309,3.44,13.64,1.66,2.46
+CAMP-002,Holiday Shopping Spree,Google Ads,Draft,2024-01-11,2024-03-22,9942.59,39573,935,11,2.36,1.18,10.63,2.62
+CAMP-003,Q4 Enterprise Outreach,Email,Paused,2024-07-19,2024-08-20,1793.41,9765,954,208,9.77,21.8,1.88,3.19
+CAMP-004,Valentine's Day Offer,Webinar,Draft,2024-03-28,2024-04-09,1177.06,37113,541,32,1.46,5.91,2.18,3.34
+CAMP-005,Q4 Enterprise Outreach,LinkedIn,Active,2024-06-03,2024-08-03,3856.57,46624,833,115,1.79,13.81,4.63,3.27
+CAMP-006,Black Friday Sale,Google Ads,Completed,2024-02-17,2024-04-26,13352.97,57809,4566,50,7.9,1.1,2.92,1.96
+CAMP-007,Customer Retention Program,Google Ads,Draft,2024-05-02,2024-05-18,4272.6,1592,1183,28,74.31,2.37,3.61,3.22
+CAMP-008,Spring Product Launch,LinkedIn,Paused,2024-03-01,2024-05-28,1769.55,11038,1014,91,9.19,8.97,1.75,3.64
+CAMP-009,Brand Awareness Drive,Email,Draft,2024-02-12,2024-03-18,2798.98,39418,1415,133,3.59,9.4,1.98,3.88
+CAMP-010,Back to School Campaign,Facebook Ads,Completed,2024-02-17,2024-03-04,5641.66,95699,437,500,0.46,114.42,12.91,3.7
+CAMP-011,Black Friday Sale,Email,Active,2024-04-26,2024-07-20,4172.51,43886,1327,112,3.02,8.44,3.14,2.75
+CAMP-012,Cyber Monday Special,Webinar,Draft,2024-01-28,2024-02-09,1015.11,9252,923,43,9.98,4.66,1.1,2.37
+CAMP-013,New Year Promotion,Social Media,Active,2024-03-26,2024-05-19,6894.36,4503,1459,124,32.4,8.5,4.73,3.91
+CAMP-014,Spring Product Launch,Social Media,Active,2024-01-10,2024-03-31,6317.27,11680,1780,170,15.24,9.55,3.55,2.75
+CAMP-015,Back to School Campaign,Social Media,Paused,2024-03-07,2024-03-18,7160.46,49985,409,115,0.82,28.12,17.51,1.59
+CAMP-016,Back to School Campaign,Facebook Ads,Draft,2024-05-30,2024-06-25,2441.24,16283,935,201,5.74,21.5,2.61,2.44
+CAMP-017,Back to School Campaign,Google Ads,Completed,2024-02-05,2024-02-16,14561.67,27885,3469,342,12.44,9.86,4.2,3.02
+CAMP-018,Brand Awareness Drive,Google Ads,Completed,2024-05-14,2024-06-24,3044.41,77429,2622,19,3.39,0.72,1.16,3.87
+CAMP-019,Black Friday Sale,Direct Mail,Active,2024-04-26,2024-06-08,2028.59,19805,107,108,0.54,100.93,18.96,3.37
+CAMP-020,Black Friday Sale,Social Media,Draft,2024-06-09,2024-07-07,6160.6,14500,1875,52,12.93,2.77,3.29,3.07
+CAMP-021,Summer Social Media Blitz,Google Ads,Draft,2024-07-15,2024-09-16,6472.39,40989,774,131,1.89,16.93,8.36,1.55
+CAMP-022,Tech Innovation Showcase,Google Ads,Completed,2024-03-07,2024-03-31,6747.44,98025,876,500,0.89,57.08,7.7,2.34
+CAMP-023,Cyber Monday Special,Social Media,Paused,2024-03-15,2024-06-08,7160.12,12051,1344,164,11.15,12.2,5.33,2.83
+CAMP-024,Black Friday Sale,Email,Active,2024-03-27,2024-05-26,1273.09,34942,1799,229,5.15,12.73,0.71,1.59
+CAMP-025,Holiday Shopping Spree,Facebook Ads,Active,2024-01-16,2024-01-26,4642.0,33058,1630,16,4.93,0.98,2.85,1.61
+CAMP-026,Summer Social Media Blitz,Facebook Ads,Active,2024-06-26,2024-08-16,4150.02,10839,1160,36,10.7,3.1,3.58,2.76
+CAMP-027,Holiday Shopping Spree,Facebook Ads,Active,2024-01-14,2024-03-03,9763.91,3138,1762,128,56.15,7.26,5.54,1.72
+CAMP-028,Brand Awareness Drive,Social Media,Paused,2024-04-20,2024-05-19,3091.26,3034,952,42,31.38,4.41,3.25,3.88
+CAMP-029,Black Friday Sale,Direct Mail,Paused,2024-01-14,2024-02-02,1239.65,29417,1730,95,5.88,5.49,0.72,1.96
+CAMP-030,Summer Social Media Blitz,Google Ads,Paused,2024-05-23,2024-05-31,14241.66,38923,802,48,2.06,5.99,17.76,2.33
+CAMP-031,Cyber Monday Special,Social Media,Completed,2024-06-10,2024-09-08,4537.46,44858,3606,491,8.04,13.62,1.26,2.66
+CAMP-032,Back to School Campaign,LinkedIn,Active,2024-02-03,2024-02-16,1037.76,48143,2148,156,4.46,7.26,0.48,1.59
+CAMP-033,Cyber Monday Special,Direct Mail,Completed,2024-04-25,2024-07-12,1833.88,33848,2531,65,7.48,2.57,0.72,1.52
+CAMP-034,New Year Promotion,Direct Mail,Paused,2024-06-05,2024-06-14,2278.44,11492,1699,179,14.78,10.54,1.34,2.91
+CAMP-035,Holiday Shopping Spree,Social Media,Draft,2024-04-08,2024-06-21,7486.07,38918,555,207,1.43,37.3,13.49,3.69
+CAMP-036,Tech Innovation Showcase,Email,Completed,2024-03-03,2024-03-25,2298.52,88220,1792,387,2.03,21.6,1.28,2.07
+CAMP-037,Back to School Campaign,Direct Mail,Paused,2024-04-22,2024-05-07,2288.74,19860,1813,139,9.13,7.67,1.26,2.3
+CAMP-038,Spring Product Launch,Email,Active,2024-03-06,2024-06-02,2528.2,23528,2081,187,8.84,8.99,1.21,2.11
+CAMP-039,Black Friday Sale,Google Ads,Active,2024-03-29,2024-04-19,11895.91,25420,2456,14,9.66,0.57,4.84,2.76
+CAMP-040,Q4 Enterprise Outreach,Webinar,Draft,2024-06-05,2024-06-13,1410.46,30292,125,245,0.41,196.0,11.28,3.13
+CAMP-041,Tech Innovation Showcase,Webinar,Paused,2024-03-21,2024-05-07,1082.86,22093,529,10,2.39,1.89,2.05,2.7
+CAMP-042,Valentine's Day Offer,Email,Draft,2024-01-30,2024-03-09,2259.16,20752,1669,109,8.04,6.53,1.35,2.58
+CAMP-043,Black Friday Sale,Social Media,Active,2024-02-01,2024-03-09,2956.93,32503,670,124,2.06,18.51,4.41,3.12
+CAMP-044,Black Friday Sale,Social Media,Active,2024-03-02,2024-04-17,5733.18,29032,480,95,1.65,19.79,11.94,2.0
+CAMP-045,Holiday Shopping Spree,Facebook Ads,Paused,2024-04-27,2024-07-17,4481.82,32571,293,204,0.9,69.62,15.3,2.04
+CAMP-046,Customer Retention Program,LinkedIn,Paused,2024-02-21,2024-04-22,1426.94,10839,580,8,5.35,1.38,2.46,1.66
+CAMP-047,Q4 Enterprise Outreach,Social Media,Completed,2024-02-22,2024-04-29,4819.72,20476,1627,57,7.95,3.5,2.96,3.93
+CAMP-048,Holiday Shopping Spree,Social Media,Draft,2024-01-03,2024-03-28,5087.78,42882,2193,113,5.11,5.15,2.32,1.97
+CAMP-049,Holiday Shopping Spree,Webinar,Active,2024-03-12,2024-05-19,509.99,47691,2080,90,4.36,4.33,0.25,3.95
+CAMP-050,Summer Social Media Blitz,Direct Mail,Completed,2024-05-12,2024-08-05,751.1,55166,4142,335,7.51,8.09,0.18,1.5

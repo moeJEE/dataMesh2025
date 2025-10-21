@@ -82,8 +82,27 @@ def main():
         print("❌ Cannot connect to Kubernetes cluster")
         return 1
     
-    # 2. Deploy Trino stack
-    print_header("Step 2/3: Deploying Trino Stack")
+    # 2. Create namespace if not exists
+    print_header("Step 2/4: Creating Namespace")
+    
+    # Check if namespace exists
+    result = subprocess.run(
+        "kubectl get namespace data-platform",
+        shell=True,
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        print("📦 Creating namespace: data-platform")
+        if not run_command("kubectl create namespace data-platform"):
+            print("❌ Failed to create namespace")
+            return 1
+    else:
+        print("✅ Namespace data-platform already exists")
+    
+    # 3. Deploy Trino stack
+    print_header("Step 3/4: Deploying Trino Stack")
     
     print("📦 Deploying components:")
     print("   • Minio (S3-compatible storage)")
@@ -97,8 +116,8 @@ def main():
         print("❌ Failed to deploy Trino stack")
         return 1
     
-    # 3. Wait for pods
-    print_header("Step 3/3: Waiting for Pods")
+    # 4. Wait for pods
+    print_header("Step 4/4: Waiting for Pods")
     
     if not wait_for_pods("data-platform", timeout=300):
         print("⚠️  Some pods may not be ready yet")

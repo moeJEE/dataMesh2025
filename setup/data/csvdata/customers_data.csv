@@ -1,0 +1,201 @@
+customer_id,first_name,last_name,full_name,email,phone,company,industry,country,company_size,created_date,is_active
+1,Tina,Lopez,Tina Lopez,tina.lopez@cloudbase.com,+1-344-984-8295,CloudBase,Non-profit,South Korea,Medium (51-200),2023-07-19,True
+2,Sam,Lopez,Sam Lopez,sam.lopez@byteworks.com,+1-532-454-6544,ByteWorks,Consulting,China,Medium (51-200),2023-11-27,False
+3,Noah,Davis,Noah Davis,noah.davis@infotech.com,+1-494-326-9392,InfoTech,Education,Mexico,Small (1-50),2023-03-16,True
+4,Liam,Jones,Liam Jones,liam.jones@codecraft.com,+1-901-396-9339,CodeCraft,Non-profit,UK,Small (1-50),2023-10-21,True
+5,Liam,Garcia,Liam Garcia,liam.garcia@codecraft.com,+1-893-919-9229,CodeCraft,Non-profit,USA,Enterprise (1000+),2023-01-06,True
+6,Xavier,Davis,Xavier Davis,xavier.davis@cloudsys.com,+1-940-397-2166,CloudSys,Media,France,Large (201-1000),2023-12-11,True
+7,Quinn,Brown,Quinn Brown,quinn.brown@technova.com,+1-278-108-7365,TechNova,Media,France,Medium (51-200),2023-06-14,True
+8,Quinn,Lee,Quinn Lee,quinn.lee@datasoft.com,+1-812-770-6893,DataSoft,Government,China,Small (1-50),2023-03-15,False
+9,Ivy,Martinez,Ivy Martinez,ivy.martinez@datacore.com,+1-615-913-8622,DataCore,Government,Mexico,Small (1-50),2023-06-13,True
+10,Jack,Harris,Jack Harris,jack.harris@infostream.com,+1-195-502-5324,InfoStream,Consulting,Spain,Large (201-1000),2023-06-26,True
+11,Mia,Miller,Mia Miller,mia.miller@datasoft.com,+1-434-918-3097,DataSoft,Manufacturing,Spain,Large (201-1000),2023-02-24,True
+12,Alice,Johnson,Alice Johnson,alice.johnson@cloudbase.com,+1-849-286-6457,CloudBase,Consulting,Mexico,Medium (51-200),2023-01-20,True
+13,Rachel,Martin,Rachel Martin,rachel.martin@codecraft.com,+1-782-941-4269,CodeCraft,Manufacturing,South Korea,Medium (51-200),2023-05-30,True
+14,Kate,Lee,Kate Lee,kate.lee@digitalsolutions.com,+1-579-724-2243,Digital Solutions,Retail,Germany,Medium (51-200),2023-01-16,False
+15,Bob,Wilson,Bob Wilson,bob.wilson@dataflow.com,+1-623-211-9898,DataFlow,Healthcare,Australia,Enterprise (1000+),2023-07-19,True
+16,Rachel,Brown,Rachel Brown,rachel.brown@datasoft.com,+1-211-484-1869,DataSoft,Education,Canada,Medium (51-200),2023-05-01,True
+17,Henry,Lopez,Henry Lopez,henry.lopez@technova.com,+1-854-457-3958,TechNova,Non-profit,Japan,Medium (51-200),2023-07-22,False
+18,Bob,Smith,Bob Smith,bob.smith@infotech.com,+1-791-673-9253,InfoTech,Technology,USA,Medium (51-200),2023-02-23,False
+19,Noah,Jackson,Noah Jackson,noah.jackson@codecraft.com,+1-155-807-9160,CodeCraft,Retail,USA,Large (201-1000),2023-07-26,True
+20,Noah,Brown,Noah Brown,noah.brown@digitalsolutions.com,+1-703-993-8595,Digital Solutions,Media,Brazil,Medium (51-200),2023-04-27,True
+21,Kate,Johnson,Kate Johnson,kate.johnson@datasoft.com,+1-453-333-3169,DataSoft,Media,Australia,Small (1-50),2023-05-24,True
+22,Noah,Brown,Noah Brown,noah.brown@technova.com,+1-302-720-7142,TechNova,Government,Japan,Enterprise (1000+),2023-01-29,True
+23,Bob,Davis,Bob Davis,bob.davis@techcorp.com,+1-943-824-5327,TechCorp,Technology,Mexico,Medium (51-200),2023-03-13,True
+24,David,Hernandez,David Hernandez,david.hernandez@datacore.com,+1-861-630-4917,DataCore,Manufacturing,India,Enterprise (1000+),2023-12-01,True
+25,Zoe,Gonzalez,Zoe Gonzalez,zoe.gonzalez@cloudbase.com,+1-410-733-5812,CloudBase,Technology,Japan,Small (1-50),2023-02-25,True
+26,Mia,Miller,Mia Miller,mia.miller@techcorp.com,+1-258-939-2945,TechCorp,Media,Mexico,Small (1-50),2023-09-23,True
+27,Jack,Miller,Jack Miller,jack.miller@infotech.com,+1-693-230-6210,InfoTech,Manufacturing,China,Medium (51-200),2023-08-19,True
+28,Ivy,Taylor,Ivy Taylor,ivy.taylor@cloudbase.com,+1-299-505-1289,CloudBase,Education,Netherlands,Large (201-1000),2023-02-11,True
+29,Henry,Gonzalez,Henry Gonzalez,henry.gonzalez@datacore.com,+1-385-666-9845,DataCore,Government,South Korea,Medium (51-200),2023-10-04,False
+30,Kate,Lee,Kate Lee,kate.lee@datacore.com,+1-557-334-3482,DataCore,Education,Germany,Medium (51-200),2023-08-16,False
+31,Frank,Lee,Frank Lee,frank.lee@datacore.com,+1-900-191-9026,DataCore,Retail,Canada,Medium (51-200),2023-08-05,True
+32,Xavier,Hernandez,Xavier Hernandez,xavier.hernandez@infotech.com,+1-781-114-2539,InfoTech,Healthcare,Australia,Enterprise (1000+),2023-05-24,True
+33,David,Moore,David Moore,david.moore@cloudsys.com,+1-963-228-6352,CloudSys,Finance,Netherlands,Large (201-1000),2023-11-22,True
+34,Carol,Taylor,Carol Taylor,carol.taylor@datacore.com,+1-139-808-6723,DataCore,Non-profit,Canada,Medium (51-200),2023-09-09,True
+35,Mia,Anderson,Mia Anderson,mia.anderson@technova.com,+1-466-522-8309,TechNova,Finance,Mexico,Large (201-1000),2023-06-26,True
+36,Carol,Brown,Carol Brown,carol.brown@datasoft.com,+1-752-426-4160,DataSoft,Media,Spain,Enterprise (1000+),2023-01-03,False
+37,Zoe,Wilson,Zoe Wilson,zoe.wilson@codecraft.com,+1-293-520-5820,CodeCraft,Healthcare,Mexico,Large (201-1000),2023-11-10,True
+38,Uma,Clark,Uma Clark,uma.clark@infostream.com,+1-948-201-3071,InfoStream,Manufacturing,South Korea,Small (1-50),2023-03-29,False
+39,Wendy,Clark,Wendy Clark,wendy.clark@technova.com,+1-463-819-7767,TechNova,Finance,South Korea,Medium (51-200),2023-04-29,False
+40,Uma,Clark,Uma Clark,uma.clark@cloudbase.com,+1-430-989-6829,CloudBase,Technology,Netherlands,Large (201-1000),2023-02-08,False
+41,Rachel,Martin,Rachel Martin,rachel.martin@techcorp.com,+1-451-631-2001,TechCorp,Finance,Brazil,Large (201-1000),2023-02-24,False
+42,Grace,Moore,Grace Moore,grace.moore@byteworks.com,+1-235-944-3520,ByteWorks,Retail,Netherlands,Enterprise (1000+),2023-04-08,True
+43,Carol,Thomas,Carol Thomas,carol.thomas@techcorp.com,+1-494-974-3331,TechCorp,Consulting,Australia,Medium (51-200),2023-03-14,True
+44,Zoe,Davis,Zoe Davis,zoe.davis@techcorp.com,+1-320-903-1822,TechCorp,Healthcare,Australia,Small (1-50),2023-02-19,False
+45,Victor,Jones,Victor Jones,victor.jones@digitalsolutions.com,+1-919-325-4691,Digital Solutions,Retail,Australia,Medium (51-200),2023-05-26,True
+46,Zoe,Johnson,Zoe Johnson,zoe.johnson@digitalsolutions.com,+1-761-792-9805,Digital Solutions,Finance,Japan,Small (1-50),2023-12-10,True
+47,David,Jones,David Jones,david.jones@dataflow.com,+1-669-560-5095,DataFlow,Finance,India,Small (1-50),2023-06-04,False
+48,Yara,Davis,Yara Davis,yara.davis@datasoft.com,+1-685-680-3611,DataSoft,Technology,Italy,Medium (51-200),2023-10-11,True
+49,Jack,Garcia,Jack Garcia,jack.garcia@infostream.com,+1-943-893-9244,InfoStream,Media,Mexico,Enterprise (1000+),2023-03-21,True
+50,Jack,Davis,Jack Davis,jack.davis@technova.com,+1-120-487-2640,TechNova,Media,Australia,Enterprise (1000+),2023-04-23,True
+51,Tina,Lopez,Tina Lopez,tina.lopez@techcorp.com,+1-251-684-1573,TechCorp,Education,Australia,Medium (51-200),2023-11-08,False
+52,Zoe,Moore,Zoe Moore,zoe.moore@cloudsys.com,+1-410-763-3391,CloudSys,Government,Canada,Medium (51-200),2023-12-05,True
+53,Eva,Lee,Eva Lee,eva.lee@datasoft.com,+1-268-545-3860,DataSoft,Education,Brazil,Medium (51-200),2023-05-23,True
+54,Sam,Lopez,Sam Lopez,sam.lopez@digitalsolutions.com,+1-660-804-8720,Digital Solutions,Manufacturing,Italy,Large (201-1000),2023-02-18,True
+55,Zoe,Lopez,Zoe Lopez,zoe.lopez@infostream.com,+1-610-550-5399,InfoStream,Education,Mexico,Small (1-50),2023-05-29,False
+56,Noah,Harris,Noah Harris,noah.harris@cloudbase.com,+1-175-563-2904,CloudBase,Education,South Korea,Medium (51-200),2023-01-29,False
+57,Xavier,Anderson,Xavier Anderson,xavier.anderson@digitalsolutions.com,+1-954-525-4055,Digital Solutions,Retail,Canada,Enterprise (1000+),2023-03-30,True
+58,Jack,Miller,Jack Miller,jack.miller@byteworks.com,+1-232-900-4735,ByteWorks,Healthcare,Canada,Medium (51-200),2023-04-15,True
+59,Grace,Martinez,Grace Martinez,grace.martinez@infostream.com,+1-654-109-4727,InfoStream,Manufacturing,Australia,Enterprise (1000+),2023-12-09,True
+60,Uma,Hernandez,Uma Hernandez,uma.hernandez@infostream.com,+1-948-839-6147,InfoStream,Healthcare,India,Enterprise (1000+),2023-11-16,True
+61,Xavier,Thompson,Xavier Thompson,xavier.thompson@datasoft.com,+1-502-282-2213,DataSoft,Technology,UK,Large (201-1000),2023-10-17,True
+62,Wendy,Thompson,Wendy Thompson,wendy.thompson@infostream.com,+1-455-153-6340,InfoStream,Healthcare,USA,Medium (51-200),2023-08-03,True
+63,Frank,Jones,Frank Jones,frank.jones@datacore.com,+1-705-488-9350,DataCore,Retail,Mexico,Enterprise (1000+),2023-05-12,True
+64,Olivia,Moore,Olivia Moore,olivia.moore@dataflow.com,+1-347-415-3610,DataFlow,Retail,USA,Medium (51-200),2023-09-28,True
+65,Alice,Smith,Alice Smith,alice.smith@dataflow.com,+1-872-311-1933,DataFlow,Government,China,Medium (51-200),2023-01-25,True
+66,Rachel,Johnson,Rachel Johnson,rachel.johnson@codecraft.com,+1-724-687-1053,CodeCraft,Non-profit,UK,Medium (51-200),2023-01-20,False
+67,Noah,Martin,Noah Martin,noah.martin@datacore.com,+1-192-128-4134,DataCore,Manufacturing,France,Enterprise (1000+),2023-10-12,True
+68,Carol,Johnson,Carol Johnson,carol.johnson@techcorp.com,+1-920-488-9272,TechCorp,Retail,UK,Small (1-50),2023-03-28,True
+69,Zoe,Davis,Zoe Davis,zoe.davis@byteworks.com,+1-241-129-1360,ByteWorks,Media,India,Small (1-50),2023-08-25,False
+70,Sam,Smith,Sam Smith,sam.smith@infostream.com,+1-677-111-1769,InfoStream,Technology,Japan,Small (1-50),2023-05-26,True
+71,Jack,Brown,Jack Brown,jack.brown@datacore.com,+1-592-485-2182,DataCore,Healthcare,India,Medium (51-200),2023-04-12,True
+72,Quinn,Martin,Quinn Martin,quinn.martin@digitalsolutions.com,+1-170-778-7753,Digital Solutions,Non-profit,South Korea,Small (1-50),2023-03-18,True
+73,Paul,Harris,Paul Harris,paul.harris@infotech.com,+1-908-670-6216,InfoTech,Media,India,Large (201-1000),2023-06-13,True
+74,Alice,Taylor,Alice Taylor,alice.taylor@technova.com,+1-534-457-8288,TechNova,Retail,Canada,Medium (51-200),2023-06-29,True
+75,David,Gonzalez,David Gonzalez,david.gonzalez@infotech.com,+1-785-673-6226,InfoTech,Retail,USA,Enterprise (1000+),2023-07-08,False
+76,Quinn,Miller,Quinn Miller,quinn.miller@codecraft.com,+1-918-855-8486,CodeCraft,Technology,Mexico,Small (1-50),2023-10-20,False
+77,Jack,Brown,Jack Brown,jack.brown@cloudbase.com,+1-784-975-8377,CloudBase,Healthcare,Australia,Enterprise (1000+),2023-08-02,True
+78,Bob,Johnson,Bob Johnson,bob.johnson@digitalsolutions.com,+1-461-599-5818,Digital Solutions,Manufacturing,Netherlands,Medium (51-200),2023-12-07,True
+79,Carol,Clark,Carol Clark,carol.clark@dataflow.com,+1-240-502-6390,DataFlow,Healthcare,Canada,Enterprise (1000+),2023-01-23,True
+80,Liam,Thompson,Liam Thompson,liam.thompson@digitalsolutions.com,+1-690-699-8473,Digital Solutions,Finance,Australia,Medium (51-200),2023-07-25,True
+81,Kate,Brown,Kate Brown,kate.brown@datasoft.com,+1-367-587-9440,DataSoft,Healthcare,Brazil,Enterprise (1000+),2023-04-10,True
+82,Zoe,White,Zoe White,zoe.white@infostream.com,+1-931-747-3570,InfoStream,Media,Germany,Small (1-50),2023-09-03,False
+83,Wendy,Smith,Wendy Smith,wendy.smith@dataflow.com,+1-849-247-6016,DataFlow,Education,Spain,Small (1-50),2023-11-03,False
+84,Bob,Gonzalez,Bob Gonzalez,bob.gonzalez@cloudbase.com,+1-914-442-1043,CloudBase,Consulting,Italy,Small (1-50),2023-07-15,True
+85,Mia,Jones,Mia Jones,mia.jones@dataflow.com,+1-307-762-6837,DataFlow,Manufacturing,South Korea,Enterprise (1000+),2023-09-13,True
+86,Frank,White,Frank White,frank.white@techcorp.com,+1-191-568-1978,TechCorp,Consulting,South Korea,Enterprise (1000+),2023-04-03,True
+87,Noah,Davis,Noah Davis,noah.davis@byteworks.com,+1-822-536-5418,ByteWorks,Manufacturing,Italy,Enterprise (1000+),2023-06-14,True
+88,Rachel,Davis,Rachel Davis,rachel.davis@infotech.com,+1-752-991-5467,InfoTech,Consulting,Netherlands,Enterprise (1000+),2023-02-26,True
+89,Jack,Harris,Jack Harris,jack.harris@cloudbase.com,+1-452-693-5823,CloudBase,Non-profit,India,Medium (51-200),2023-03-27,True
+90,Paul,Harris,Paul Harris,paul.harris@infostream.com,+1-202-395-5741,InfoStream,Manufacturing,Netherlands,Medium (51-200),2023-03-22,True
+91,Carol,Lee,Carol Lee,carol.lee@cloudsys.com,+1-373-251-7652,CloudSys,Consulting,Germany,Large (201-1000),2023-07-12,True
+92,David,Anderson,David Anderson,david.anderson@digitalsolutions.com,+1-700-267-9837,Digital Solutions,Finance,China,Large (201-1000),2023-08-09,True
+93,Noah,Thompson,Noah Thompson,noah.thompson@byteworks.com,+1-865-826-7766,ByteWorks,Education,Italy,Enterprise (1000+),2023-11-21,True
+94,Uma,Clark,Uma Clark,uma.clark@techcorp.com,+1-385-552-3455,TechCorp,Education,Australia,Medium (51-200),2023-12-17,True
+95,Eva,Jones,Eva Jones,eva.jones@datasoft.com,+1-826-634-3872,DataSoft,Technology,India,Large (201-1000),2023-05-09,False
+96,Zoe,Taylor,Zoe Taylor,zoe.taylor@dataflow.com,+1-157-479-2267,DataFlow,Finance,Spain,Medium (51-200),2023-06-21,False
+97,Sam,Martin,Sam Martin,sam.martin@infotech.com,+1-864-550-6016,InfoTech,Non-profit,UK,Enterprise (1000+),2023-07-07,True
+98,Zoe,Thompson,Zoe Thompson,zoe.thompson@digitalsolutions.com,+1-610-752-6695,Digital Solutions,Consulting,Brazil,Large (201-1000),2023-03-22,False
+99,Tina,Harris,Tina Harris,tina.harris@cloudbase.com,+1-840-884-2727,CloudBase,Education,France,Enterprise (1000+),2023-07-02,False
+100,Jack,Gonzalez,Jack Gonzalez,jack.gonzalez@digitalsolutions.com,+1-991-779-6749,Digital Solutions,Government,Germany,Enterprise (1000+),2023-04-23,True
+101,Mia,Brown,Mia Brown,mia.brown@dataflow.com,+1-260-743-5293,DataFlow,Manufacturing,Germany,Enterprise (1000+),2023-07-03,True
+102,Noah,Lee,Noah Lee,noah.lee@datacore.com,+1-484-261-8238,DataCore,Retail,UK,Medium (51-200),2023-10-04,True
+103,Victor,Miller,Victor Miller,victor.miller@cloudbase.com,+1-389-649-6356,CloudBase,Finance,UK,Medium (51-200),2023-09-24,True
+104,Mia,Davis,Mia Davis,mia.davis@infotech.com,+1-515-537-3810,InfoTech,Technology,Netherlands,Small (1-50),2023-12-23,True
+105,Sam,Lopez,Sam Lopez,sam.lopez@infostream.com,+1-967-653-8263,InfoStream,Non-profit,USA,Large (201-1000),2023-10-27,False
+106,Yara,White,Yara White,yara.white@infotech.com,+1-752-849-6143,InfoTech,Technology,Spain,Enterprise (1000+),2023-11-10,True
+107,Kate,Hernandez,Kate Hernandez,kate.hernandez@codecraft.com,+1-935-853-3186,CodeCraft,Consulting,Germany,Medium (51-200),2023-08-25,True
+108,Uma,Jackson,Uma Jackson,uma.jackson@infotech.com,+1-438-311-6782,InfoTech,Retail,China,Enterprise (1000+),2023-10-25,False
+109,Grace,Thomas,Grace Thomas,grace.thomas@techcorp.com,+1-854-757-2007,TechCorp,Manufacturing,South Korea,Medium (51-200),2023-11-06,True
+110,Kate,Wilson,Kate Wilson,kate.wilson@infostream.com,+1-730-750-2013,InfoStream,Education,Italy,Enterprise (1000+),2023-07-12,True
+111,Kate,Harris,Kate Harris,kate.harris@cloudsys.com,+1-584-980-3644,CloudSys,Consulting,Italy,Large (201-1000),2023-11-08,True
+112,Paul,Wilson,Paul Wilson,paul.wilson@techcorp.com,+1-533-409-4758,TechCorp,Retail,Germany,Enterprise (1000+),2023-02-19,True
+113,Tina,Garcia,Tina Garcia,tina.garcia@datasoft.com,+1-197-827-5741,DataSoft,Media,Germany,Small (1-50),2023-01-22,True
+114,Xavier,White,Xavier White,xavier.white@cloudbase.com,+1-446-110-3424,CloudBase,Technology,Japan,Small (1-50),2023-05-23,True
+115,Kate,Lopez,Kate Lopez,kate.lopez@datasoft.com,+1-269-193-4988,DataSoft,Finance,China,Medium (51-200),2023-10-31,True
+116,Liam,Martinez,Liam Martinez,liam.martinez@datacore.com,+1-914-969-1398,DataCore,Manufacturing,USA,Medium (51-200),2023-07-11,True
+117,Mia,Jackson,Mia Jackson,mia.jackson@infostream.com,+1-101-385-6504,InfoStream,Retail,India,Small (1-50),2023-04-05,True
+118,Wendy,White,Wendy White,wendy.white@digitalsolutions.com,+1-111-273-5395,Digital Solutions,Media,Germany,Medium (51-200),2023-01-31,True
+119,Zoe,Jackson,Zoe Jackson,zoe.jackson@techcorp.com,+1-783-751-9975,TechCorp,Government,Australia,Small (1-50),2023-07-05,True
+120,Victor,Lopez,Victor Lopez,victor.lopez@cloudbase.com,+1-922-911-6855,CloudBase,Technology,France,Medium (51-200),2023-01-24,True
+121,Olivia,Lopez,Olivia Lopez,olivia.lopez@infotech.com,+1-768-431-9112,InfoTech,Consulting,Spain,Enterprise (1000+),2023-02-22,False
+122,Ivy,Gonzalez,Ivy Gonzalez,ivy.gonzalez@techcorp.com,+1-431-661-5426,TechCorp,Consulting,Mexico,Large (201-1000),2023-03-10,True
+123,Paul,Taylor,Paul Taylor,paul.taylor@infostream.com,+1-484-538-9027,InfoStream,Manufacturing,Mexico,Large (201-1000),2023-03-12,True
+124,Quinn,Lopez,Quinn Lopez,quinn.lopez@byteworks.com,+1-398-562-7955,ByteWorks,Media,Italy,Small (1-50),2023-06-29,True
+125,Wendy,Thompson,Wendy Thompson,wendy.thompson@cloudsys.com,+1-247-145-6393,CloudSys,Media,India,Large (201-1000),2023-03-03,True
+126,Xavier,Miller,Xavier Miller,xavier.miller@cloudsys.com,+1-344-317-4171,CloudSys,Education,Japan,Small (1-50),2023-09-07,True
+127,Wendy,Martinez,Wendy Martinez,wendy.martinez@cloudbase.com,+1-938-611-4966,CloudBase,Manufacturing,Italy,Small (1-50),2023-11-11,False
+128,Rachel,Jackson,Rachel Jackson,rachel.jackson@codecraft.com,+1-294-355-1500,CodeCraft,Manufacturing,Australia,Medium (51-200),2023-05-19,True
+129,Paul,White,Paul White,paul.white@digitalsolutions.com,+1-135-119-6335,Digital Solutions,Government,Mexico,Small (1-50),2023-09-10,True
+130,Alice,White,Alice White,alice.white@dataflow.com,+1-458-926-1056,DataFlow,Non-profit,Australia,Medium (51-200),2023-03-21,False
+131,Tina,Miller,Tina Miller,tina.miller@cloudsys.com,+1-471-774-1461,CloudSys,Media,Germany,Small (1-50),2023-02-09,True
+132,Noah,Martin,Noah Martin,noah.martin@datacore.com,+1-528-565-2479,DataCore,Government,Japan,Small (1-50),2023-09-02,True
+133,Wendy,Anderson,Wendy Anderson,wendy.anderson@techcorp.com,+1-387-487-8660,TechCorp,Consulting,Italy,Large (201-1000),2023-01-31,True
+134,Eva,Garcia,Eva Garcia,eva.garcia@cloudsys.com,+1-101-580-9447,CloudSys,Manufacturing,USA,Small (1-50),2023-09-26,True
+135,Carol,White,Carol White,carol.white@digitalsolutions.com,+1-916-834-4324,Digital Solutions,Consulting,Spain,Medium (51-200),2023-09-14,True
+136,Olivia,Smith,Olivia Smith,olivia.smith@cloudbase.com,+1-541-464-6843,CloudBase,Government,China,Small (1-50),2023-10-25,True
+137,Zoe,Thompson,Zoe Thompson,zoe.thompson@datasoft.com,+1-596-907-7284,DataSoft,Education,France,Large (201-1000),2023-08-10,True
+138,Liam,Garcia,Liam Garcia,liam.garcia@digitalsolutions.com,+1-878-925-6625,Digital Solutions,Education,France,Medium (51-200),2023-12-07,True
+139,Bob,Taylor,Bob Taylor,bob.taylor@datacore.com,+1-534-265-1891,DataCore,Finance,Germany,Enterprise (1000+),2023-07-14,False
+140,Paul,Garcia,Paul Garcia,paul.garcia@infostream.com,+1-976-518-4789,InfoStream,Technology,UK,Large (201-1000),2023-12-20,False
+141,Eva,Jones,Eva Jones,eva.jones@cloudbase.com,+1-216-277-5687,CloudBase,Government,South Korea,Medium (51-200),2023-02-19,True
+142,Henry,Miller,Henry Miller,henry.miller@datacore.com,+1-587-684-4545,DataCore,Education,Italy,Large (201-1000),2023-12-22,False
+143,Alice,Johnson,Alice Johnson,alice.johnson@techcorp.com,+1-453-967-2910,TechCorp,Technology,Netherlands,Large (201-1000),2023-12-04,True
+144,Xavier,Thompson,Xavier Thompson,xavier.thompson@byteworks.com,+1-296-209-2724,ByteWorks,Retail,Spain,Large (201-1000),2023-05-30,False
+145,Mia,Anderson,Mia Anderson,mia.anderson@byteworks.com,+1-528-971-4741,ByteWorks,Media,Netherlands,Enterprise (1000+),2023-04-29,True
+146,Liam,Jones,Liam Jones,liam.jones@cloudbase.com,+1-685-473-6232,CloudBase,Technology,Japan,Large (201-1000),2023-09-30,True
+147,Uma,Wilson,Uma Wilson,uma.wilson@cloudsys.com,+1-718-123-5421,CloudSys,Consulting,Brazil,Small (1-50),2023-11-12,False
+148,Jack,Martin,Jack Martin,jack.martin@digitalsolutions.com,+1-227-423-9007,Digital Solutions,Education,UK,Medium (51-200),2023-08-09,False
+149,Paul,Jackson,Paul Jackson,paul.jackson@datasoft.com,+1-330-773-9109,DataSoft,Non-profit,UK,Medium (51-200),2023-05-11,True
+150,Olivia,Hernandez,Olivia Hernandez,olivia.hernandez@cloudsys.com,+1-428-147-1043,CloudSys,Manufacturing,Japan,Large (201-1000),2023-06-13,True
+151,Uma,Thomas,Uma Thomas,uma.thomas@cloudbase.com,+1-418-297-5959,CloudBase,Education,Spain,Enterprise (1000+),2023-09-30,True
+152,Kate,Moore,Kate Moore,kate.moore@datacore.com,+1-611-556-4319,DataCore,Media,Canada,Large (201-1000),2023-10-20,True
+153,Rachel,Lopez,Rachel Lopez,rachel.lopez@codecraft.com,+1-251-378-5590,CodeCraft,Finance,France,Small (1-50),2023-09-02,True
+154,Wendy,Gonzalez,Wendy Gonzalez,wendy.gonzalez@byteworks.com,+1-728-458-2313,ByteWorks,Consulting,Australia,Large (201-1000),2023-09-07,False
+155,Yara,Miller,Yara Miller,yara.miller@cloudsys.com,+1-921-547-2441,CloudSys,Technology,Germany,Medium (51-200),2023-01-06,True
+156,Frank,Wilson,Frank Wilson,frank.wilson@dataflow.com,+1-529-493-8974,DataFlow,Non-profit,USA,Large (201-1000),2023-03-06,True
+157,Rachel,Gonzalez,Rachel Gonzalez,rachel.gonzalez@cloudbase.com,+1-220-892-6627,CloudBase,Education,UK,Enterprise (1000+),2023-10-24,True
+158,Olivia,Davis,Olivia Davis,olivia.davis@codecraft.com,+1-170-637-7538,CodeCraft,Healthcare,India,Small (1-50),2023-09-30,True
+159,Quinn,Smith,Quinn Smith,quinn.smith@infostream.com,+1-747-259-3857,InfoStream,Education,Italy,Large (201-1000),2023-12-15,True
+160,Rachel,Jackson,Rachel Jackson,rachel.jackson@datacore.com,+1-581-231-9658,DataCore,Media,Netherlands,Enterprise (1000+),2023-11-26,True
+161,Frank,Smith,Frank Smith,frank.smith@codecraft.com,+1-130-978-5559,CodeCraft,Finance,Brazil,Small (1-50),2023-04-02,True
+162,Liam,Martin,Liam Martin,liam.martin@byteworks.com,+1-281-420-4429,ByteWorks,Manufacturing,Canada,Large (201-1000),2023-11-25,True
+163,Bob,Hernandez,Bob Hernandez,bob.hernandez@digitalsolutions.com,+1-281-481-8778,Digital Solutions,Technology,USA,Small (1-50),2023-03-13,False
+164,Kate,Brown,Kate Brown,kate.brown@techcorp.com,+1-722-785-2176,TechCorp,Healthcare,Japan,Small (1-50),2023-10-29,False
+165,Liam,Lee,Liam Lee,liam.lee@cloudbase.com,+1-286-214-1480,CloudBase,Retail,India,Small (1-50),2023-12-10,True
+166,Frank,Martin,Frank Martin,frank.martin@digitalsolutions.com,+1-736-573-6553,Digital Solutions,Government,Spain,Large (201-1000),2023-04-20,True
+167,Quinn,Smith,Quinn Smith,quinn.smith@digitalsolutions.com,+1-816-512-3881,Digital Solutions,Government,USA,Large (201-1000),2023-12-12,True
+168,Grace,Jones,Grace Jones,grace.jones@codecraft.com,+1-587-353-9809,CodeCraft,Manufacturing,Mexico,Medium (51-200),2023-05-09,True
+169,Wendy,Jackson,Wendy Jackson,wendy.jackson@datacore.com,+1-940-178-1150,DataCore,Education,UK,Small (1-50),2023-12-10,True
+170,David,Wilson,David Wilson,david.wilson@codecraft.com,+1-412-715-9873,CodeCraft,Technology,India,Small (1-50),2023-01-20,True
+171,Alice,Hernandez,Alice Hernandez,alice.hernandez@byteworks.com,+1-110-257-4443,ByteWorks,Technology,Canada,Medium (51-200),2023-09-20,True
+172,David,Lopez,David Lopez,david.lopez@digitalsolutions.com,+1-118-638-7423,Digital Solutions,Finance,Australia,Large (201-1000),2023-11-03,False
+173,Kate,Hernandez,Kate Hernandez,kate.hernandez@datacore.com,+1-436-277-2879,DataCore,Non-profit,India,Enterprise (1000+),2023-04-08,True
+174,Quinn,Harris,Quinn Harris,quinn.harris@datasoft.com,+1-353-414-5741,DataSoft,Healthcare,Spain,Medium (51-200),2023-07-19,True
+175,Carol,Jackson,Carol Jackson,carol.jackson@datasoft.com,+1-531-450-7442,DataSoft,Retail,Spain,Small (1-50),2023-04-14,True
+176,Zoe,Wilson,Zoe Wilson,zoe.wilson@cloudsys.com,+1-848-117-5544,CloudSys,Consulting,China,Medium (51-200),2023-09-16,True
+177,David,Anderson,David Anderson,david.anderson@datacore.com,+1-948-683-8437,DataCore,Finance,Netherlands,Large (201-1000),2023-10-26,True
+178,Kate,Smith,Kate Smith,kate.smith@techcorp.com,+1-288-885-1561,TechCorp,Media,France,Enterprise (1000+),2023-10-30,True
+179,Uma,Jackson,Uma Jackson,uma.jackson@datasoft.com,+1-752-934-3506,DataSoft,Non-profit,France,Small (1-50),2023-10-12,True
+180,Paul,Taylor,Paul Taylor,paul.taylor@infotech.com,+1-498-773-1552,InfoTech,Retail,France,Small (1-50),2023-12-23,True
+181,Alice,Johnson,Alice Johnson,alice.johnson@infostream.com,+1-902-614-6342,InfoStream,Media,Germany,Medium (51-200),2023-09-15,True
+182,Frank,Lee,Frank Lee,frank.lee@codecraft.com,+1-190-277-3202,CodeCraft,Healthcare,USA,Small (1-50),2023-05-06,True
+183,Bob,Thompson,Bob Thompson,bob.thompson@infostream.com,+1-417-137-5302,InfoStream,Non-profit,Japan,Medium (51-200),2023-04-05,True
+184,Noah,Anderson,Noah Anderson,noah.anderson@codecraft.com,+1-374-487-4628,CodeCraft,Education,USA,Large (201-1000),2023-05-22,True
+185,Mia,Gonzalez,Mia Gonzalez,mia.gonzalez@infostream.com,+1-205-374-2676,InfoStream,Media,Italy,Small (1-50),2023-08-02,False
+186,Kate,Taylor,Kate Taylor,kate.taylor@cloudbase.com,+1-649-490-1141,CloudBase,Retail,Australia,Medium (51-200),2023-03-12,True
+187,Paul,Clark,Paul Clark,paul.clark@cloudsys.com,+1-792-821-4712,CloudSys,Media,South Korea,Large (201-1000),2023-04-05,True
+188,Mia,Lee,Mia Lee,mia.lee@techcorp.com,+1-457-125-3980,TechCorp,Media,Mexico,Enterprise (1000+),2023-04-21,True
+189,Rachel,Jones,Rachel Jones,rachel.jones@techcorp.com,+1-314-442-3963,TechCorp,Retail,Australia,Enterprise (1000+),2023-04-10,False
+190,Alice,Brown,Alice Brown,alice.brown@datasoft.com,+1-867-240-4273,DataSoft,Retail,South Korea,Enterprise (1000+),2023-08-09,True
+191,Ivy,Garcia,Ivy Garcia,ivy.garcia@codecraft.com,+1-978-159-8411,CodeCraft,Finance,Canada,Enterprise (1000+),2023-05-02,True
+192,Alice,Lopez,Alice Lopez,alice.lopez@digitalsolutions.com,+1-825-604-3755,Digital Solutions,Healthcare,France,Large (201-1000),2023-08-03,True
+193,Quinn,Hernandez,Quinn Hernandez,quinn.hernandez@infostream.com,+1-646-109-1653,InfoStream,Healthcare,Canada,Large (201-1000),2023-10-05,True
+194,Henry,Wilson,Henry Wilson,henry.wilson@datacore.com,+1-441-550-3289,DataCore,Media,India,Large (201-1000),2023-06-12,False
+195,David,Moore,David Moore,david.moore@codecraft.com,+1-174-666-9543,CodeCraft,Media,Netherlands,Enterprise (1000+),2023-06-16,True
+196,Paul,White,Paul White,paul.white@dataflow.com,+1-694-172-5934,DataFlow,Finance,South Korea,Enterprise (1000+),2023-03-07,True
+197,Wendy,Wilson,Wendy Wilson,wendy.wilson@techcorp.com,+1-829-652-1207,TechCorp,Finance,Netherlands,Enterprise (1000+),2023-07-03,True
+198,Tina,Harris,Tina Harris,tina.harris@datacore.com,+1-195-736-8355,DataCore,Healthcare,Germany,Medium (51-200),2023-07-26,True
+199,Noah,White,Noah White,noah.white@datacore.com,+1-555-440-9267,DataCore,Consulting,Spain,Medium (51-200),2023-03-19,False
+200,Yara,Garcia,Yara Garcia,yara.garcia@datacore.com,+1-535-799-3215,DataCore,Manufacturing,Japan,Small (1-50),2023-10-03,True

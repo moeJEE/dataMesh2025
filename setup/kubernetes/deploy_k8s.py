@@ -80,7 +80,7 @@ def main():
     # 1. Check kubectl
     print_header("Step 1/4: Verifying kubectl")
     
-    if not run_command("kubectl version --client --short"):
+    if not run_command("kubectl version --client"):
         print("❌ kubectl not found. Please install kubectl first.")
         return 1
     

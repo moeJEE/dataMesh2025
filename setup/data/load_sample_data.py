@@ -89,8 +89,69 @@ def main():
     marketing_pod = result.stdout.strip().split()[0]
     print(f"✅ Found Marketing pod: {marketing_pod}")
     
-    # 2. Load Sales data
-    print_header("Step 2/3: Loading Sales Domain Data")
+    # 2. Create Sales tables
+    print_header("Step 2/4: Creating Sales Domain Tables")
+    
+    sales_create_sql = """
+-- Sales Domain Table Creation
+
+-- Customers table
+CREATE TABLE IF NOT EXISTS customers (
+    customer_id SERIAL PRIMARY KEY,
+    customer_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    phone VARCHAR(50),
+    country VARCHAR(100),
+    industry VARCHAR(100),
+    company_size VARCHAR(50),
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Products table
+CREATE TABLE IF NOT EXISTS products (
+    product_id SERIAL PRIMARY KEY,
+    product_name VARCHAR(255) UNIQUE NOT NULL,
+    category VARCHAR(100),
+    price NUMERIC(10,2),
+    stock_quantity INTEGER,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Orders table
+CREATE TABLE IF NOT EXISTS orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INTEGER REFERENCES customers(customer_id),
+    order_date TIMESTAMP,
+    order_status VARCHAR(50),
+    total_amount NUMERIC(10,2),
+    payment_method VARCHAR(50),
+    sales_rep VARCHAR(100),
+    region VARCHAR(100),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Order Items table
+CREATE TABLE IF NOT EXISTS order_items (
+    order_item_id SERIAL PRIMARY KEY,
+    order_id INTEGER REFERENCES orders(order_id),
+    product_id INTEGER REFERENCES products(product_id),
+    quantity INTEGER,
+    unit_price NUMERIC(10,2),
+    discount NUMERIC(5,2),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+"""
+    
+    if not execute_sql("sales-domain", sales_pod, "sales_db", "sales_user", sales_create_sql):
+        print("❌ Failed to create Sales tables")
+        return 1
+    
+    print("✅ Sales tables created")
+    
+    # 3. Load Sales data
+    print_header("Step 3/4: Loading Sales Domain Data")
     
     sales_sql = """
 -- Sales Domain Sample Data
@@ -170,8 +231,77 @@ ON CONFLICT DO NOTHING;
         print("❌ Failed to load Sales data")
         return 1
     
-    # 3. Load Marketing data
-    print_header("Step 3/3: Loading Marketing Domain Data")
+    # 4. Create Marketing tables
+    print_header("Step 4/5: Creating Marketing Domain Tables")
+    
+    marketing_create_sql = """
+-- Marketing Domain Table Creation
+
+-- Campaigns table
+CREATE TABLE IF NOT EXISTS campaigns (
+    campaign_id SERIAL PRIMARY KEY,
+    campaign_name VARCHAR(255) NOT NULL,
+    campaign_type VARCHAR(100),
+    start_date DATE,
+    end_date DATE,
+    budget NUMERIC(12,2),
+    status VARCHAR(50),
+    channel VARCHAR(100),
+    target_audience VARCHAR(255),
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Leads table
+CREATE TABLE IF NOT EXISTS leads (
+    lead_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email VARCHAR(255),
+    phone VARCHAR(50),
+    company VARCHAR(255),
+    job_title VARCHAR(100),
+    lead_source VARCHAR(100),
+    lead_stage VARCHAR(50),
+    campaign_id INTEGER REFERENCES campaigns(campaign_id),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Campaign Metrics table
+CREATE TABLE IF NOT EXISTS campaign_metrics (
+    metric_id SERIAL PRIMARY KEY,
+    campaign_id INTEGER REFERENCES campaigns(campaign_id),
+    metric_date DATE,
+    impressions INTEGER,
+    clicks INTEGER,
+    conversions INTEGER,
+    cost NUMERIC(10,2),
+    revenue NUMERIC(10,2),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Website Traffic table
+CREATE TABLE IF NOT EXISTS website_traffic (
+    traffic_id SERIAL PRIMARY KEY,
+    traffic_date DATE,
+    page_url VARCHAR(500),
+    page_views INTEGER,
+    unique_visitors INTEGER,
+    bounce_rate NUMERIC(5,2),
+    avg_time_on_page INTEGER,
+    referral_source VARCHAR(100),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+"""
+    
+    if not execute_sql("marketing-domain", marketing_pod, "marketing_db", "marketing_user", marketing_create_sql):
+        print("❌ Failed to create Marketing tables")
+        return 1
+    
+    print("✅ Marketing tables created")
+    
+    # 5. Load Marketing data
+    print_header("Step 5/5: Loading Marketing Domain Data")
     
     marketing_sql = """
 -- Marketing Domain Sample Data
@@ -263,12 +393,14 @@ ON CONFLICT DO NOTHING;
     
     print("📊 Data Loaded:")
     print("  Sales Domain:")
+    print("    ✅ Tables created: customers, products, orders, order_items")
     print("    • 15 Customers")
     print("    • 10 Products")
     print("    • 20 Orders")
     print("    • 40+ Order Items")
     print()
     print("  Marketing Domain:")
+    print("    ✅ Tables created: campaigns, leads, campaign_metrics, website_traffic")
     print("    • 8 Campaigns")
     print("    • 15 Leads")
     print("    • 8 Campaign Metrics")
@@ -276,14 +408,17 @@ ON CONFLICT DO NOTHING;
     print()
     
     print("📖 Next Steps:")
-    print("   1. Query data via Trino:")
-    print("      python setup/trino/deploy_trino.py")
+    print("   1. Setup DBT transformations:")
+    print("      python setup/dbt/setup_dbt_complete.py")
     print()
     print("   2. Analyze in JupyterHub:")
     print("      http://localhost:30080")
     print()
-    print("   3. Create dashboards in Grafana:")
-    print("      http://localhost:30030")
+    print("   3. Query data via Trino:")
+    print("      http://localhost:30808")
+    print()
+    print("   4. View DBT documentation:")
+    print("      http://localhost:30082")
     print()
     
     return 0

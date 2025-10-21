@@ -25,6 +25,31 @@ def run_script(script_path, description):
     print(f"\n✅ Completed: {description}")
     return True
 
+def wait_for_jupyterhub():
+    """Wait for JupyterHub to be ready"""
+    print("\n⏳ Waiting for JupyterHub to be ready...")
+    print("   This ensures DBT setup can find an active user pod.")
+    
+    max_attempts = 30
+    for attempt in range(max_attempts):
+        result = subprocess.run(
+            "kubectl get pods -n jupyterhub -l component=singleuser-server --no-headers",
+            shell=True,
+            capture_output=True,
+            text=True
+        )
+        
+        if result.stdout.strip():
+            print("✅ JupyterHub user pod found!")
+            return True
+        
+        print(f"   Attempt {attempt + 1}/{max_attempts} - waiting for user pod...")
+        time.sleep(10)
+    
+    print("⚠️  No JupyterHub user pod found after 5 minutes")
+    print("   DBT setup will prompt you to login to JupyterHub first")
+    return False
+
 def print_header(text):
     """Print section header"""
     print(f"\n{'=' * 70}")
@@ -42,12 +67,13 @@ This will deploy the entire Data Mesh platform:
   ✅ Trino Stack (Federated SQL queries)
   ✅ Grafana (Dashboards + visualization)
   ✅ Sample Data (Realistic test data)
+  ✅ DBT Setup & Transformations (Data modeling)
 
 ⚠️  Note: DataHub NOT included (requires 10-12GB RAM)
     To deploy DataHub separately:
     python setup/datahub/deploy_datahub.py
 
-Estimated time: 10-15 minutes
+Estimated time: 15-20 minutes
 Required RAM: 8-10GB (or 10-12GB with DataHub)
     """)
     
@@ -64,12 +90,13 @@ Required RAM: 8-10GB (or 10-12GB with DataHub)
     
     # Deployment steps
     steps = [
-        (os.path.join(script_dir, "kubernetes", "deploy_k8s.py"), "1/6: Deploy Core Kubernetes Resources"),
-        (os.path.join(script_dir, "helm", "install_helm.py"), "2/6: Install Helm"),
-        (os.path.join(script_dir, "helm", "deploy_jupyterhub.py"), "3/6: Deploy JupyterHub"),
-        (os.path.join(script_dir, "trino", "deploy_trino.py"), "4/6: Deploy Trino Stack"),
-        (os.path.join(script_dir, "grafana", "deploy_grafana.py"), "5/6: Deploy Grafana"),
-        (os.path.join(script_dir, "data", "load_sample_data.py"), "6/6: Load Sample Data"),
+        (os.path.join(script_dir, "kubernetes", "deploy_k8s.py"), "1/7: Deploy Core Kubernetes Resources"),
+        (os.path.join(script_dir, "helm", "install_helm.py"), "2/7: Install Helm"),
+        (os.path.join(script_dir, "helm", "deploy_jupyterhub.py"), "3/7: Deploy JupyterHub"),
+        (os.path.join(script_dir, "trino", "deploy_trino.py"), "4/7: Deploy Trino Stack"),
+        (os.path.join(script_dir, "grafana", "deploy_grafana.py"), "5/7: Deploy Grafana"),
+        (os.path.join(script_dir, "data", "load_sample_data.py"), "6/7: Load Sample Data"),
+        (os.path.join(script_dir, "dbt", "setup_dbt_complete.py"), "7/7: Setup DBT & Run Transformations"),
     ]
     
     failed_steps = []
@@ -79,6 +106,11 @@ Required RAM: 8-10GB (or 10-12GB with DataHub)
             print(f"⚠️  Script not found: {script_path}")
             failed_steps.append(description)
             continue
+        
+        # Special handling for DBT setup - wait for JupyterHub
+        if "setup_dbt_complete.py" in script_path:
+            print("\n🔧 DBT Setup requires JupyterHub to be ready...")
+            wait_for_jupyterhub()
         
         if not run_script(script_path, description):
             failed_steps.append(description)
@@ -134,6 +166,7 @@ Required RAM: 8-10GB (or 10-12GB with DataHub)
 │     Login: minioadmin / minioadmin                          │
 │     • S3 bucket management                                  │
 │     • Data lake storage                                     │
+│     • File upload/download                                  │
 │                                                             │
 │  📊 Grafana             http://localhost:30030              │
 │     Login: admin / datamesh2024                             │
@@ -143,6 +176,7 @@ Required RAM: 8-10GB (or 10-12GB with DataHub)
 │  📚 DBT Docs            http://localhost:30082              │
 │     • Data lineage                                          │
 │     • Model documentation                                   │
+│     • Ready-to-use transformations                         │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
     """)
@@ -156,7 +190,7 @@ Required RAM: 8-10GB (or 10-12GB with DataHub)
 
 2. Start a new Python notebook
 
-3. Query data with Trino:
+3. Query raw data with Trino:
    
    from trino.dbapi import connect
    
@@ -170,22 +204,34 @@ Required RAM: 8-10GB (or 10-12GB with DataHub)
    cursor.execute("SELECT * FROM sales.public.customers LIMIT 10")
    print(cursor.fetchall())
 
-4. Or use pandas for analysis:
+4. Query transformed data (DBT models):
+   
+   cursor.execute("SELECT * FROM hive.analytics_analytics.customer_campaign_analysis")
+   print(cursor.fetchall())
+
+5. Use pandas for analysis:
    
    import pandas as pd
-   query = "SELECT * FROM sales.public.customers"
+   query = "SELECT * FROM hive.analytics_analytics.sales_customers"
    df = pd.read_sql(query, conn)
    df.head()
 
-5. Create dashboards in Grafana:
+6. Upload files to MinIO Data Lake:
+   - Open http://localhost:30901
+   - Login: minioadmin / minioadmin
+   - Create buckets and upload CSV/Parquet files
+   - Access via Trino: SELECT * FROM hive.raw.your_table
+
+7. Create dashboards in Grafana:
    - Open http://localhost:30030
    - Add visualizations
    - Query from Sales, Marketing, or Trino datasources
 
-6. Setup DBT (optional):
-   python setup/dbt/setup_dbt.py
+8. View DBT documentation:
+   - Open http://localhost:30082
+   - Browse data models and lineage
 
-7. Deploy DataHub (optional - requires 10-12GB RAM):
+9. Deploy DataHub (optional - requires 10-12GB RAM):
    python setup/datahub/deploy_datahub.py
     """)
     

@@ -1,0 +1,1826 @@
+date,account,category,amount,currency,department
+2024-01-01,Sales Revenue,Equity,70812.72,USD,Sales
+2024-01-01,Marketing Expenses,Asset,77341.56,USD,Sales
+2024-01-01,R&D Costs,Revenue,58744.68,USD,Marketing
+2024-01-01,Administrative,Expense,48482.36,USD,Admin
+2024-01-01,Operations,Revenue,37383.55,USD,Sales
+2024-01-02,Sales Revenue,Revenue,67078.4,USD,Sales
+2024-01-02,Marketing Expenses,Liability,52369.74,USD,Marketing
+2024-01-02,R&D Costs,Asset,67912.11,USD,Admin
+2024-01-02,Administrative,Asset,18826.04,USD,Operations
+2024-01-02,Operations,Liability,38377.25,USD,Marketing
+2024-01-03,Sales Revenue,Liability,111787.45,USD,Operations
+2024-01-03,Marketing Expenses,Liability,74371.66,USD,Operations
+2024-01-03,R&D Costs,Equity,22087.5,USD,Operations
+2024-01-03,Administrative,Liability,24262.32,USD,Sales
+2024-01-03,Operations,Asset,47018.04,USD,Operations
+2024-01-04,Sales Revenue,Equity,132642.66,USD,Operations
+2024-01-04,Marketing Expenses,Revenue,78073.4,USD,R&D
+2024-01-04,R&D Costs,Expense,65349.77,USD,R&D
+2024-01-04,Administrative,Revenue,46229.17,USD,Admin
+2024-01-04,Operations,Liability,10174.42,USD,Sales
+2024-01-05,Sales Revenue,Revenue,164187.66,USD,Operations
+2024-01-05,Marketing Expenses,Liability,38823.81,USD,Admin
+2024-01-05,R&D Costs,Expense,18259.27,USD,Sales
+2024-01-05,Administrative,Revenue,30873.02,USD,Operations
+2024-01-05,Operations,Revenue,16207.82,USD,R&D
+2024-01-06,Sales Revenue,Liability,128972.05,USD,Admin
+2024-01-06,Marketing Expenses,Asset,62180.77,USD,Sales
+2024-01-06,R&D Costs,Asset,57463.21,USD,R&D
+2024-01-06,Administrative,Revenue,44410.4,USD,Marketing
+2024-01-06,Operations,Equity,4458.9,USD,Admin
+2024-01-07,Sales Revenue,Equity,126277.85,USD,Sales
+2024-01-07,Marketing Expenses,Equity,67190.4,USD,Sales
+2024-01-07,R&D Costs,Equity,33288.26,USD,R&D
+2024-01-07,Administrative,Equity,31491.68,USD,Sales
+2024-01-07,Operations,Equity,6539.32,USD,R&D
+2024-01-08,Sales Revenue,Revenue,77589.7,USD,Marketing
+2024-01-08,Marketing Expenses,Equity,11798.7,USD,Admin
+2024-01-08,R&D Costs,Equity,74548.58,USD,Marketing
+2024-01-08,Administrative,Equity,46095.65,USD,Sales
+2024-01-08,Operations,Liability,22781.53,USD,Sales
+2024-01-09,Sales Revenue,Liability,184744.6,USD,R&D
+2024-01-09,Marketing Expenses,Expense,12391.62,USD,R&D
+2024-01-09,R&D Costs,Liability,33364.2,USD,Operations
+2024-01-09,Administrative,Asset,42090.13,USD,Sales
+2024-01-09,Operations,Revenue,33129.24,USD,Admin
+2024-01-10,Sales Revenue,Expense,74196.71,USD,R&D
+2024-01-10,Marketing Expenses,Expense,41637.55,USD,Admin
+2024-01-10,R&D Costs,Asset,71348.79,USD,Marketing
+2024-01-10,Administrative,Liability,4605.04,USD,Marketing
+2024-01-10,Operations,Equity,37154.31,USD,Admin
+2024-01-11,Sales Revenue,Equity,99497.96,USD,Admin
+2024-01-11,Marketing Expenses,Expense,15143.02,USD,Marketing
+2024-01-11,R&D Costs,Equity,30626.0,USD,Admin
+2024-01-11,Administrative,Liability,7825.34,USD,Operations
+2024-01-11,Operations,Liability,21319.08,USD,Admin
+2024-01-12,Sales Revenue,Asset,57443.42,USD,Operations
+2024-01-12,Marketing Expenses,Asset,35030.14,USD,Marketing
+2024-01-12,R&D Costs,Expense,66393.69,USD,R&D
+2024-01-12,Administrative,Asset,39628.9,USD,R&D
+2024-01-12,Operations,Liability,46851.55,USD,Admin
+2024-01-13,Sales Revenue,Equity,199686.04,USD,R&D
+2024-01-13,Marketing Expenses,Asset,64397.06,USD,R&D
+2024-01-13,R&D Costs,Liability,13778.46,USD,Operations
+2024-01-13,Administrative,Revenue,38996.31,USD,Sales
+2024-01-13,Operations,Asset,4558.98,USD,Sales
+2024-01-14,Sales Revenue,Equity,124416.92,USD,Marketing
+2024-01-14,Marketing Expenses,Liability,25720.52,USD,Sales
+2024-01-14,R&D Costs,Revenue,47420.36,USD,Marketing
+2024-01-14,Administrative,Asset,14493.37,USD,R&D
+2024-01-14,Operations,Revenue,20760.82,USD,Sales
+2024-01-15,Sales Revenue,Expense,157793.22,USD,R&D
+2024-01-15,Marketing Expenses,Equity,47533.04,USD,Admin
+2024-01-15,R&D Costs,Equity,36517.59,USD,R&D
+2024-01-15,Administrative,Equity,10443.63,USD,Admin
+2024-01-15,Operations,Liability,3530.28,USD,Operations
+2024-01-16,Sales Revenue,Liability,50493.04,USD,R&D
+2024-01-16,Marketing Expenses,Revenue,41838.34,USD,Sales
+2024-01-16,R&D Costs,Equity,76110.41,USD,Operations
+2024-01-16,Administrative,Revenue,24310.32,USD,Operations
+2024-01-16,Operations,Liability,46266.21,USD,R&D
+2024-01-17,Sales Revenue,Expense,129163.79,USD,R&D
+2024-01-17,Marketing Expenses,Revenue,51245.12,USD,Sales
+2024-01-17,R&D Costs,Liability,25714.16,USD,R&D
+2024-01-17,Administrative,Expense,11502.91,USD,Admin
+2024-01-17,Operations,Revenue,36253.0,USD,Operations
+2024-01-18,Sales Revenue,Expense,190481.63,USD,Marketing
+2024-01-18,Marketing Expenses,Expense,66638.17,USD,Sales
+2024-01-18,R&D Costs,Equity,56739.16,USD,Marketing
+2024-01-18,Administrative,Equity,3528.97,USD,R&D
+2024-01-18,Operations,Revenue,37579.67,USD,Admin
+2024-01-19,Sales Revenue,Equity,147401.63,USD,Admin
+2024-01-19,Marketing Expenses,Revenue,23844.08,USD,Marketing
+2024-01-19,R&D Costs,Revenue,77948.25,USD,Admin
+2024-01-19,Administrative,Asset,39174.04,USD,Operations
+2024-01-19,Operations,Asset,31306.72,USD,R&D
+2024-01-20,Sales Revenue,Revenue,142967.14,USD,R&D
+2024-01-20,Marketing Expenses,Liability,56000.11,USD,R&D
+2024-01-20,R&D Costs,Asset,41198.11,USD,Marketing
+2024-01-20,Administrative,Revenue,42881.26,USD,R&D
+2024-01-20,Operations,Liability,44946.17,USD,Operations
+2024-01-21,Sales Revenue,Asset,140811.56,USD,Operations
+2024-01-21,Marketing Expenses,Asset,65706.18,USD,R&D
+2024-01-21,R&D Costs,Liability,47301.7,USD,Operations
+2024-01-21,Administrative,Equity,28871.49,USD,R&D
+2024-01-21,Operations,Expense,43632.53,USD,Marketing
+2024-01-22,Sales Revenue,Asset,106434.12,USD,R&D
+2024-01-22,Marketing Expenses,Expense,19388.14,USD,Sales
+2024-01-22,R&D Costs,Asset,12541.73,USD,Admin
+2024-01-22,Administrative,Asset,48985.3,USD,Marketing
+2024-01-22,Operations,Liability,5424.24,USD,R&D
+2024-01-23,Sales Revenue,Equity,89504.67,USD,R&D
+2024-01-23,Marketing Expenses,Equity,25397.76,USD,Admin
+2024-01-23,R&D Costs,Asset,28510.14,USD,Admin
+2024-01-23,Administrative,Liability,14866.97,USD,Sales
+2024-01-23,Operations,Liability,6993.29,USD,R&D
+2024-01-24,Sales Revenue,Asset,188165.13,USD,Marketing
+2024-01-24,Marketing Expenses,Revenue,29217.94,USD,Marketing
+2024-01-24,R&D Costs,Equity,50055.12,USD,R&D
+2024-01-24,Administrative,Liability,42916.44,USD,Marketing
+2024-01-24,Operations,Revenue,5384.48,USD,Sales
+2024-01-25,Sales Revenue,Expense,54426.15,USD,Marketing
+2024-01-25,Marketing Expenses,Liability,34670.12,USD,Sales
+2024-01-25,R&D Costs,Asset,67013.4,USD,Sales
+2024-01-25,Administrative,Asset,26660.53,USD,Admin
+2024-01-25,Operations,Expense,30801.35,USD,Admin
+2024-01-26,Sales Revenue,Asset,157863.43,USD,Admin
+2024-01-26,Marketing Expenses,Equity,61397.19,USD,Marketing
+2024-01-26,R&D Costs,Liability,62998.5,USD,Marketing
+2024-01-26,Administrative,Liability,3580.04,USD,Operations
+2024-01-26,Operations,Liability,27545.21,USD,R&D
+2024-01-27,Sales Revenue,Revenue,147650.96,USD,Operations
+2024-01-27,Marketing Expenses,Asset,79547.13,USD,R&D
+2024-01-27,R&D Costs,Asset,27306.79,USD,R&D
+2024-01-27,Administrative,Equity,16962.44,USD,Marketing
+2024-01-27,Operations,Asset,31057.38,USD,R&D
+2024-01-28,Sales Revenue,Equity,170820.07,USD,Sales
+2024-01-28,Marketing Expenses,Revenue,54939.0,USD,Operations
+2024-01-28,R&D Costs,Equity,70979.47,USD,R&D
+2024-01-28,Administrative,Expense,41349.62,USD,Operations
+2024-01-28,Operations,Equity,24319.35,USD,Operations
+2024-01-29,Sales Revenue,Expense,142523.17,USD,Operations
+2024-01-29,Marketing Expenses,Asset,17418.74,USD,R&D
+2024-01-29,R&D Costs,Asset,28772.07,USD,Sales
+2024-01-29,Administrative,Equity,35995.46,USD,Admin
+2024-01-29,Operations,Liability,32939.6,USD,Marketing
+2024-01-30,Sales Revenue,Equity,62724.77,USD,Operations
+2024-01-30,Marketing Expenses,Equity,39552.71,USD,Sales
+2024-01-30,R&D Costs,Asset,79741.67,USD,R&D
+2024-01-30,Administrative,Liability,17692.72,USD,Sales
+2024-01-30,Operations,Expense,38183.72,USD,Admin
+2024-01-31,Sales Revenue,Liability,177140.82,USD,Sales
+2024-01-31,Marketing Expenses,Equity,56573.19,USD,R&D
+2024-01-31,R&D Costs,Equity,14845.1,USD,Marketing
+2024-01-31,Administrative,Revenue,31464.74,USD,Sales
+2024-01-31,Operations,Asset,44569.35,USD,Sales
+2024-02-01,Sales Revenue,Expense,195807.28,USD,Sales
+2024-02-01,Marketing Expenses,Asset,67945.33,USD,Marketing
+2024-02-01,R&D Costs,Asset,44735.52,USD,Admin
+2024-02-01,Administrative,Liability,26892.57,USD,R&D
+2024-02-01,Operations,Liability,27164.82,USD,Marketing
+2024-02-02,Sales Revenue,Expense,50673.44,USD,Sales
+2024-02-02,Marketing Expenses,Equity,23187.47,USD,Admin
+2024-02-02,R&D Costs,Asset,45536.53,USD,R&D
+2024-02-02,Administrative,Revenue,17275.31,USD,R&D
+2024-02-02,Operations,Asset,3560.14,USD,Marketing
+2024-02-03,Sales Revenue,Equity,144893.82,USD,R&D
+2024-02-03,Marketing Expenses,Revenue,76348.15,USD,Marketing
+2024-02-03,R&D Costs,Expense,68718.49,USD,Operations
+2024-02-03,Administrative,Equity,46739.22,USD,Sales
+2024-02-03,Operations,Revenue,47629.59,USD,R&D
+2024-02-04,Sales Revenue,Liability,102112.44,USD,Sales
+2024-02-04,Marketing Expenses,Asset,62862.95,USD,R&D
+2024-02-04,R&D Costs,Revenue,29487.49,USD,Sales
+2024-02-04,Administrative,Expense,49711.69,USD,R&D
+2024-02-04,Operations,Asset,15354.53,USD,Marketing
+2024-02-05,Sales Revenue,Revenue,92026.01,USD,R&D
+2024-02-05,Marketing Expenses,Revenue,25480.29,USD,Marketing
+2024-02-05,R&D Costs,Expense,40991.75,USD,R&D
+2024-02-05,Administrative,Equity,43393.53,USD,Sales
+2024-02-05,Operations,Expense,40309.12,USD,Admin
+2024-02-06,Sales Revenue,Asset,135139.7,USD,Marketing
+2024-02-06,Marketing Expenses,Liability,69879.21,USD,Sales
+2024-02-06,R&D Costs,Expense,60561.02,USD,R&D
+2024-02-06,Administrative,Equity,19522.93,USD,Admin
+2024-02-06,Operations,Liability,38039.63,USD,Operations
+2024-02-07,Sales Revenue,Asset,85724.91,USD,Marketing
+2024-02-07,Marketing Expenses,Liability,19879.19,USD,R&D
+2024-02-07,R&D Costs,Revenue,49900.49,USD,Admin
+2024-02-07,Administrative,Expense,11590.39,USD,R&D
+2024-02-07,Operations,Revenue,40768.1,USD,Sales
+2024-02-08,Sales Revenue,Revenue,137584.85,USD,Operations
+2024-02-08,Marketing Expenses,Liability,43681.88,USD,Marketing
+2024-02-08,R&D Costs,Liability,75188.5,USD,Sales
+2024-02-08,Administrative,Liability,27191.99,USD,Marketing
+2024-02-08,Operations,Expense,26588.57,USD,Marketing
+2024-02-09,Sales Revenue,Liability,103123.56,USD,Sales
+2024-02-09,Marketing Expenses,Asset,67253.33,USD,Admin
+2024-02-09,R&D Costs,Revenue,69650.59,USD,Sales
+2024-02-09,Administrative,Liability,14062.62,USD,Admin
+2024-02-09,Operations,Expense,22327.85,USD,Admin
+2024-02-10,Sales Revenue,Asset,195790.0,USD,Operations
+2024-02-10,Marketing Expenses,Liability,77296.47,USD,R&D
+2024-02-10,R&D Costs,Expense,53433.89,USD,Operations
+2024-02-10,Administrative,Revenue,7536.82,USD,Admin
+2024-02-10,Operations,Revenue,9071.55,USD,Operations
+2024-02-11,Sales Revenue,Expense,114649.74,USD,Marketing
+2024-02-11,Marketing Expenses,Asset,29490.13,USD,Admin
+2024-02-11,R&D Costs,Expense,75412.87,USD,Sales
+2024-02-11,Administrative,Revenue,19194.59,USD,R&D
+2024-02-11,Operations,Equity,36777.34,USD,R&D
+2024-02-12,Sales Revenue,Revenue,93341.85,USD,R&D
+2024-02-12,Marketing Expenses,Asset,21937.97,USD,Admin
+2024-02-12,R&D Costs,Equity,40892.5,USD,Operations
+2024-02-12,Administrative,Revenue,31287.77,USD,Marketing
+2024-02-12,Operations,Liability,35582.27,USD,Operations
+2024-02-13,Sales Revenue,Revenue,178173.0,USD,Sales
+2024-02-13,Marketing Expenses,Expense,50815.29,USD,Admin
+2024-02-13,R&D Costs,Revenue,42251.25,USD,R&D
+2024-02-13,Administrative,Expense,24607.59,USD,Operations
+2024-02-13,Operations,Equity,38226.95,USD,R&D
+2024-02-14,Sales Revenue,Expense,66727.2,USD,Marketing
+2024-02-14,Marketing Expenses,Equity,37776.01,USD,Sales
+2024-02-14,R&D Costs,Equity,78329.17,USD,R&D
+2024-02-14,Administrative,Equity,37200.59,USD,Admin
+2024-02-14,Operations,Expense,42230.23,USD,Operations
+2024-02-15,Sales Revenue,Expense,74743.8,USD,Admin
+2024-02-15,Marketing Expenses,Equity,43227.87,USD,Sales
+2024-02-15,R&D Costs,Revenue,66584.84,USD,Sales
+2024-02-15,Administrative,Equity,4491.74,USD,Marketing
+2024-02-15,Operations,Revenue,23111.82,USD,Admin
+2024-02-16,Sales Revenue,Liability,100852.28,USD,R&D
+2024-02-16,Marketing Expenses,Expense,22557.14,USD,Sales
+2024-02-16,R&D Costs,Equity,76104.44,USD,Marketing
+2024-02-16,Administrative,Expense,23115.63,USD,Admin
+2024-02-16,Operations,Liability,31412.67,USD,Marketing
+2024-02-17,Sales Revenue,Equity,125739.46,USD,Admin
+2024-02-17,Marketing Expenses,Revenue,35654.72,USD,Sales
+2024-02-17,R&D Costs,Asset,18393.77,USD,Sales
+2024-02-17,Administrative,Liability,46839.05,USD,Marketing
+2024-02-17,Operations,Liability,6828.81,USD,Operations
+2024-02-18,Sales Revenue,Revenue,100032.68,USD,R&D
+2024-02-18,Marketing Expenses,Liability,36317.07,USD,Operations
+2024-02-18,R&D Costs,Liability,71111.2,USD,Sales
+2024-02-18,Administrative,Revenue,6846.61,USD,Admin
+2024-02-18,Operations,Liability,27799.63,USD,Sales
+2024-02-19,Sales Revenue,Asset,160052.07,USD,Marketing
+2024-02-19,Marketing Expenses,Liability,65789.68,USD,Admin
+2024-02-19,R&D Costs,Equity,53811.35,USD,Operations
+2024-02-19,Administrative,Equity,3281.37,USD,Operations
+2024-02-19,Operations,Liability,28004.55,USD,Admin
+2024-02-20,Sales Revenue,Revenue,80798.57,USD,Sales
+2024-02-20,Marketing Expenses,Revenue,78772.2,USD,Admin
+2024-02-20,R&D Costs,Liability,50346.34,USD,Admin
+2024-02-20,Administrative,Asset,18929.88,USD,Admin
+2024-02-20,Operations,Equity,44996.28,USD,R&D
+2024-02-21,Sales Revenue,Liability,114589.46,USD,Sales
+2024-02-21,Marketing Expenses,Expense,76822.84,USD,Sales
+2024-02-21,R&D Costs,Equity,75776.0,USD,R&D
+2024-02-21,Administrative,Liability,44786.56,USD,R&D
+2024-02-21,Operations,Expense,27337.08,USD,Operations
+2024-02-22,Sales Revenue,Expense,93996.56,USD,Admin
+2024-02-22,Marketing Expenses,Expense,33412.74,USD,Operations
+2024-02-22,R&D Costs,Liability,41479.56,USD,R&D
+2024-02-22,Administrative,Expense,30287.64,USD,Marketing
+2024-02-22,Operations,Liability,37899.17,USD,Admin
+2024-02-23,Sales Revenue,Liability,115425.56,USD,Sales
+2024-02-23,Marketing Expenses,Revenue,65793.82,USD,Admin
+2024-02-23,R&D Costs,Liability,25469.8,USD,Marketing
+2024-02-23,Administrative,Liability,40568.35,USD,Marketing
+2024-02-23,Operations,Revenue,11917.49,USD,R&D
+2024-02-24,Sales Revenue,Equity,53907.35,USD,Marketing
+2024-02-24,Marketing Expenses,Liability,24707.05,USD,Admin
+2024-02-24,R&D Costs,Equity,64684.67,USD,Admin
+2024-02-24,Administrative,Asset,32631.34,USD,Operations
+2024-02-24,Operations,Asset,39100.07,USD,R&D
+2024-02-25,Sales Revenue,Revenue,83897.71,USD,R&D
+2024-02-25,Marketing Expenses,Expense,18090.15,USD,Admin
+2024-02-25,R&D Costs,Equity,62276.64,USD,R&D
+2024-02-25,Administrative,Revenue,14801.43,USD,Marketing
+2024-02-25,Operations,Revenue,14224.82,USD,Operations
+2024-02-26,Sales Revenue,Liability,113219.91,USD,Admin
+2024-02-26,Marketing Expenses,Liability,43157.14,USD,R&D
+2024-02-26,R&D Costs,Asset,59165.84,USD,Marketing
+2024-02-26,Administrative,Liability,11472.84,USD,Marketing
+2024-02-26,Operations,Revenue,40254.87,USD,Admin
+2024-02-27,Sales Revenue,Expense,129885.07,USD,Sales
+2024-02-27,Marketing Expenses,Expense,18503.79,USD,Marketing
+2024-02-27,R&D Costs,Liability,65376.8,USD,Admin
+2024-02-27,Administrative,Expense,20282.48,USD,Sales
+2024-02-27,Operations,Liability,42058.75,USD,Admin
+2024-02-28,Sales Revenue,Revenue,96200.81,USD,R&D
+2024-02-28,Marketing Expenses,Expense,20568.15,USD,Operations
+2024-02-28,R&D Costs,Equity,76466.95,USD,R&D
+2024-02-28,Administrative,Asset,24857.48,USD,Admin
+2024-02-28,Operations,Revenue,40879.99,USD,Marketing
+2024-02-29,Sales Revenue,Expense,92359.8,USD,Admin
+2024-02-29,Marketing Expenses,Equity,14637.09,USD,Marketing
+2024-02-29,R&D Costs,Asset,21503.84,USD,R&D
+2024-02-29,Administrative,Revenue,32403.26,USD,Admin
+2024-02-29,Operations,Liability,12042.07,USD,R&D
+2024-03-01,Sales Revenue,Revenue,69742.94,USD,Marketing
+2024-03-01,Marketing Expenses,Expense,79696.39,USD,R&D
+2024-03-01,R&D Costs,Liability,24185.83,USD,Sales
+2024-03-01,Administrative,Liability,13562.32,USD,Sales
+2024-03-01,Operations,Equity,17868.92,USD,Marketing
+2024-03-02,Sales Revenue,Revenue,144229.85,USD,Sales
+2024-03-02,Marketing Expenses,Equity,73640.12,USD,Operations
+2024-03-02,R&D Costs,Expense,78111.34,USD,Operations
+2024-03-02,Administrative,Liability,25056.1,USD,Sales
+2024-03-02,Operations,Equity,41015.65,USD,Admin
+2024-03-03,Sales Revenue,Asset,118617.19,USD,Admin
+2024-03-03,Marketing Expenses,Liability,63980.36,USD,R&D
+2024-03-03,R&D Costs,Expense,34262.26,USD,R&D
+2024-03-03,Administrative,Liability,49231.37,USD,Admin
+2024-03-03,Operations,Liability,43558.19,USD,Sales
+2024-03-04,Sales Revenue,Equity,66490.72,USD,Admin
+2024-03-04,Marketing Expenses,Asset,64051.42,USD,Sales
+2024-03-04,R&D Costs,Revenue,40455.54,USD,Marketing
+2024-03-04,Administrative,Expense,49221.28,USD,Operations
+2024-03-04,Operations,Expense,16053.04,USD,R&D
+2024-03-05,Sales Revenue,Revenue,131740.38,USD,Sales
+2024-03-05,Marketing Expenses,Revenue,76433.78,USD,Marketing
+2024-03-05,R&D Costs,Asset,75375.54,USD,Marketing
+2024-03-05,Administrative,Expense,44196.2,USD,Sales
+2024-03-05,Operations,Asset,5253.1,USD,Operations
+2024-03-06,Sales Revenue,Asset,121989.31,USD,Admin
+2024-03-06,Marketing Expenses,Liability,24155.3,USD,Admin
+2024-03-06,R&D Costs,Revenue,65082.57,USD,Marketing
+2024-03-06,Administrative,Asset,20645.16,USD,Marketing
+2024-03-06,Operations,Equity,19312.1,USD,R&D
+2024-03-07,Sales Revenue,Expense,50618.84,USD,R&D
+2024-03-07,Marketing Expenses,Revenue,31189.93,USD,Marketing
+2024-03-07,R&D Costs,Revenue,79205.25,USD,Sales
+2024-03-07,Administrative,Revenue,20682.94,USD,R&D
+2024-03-07,Operations,Equity,49675.28,USD,R&D
+2024-03-08,Sales Revenue,Revenue,178217.49,USD,Sales
+2024-03-08,Marketing Expenses,Revenue,45673.82,USD,Admin
+2024-03-08,R&D Costs,Liability,67538.62,USD,R&D
+2024-03-08,Administrative,Liability,30747.05,USD,R&D
+2024-03-08,Operations,Equity,44920.25,USD,R&D
+2024-03-09,Sales Revenue,Liability,86782.81,USD,Marketing
+2024-03-09,Marketing Expenses,Equity,15008.66,USD,R&D
+2024-03-09,R&D Costs,Equity,60794.33,USD,Marketing
+2024-03-09,Administrative,Asset,17332.31,USD,Operations
+2024-03-09,Operations,Revenue,7424.29,USD,Sales
+2024-03-10,Sales Revenue,Equity,121706.67,USD,Operations
+2024-03-10,Marketing Expenses,Equity,71394.06,USD,Operations
+2024-03-10,R&D Costs,Expense,79558.61,USD,Marketing
+2024-03-10,Administrative,Revenue,13719.82,USD,Admin
+2024-03-10,Operations,Liability,1284.99,USD,Admin
+2024-03-11,Sales Revenue,Expense,189835.07,USD,Admin
+2024-03-11,Marketing Expenses,Equity,13405.99,USD,R&D
+2024-03-11,R&D Costs,Equity,61173.63,USD,Admin
+2024-03-11,Administrative,Liability,49844.38,USD,Operations
+2024-03-11,Operations,Asset,9719.6,USD,Operations
+2024-03-12,Sales Revenue,Expense,72163.6,USD,Sales
+2024-03-12,Marketing Expenses,Equity,24585.07,USD,R&D
+2024-03-12,R&D Costs,Asset,76297.31,USD,Admin
+2024-03-12,Administrative,Equity,47231.63,USD,Operations
+2024-03-12,Operations,Asset,12704.88,USD,Admin
+2024-03-13,Sales Revenue,Equity,171041.11,USD,Admin
+2024-03-13,Marketing Expenses,Revenue,75114.66,USD,Operations
+2024-03-13,R&D Costs,Liability,38432.91,USD,Admin
+2024-03-13,Administrative,Equity,26096.0,USD,Marketing
+2024-03-13,Operations,Liability,34159.83,USD,Operations
+2024-03-14,Sales Revenue,Expense,52836.95,USD,R&D
+2024-03-14,Marketing Expenses,Expense,36448.28,USD,Admin
+2024-03-14,R&D Costs,Asset,69155.22,USD,Operations
+2024-03-14,Administrative,Revenue,21174.2,USD,Sales
+2024-03-14,Operations,Equity,7639.93,USD,Admin
+2024-03-15,Sales Revenue,Revenue,120423.97,USD,Operations
+2024-03-15,Marketing Expenses,Liability,36125.51,USD,R&D
+2024-03-15,R&D Costs,Expense,49600.38,USD,Operations
+2024-03-15,Administrative,Expense,44085.03,USD,R&D
+2024-03-15,Operations,Expense,37929.28,USD,Operations
+2024-03-16,Sales Revenue,Equity,83309.21,USD,Admin
+2024-03-16,Marketing Expenses,Equity,63760.69,USD,Admin
+2024-03-16,R&D Costs,Expense,36156.51,USD,Operations
+2024-03-16,Administrative,Equity,33573.25,USD,Admin
+2024-03-16,Operations,Liability,49431.76,USD,Operations
+2024-03-17,Sales Revenue,Asset,195317.96,USD,Admin
+2024-03-17,Marketing Expenses,Liability,49198.63,USD,Marketing
+2024-03-17,R&D Costs,Asset,63619.6,USD,Sales
+2024-03-17,Administrative,Expense,26044.87,USD,Admin
+2024-03-17,Operations,Revenue,13928.06,USD,Operations
+2024-03-18,Sales Revenue,Expense,165656.21,USD,Admin
+2024-03-18,Marketing Expenses,Liability,74378.52,USD,Marketing
+2024-03-18,R&D Costs,Expense,66282.88,USD,Operations
+2024-03-18,Administrative,Asset,5760.9,USD,Marketing
+2024-03-18,Operations,Equity,32357.17,USD,Sales
+2024-03-19,Sales Revenue,Asset,139103.98,USD,Operations
+2024-03-19,Marketing Expenses,Revenue,49238.47,USD,R&D
+2024-03-19,R&D Costs,Revenue,47265.59,USD,Sales
+2024-03-19,Administrative,Expense,23614.94,USD,Sales
+2024-03-19,Operations,Equity,45681.65,USD,R&D
+2024-03-20,Sales Revenue,Liability,153642.96,USD,Operations
+2024-03-20,Marketing Expenses,Equity,34178.99,USD,Marketing
+2024-03-20,R&D Costs,Asset,27973.29,USD,Admin
+2024-03-20,Administrative,Revenue,3869.16,USD,Marketing
+2024-03-20,Operations,Asset,5598.76,USD,R&D
+2024-03-21,Sales Revenue,Revenue,63635.14,USD,Sales
+2024-03-21,Marketing Expenses,Equity,69634.3,USD,Sales
+2024-03-21,R&D Costs,Liability,70140.14,USD,Admin
+2024-03-21,Administrative,Equity,36765.52,USD,R&D
+2024-03-21,Operations,Equity,39101.85,USD,Marketing
+2024-03-22,Sales Revenue,Asset,127399.55,USD,Operations
+2024-03-22,Marketing Expenses,Liability,18183.47,USD,Operations
+2024-03-22,R&D Costs,Asset,67432.65,USD,Operations
+2024-03-22,Administrative,Asset,30471.33,USD,Operations
+2024-03-22,Operations,Expense,22167.19,USD,Sales
+2024-03-23,Sales Revenue,Asset,78408.15,USD,Operations
+2024-03-23,Marketing Expenses,Revenue,18160.41,USD,R&D
+2024-03-23,R&D Costs,Equity,45974.52,USD,R&D
+2024-03-23,Administrative,Liability,18706.87,USD,Admin
+2024-03-23,Operations,Equity,31388.05,USD,Marketing
+2024-03-24,Sales Revenue,Equity,79525.34,USD,Operations
+2024-03-24,Marketing Expenses,Revenue,22382.37,USD,Marketing
+2024-03-24,R&D Costs,Revenue,22136.61,USD,Admin
+2024-03-24,Administrative,Expense,24887.67,USD,Marketing
+2024-03-24,Operations,Liability,33728.1,USD,Admin
+2024-03-25,Sales Revenue,Asset,187650.32,USD,Marketing
+2024-03-25,Marketing Expenses,Equity,46535.7,USD,R&D
+2024-03-25,R&D Costs,Revenue,47537.74,USD,Operations
+2024-03-25,Administrative,Asset,18433.94,USD,Sales
+2024-03-25,Operations,Liability,10419.65,USD,Marketing
+2024-03-26,Sales Revenue,Revenue,135764.91,USD,Admin
+2024-03-26,Marketing Expenses,Revenue,61117.68,USD,Operations
+2024-03-26,R&D Costs,Asset,35236.91,USD,Admin
+2024-03-26,Administrative,Equity,49927.56,USD,Marketing
+2024-03-26,Operations,Revenue,35651.04,USD,Marketing
+2024-03-27,Sales Revenue,Liability,149581.31,USD,Marketing
+2024-03-27,Marketing Expenses,Expense,28182.99,USD,R&D
+2024-03-27,R&D Costs,Revenue,26473.18,USD,Operations
+2024-03-27,Administrative,Asset,4266.64,USD,R&D
+2024-03-27,Operations,Revenue,25574.81,USD,Sales
+2024-03-28,Sales Revenue,Expense,185170.34,USD,Operations
+2024-03-28,Marketing Expenses,Expense,52761.85,USD,Sales
+2024-03-28,R&D Costs,Liability,55618.77,USD,Marketing
+2024-03-28,Administrative,Expense,4248.09,USD,Sales
+2024-03-28,Operations,Equity,13225.98,USD,R&D
+2024-03-29,Sales Revenue,Liability,150101.0,USD,Operations
+2024-03-29,Marketing Expenses,Revenue,12424.6,USD,Admin
+2024-03-29,R&D Costs,Revenue,31194.82,USD,Marketing
+2024-03-29,Administrative,Expense,26568.55,USD,Sales
+2024-03-29,Operations,Revenue,6417.98,USD,R&D
+2024-03-30,Sales Revenue,Revenue,155702.58,USD,Operations
+2024-03-30,Marketing Expenses,Expense,30703.83,USD,Sales
+2024-03-30,R&D Costs,Equity,43236.66,USD,Marketing
+2024-03-30,Administrative,Revenue,24037.75,USD,Marketing
+2024-03-30,Operations,Expense,40907.01,USD,Marketing
+2024-03-31,Sales Revenue,Equity,193799.77,USD,Marketing
+2024-03-31,Marketing Expenses,Revenue,70735.33,USD,R&D
+2024-03-31,R&D Costs,Liability,68625.74,USD,Operations
+2024-03-31,Administrative,Expense,2332.68,USD,Admin
+2024-03-31,Operations,Revenue,23977.81,USD,Operations
+2024-04-01,Sales Revenue,Liability,115062.61,USD,R&D
+2024-04-01,Marketing Expenses,Expense,30867.62,USD,Marketing
+2024-04-01,R&D Costs,Liability,45427.73,USD,R&D
+2024-04-01,Administrative,Revenue,34563.34,USD,Marketing
+2024-04-01,Operations,Asset,32140.65,USD,R&D
+2024-04-02,Sales Revenue,Liability,190846.95,USD,Operations
+2024-04-02,Marketing Expenses,Revenue,54047.4,USD,R&D
+2024-04-02,R&D Costs,Equity,58093.75,USD,Sales
+2024-04-02,Administrative,Asset,28899.72,USD,Admin
+2024-04-02,Operations,Equity,38871.28,USD,Sales
+2024-04-03,Sales Revenue,Asset,144866.48,USD,Operations
+2024-04-03,Marketing Expenses,Expense,12494.42,USD,Sales
+2024-04-03,R&D Costs,Revenue,63086.22,USD,Admin
+2024-04-03,Administrative,Revenue,8930.91,USD,Admin
+2024-04-03,Operations,Revenue,38331.94,USD,Admin
+2024-04-04,Sales Revenue,Expense,135975.8,USD,Admin
+2024-04-04,Marketing Expenses,Asset,47766.94,USD,R&D
+2024-04-04,R&D Costs,Asset,72037.03,USD,Marketing
+2024-04-04,Administrative,Expense,40291.28,USD,Marketing
+2024-04-04,Operations,Asset,28126.7,USD,Admin
+2024-04-05,Sales Revenue,Liability,162510.62,USD,Admin
+2024-04-05,Marketing Expenses,Liability,42295.16,USD,Marketing
+2024-04-05,R&D Costs,Equity,40403.42,USD,R&D
+2024-04-05,Administrative,Liability,8553.21,USD,Marketing
+2024-04-05,Operations,Equity,40972.28,USD,Sales
+2024-04-06,Sales Revenue,Liability,131317.26,USD,Marketing
+2024-04-06,Marketing Expenses,Revenue,77560.67,USD,Operations
+2024-04-06,R&D Costs,Equity,75118.37,USD,R&D
+2024-04-06,Administrative,Revenue,14035.23,USD,R&D
+2024-04-06,Operations,Revenue,20950.29,USD,Sales
+2024-04-07,Sales Revenue,Liability,143633.8,USD,Marketing
+2024-04-07,Marketing Expenses,Expense,74016.47,USD,Operations
+2024-04-07,R&D Costs,Revenue,47176.55,USD,Marketing
+2024-04-07,Administrative,Revenue,39635.8,USD,R&D
+2024-04-07,Operations,Revenue,23629.3,USD,Admin
+2024-04-08,Sales Revenue,Revenue,138900.22,USD,R&D
+2024-04-08,Marketing Expenses,Asset,72990.53,USD,R&D
+2024-04-08,R&D Costs,Asset,55780.42,USD,Sales
+2024-04-08,Administrative,Expense,4498.46,USD,Operations
+2024-04-08,Operations,Revenue,44741.75,USD,Admin
+2024-04-09,Sales Revenue,Revenue,108574.45,USD,R&D
+2024-04-09,Marketing Expenses,Asset,67316.74,USD,R&D
+2024-04-09,R&D Costs,Asset,62123.07,USD,Operations
+2024-04-09,Administrative,Equity,16669.62,USD,Operations
+2024-04-09,Operations,Liability,15100.57,USD,R&D
+2024-04-10,Sales Revenue,Liability,58480.96,USD,Admin
+2024-04-10,Marketing Expenses,Asset,14567.82,USD,Admin
+2024-04-10,R&D Costs,Asset,24775.76,USD,Marketing
+2024-04-10,Administrative,Equity,25561.11,USD,Marketing
+2024-04-10,Operations,Asset,2772.57,USD,Admin
+2024-04-11,Sales Revenue,Expense,181318.44,USD,Operations
+2024-04-11,Marketing Expenses,Expense,79529.95,USD,Operations
+2024-04-11,R&D Costs,Equity,76829.64,USD,Operations
+2024-04-11,Administrative,Asset,31595.01,USD,Operations
+2024-04-11,Operations,Expense,13034.38,USD,Operations
+2024-04-12,Sales Revenue,Revenue,56799.59,USD,Sales
+2024-04-12,Marketing Expenses,Asset,12862.41,USD,R&D
+2024-04-12,R&D Costs,Revenue,43880.63,USD,Admin
+2024-04-12,Administrative,Revenue,19538.26,USD,Sales
+2024-04-12,Operations,Liability,2339.6,USD,Marketing
+2024-04-13,Sales Revenue,Equity,54555.78,USD,Marketing
+2024-04-13,Marketing Expenses,Liability,38004.83,USD,Marketing
+2024-04-13,R&D Costs,Revenue,56061.8,USD,Marketing
+2024-04-13,Administrative,Equity,21326.64,USD,Operations
+2024-04-13,Operations,Liability,49494.0,USD,Admin
+2024-04-14,Sales Revenue,Expense,147614.0,USD,Admin
+2024-04-14,Marketing Expenses,Revenue,71620.02,USD,Operations
+2024-04-14,R&D Costs,Liability,10804.72,USD,Sales
+2024-04-14,Administrative,Revenue,25881.04,USD,Sales
+2024-04-14,Operations,Asset,7101.58,USD,Marketing
+2024-04-15,Sales Revenue,Equity,63290.23,USD,R&D
+2024-04-15,Marketing Expenses,Expense,20254.0,USD,Admin
+2024-04-15,R&D Costs,Liability,23010.21,USD,Operations
+2024-04-15,Administrative,Equity,15933.56,USD,Sales
+2024-04-15,Operations,Asset,20500.63,USD,Marketing
+2024-04-16,Sales Revenue,Expense,138520.39,USD,Sales
+2024-04-16,Marketing Expenses,Equity,62977.91,USD,Admin
+2024-04-16,R&D Costs,Liability,33508.93,USD,R&D
+2024-04-16,Administrative,Expense,15555.43,USD,Admin
+2024-04-16,Operations,Revenue,34474.38,USD,Marketing
+2024-04-17,Sales Revenue,Equity,90387.8,USD,Marketing
+2024-04-17,Marketing Expenses,Expense,15461.29,USD,Operations
+2024-04-17,R&D Costs,Revenue,42106.92,USD,Marketing
+2024-04-17,Administrative,Asset,15997.95,USD,Admin
+2024-04-17,Operations,Revenue,1353.33,USD,R&D
+2024-04-18,Sales Revenue,Equity,111299.5,USD,R&D
+2024-04-18,Marketing Expenses,Equity,29954.49,USD,R&D
+2024-04-18,R&D Costs,Liability,20374.38,USD,Sales
+2024-04-18,Administrative,Expense,45772.02,USD,Admin
+2024-04-18,Operations,Asset,40340.47,USD,Admin
+2024-04-19,Sales Revenue,Revenue,53620.02,USD,Sales
+2024-04-19,Marketing Expenses,Asset,17646.16,USD,R&D
+2024-04-19,R&D Costs,Liability,62196.51,USD,Sales
+2024-04-19,Administrative,Revenue,11881.72,USD,Operations
+2024-04-19,Operations,Equity,46107.32,USD,R&D
+2024-04-20,Sales Revenue,Asset,118905.5,USD,Sales
+2024-04-20,Marketing Expenses,Equity,55954.07,USD,R&D
+2024-04-20,R&D Costs,Revenue,49327.04,USD,Admin
+2024-04-20,Administrative,Expense,45642.76,USD,Marketing
+2024-04-20,Operations,Liability,42687.54,USD,Admin
+2024-04-21,Sales Revenue,Liability,115077.8,USD,Sales
+2024-04-21,Marketing Expenses,Equity,56156.73,USD,R&D
+2024-04-21,R&D Costs,Liability,62108.24,USD,Marketing
+2024-04-21,Administrative,Asset,38053.65,USD,Operations
+2024-04-21,Operations,Revenue,48984.09,USD,R&D
+2024-04-22,Sales Revenue,Asset,136608.97,USD,Admin
+2024-04-22,Marketing Expenses,Expense,43985.1,USD,Marketing
+2024-04-22,R&D Costs,Liability,49625.63,USD,Marketing
+2024-04-22,Administrative,Liability,29439.28,USD,R&D
+2024-04-22,Operations,Expense,20274.53,USD,Sales
+2024-04-23,Sales Revenue,Equity,174773.52,USD,Admin
+2024-04-23,Marketing Expenses,Revenue,56181.07,USD,R&D
+2024-04-23,R&D Costs,Equity,50749.58,USD,R&D
+2024-04-23,Administrative,Liability,32721.46,USD,Admin
+2024-04-23,Operations,Expense,27698.53,USD,Marketing
+2024-04-24,Sales Revenue,Liability,170139.67,USD,R&D
+2024-04-24,Marketing Expenses,Equity,58091.88,USD,Admin
+2024-04-24,R&D Costs,Equity,32665.47,USD,Marketing
+2024-04-24,Administrative,Asset,8925.24,USD,Admin
+2024-04-24,Operations,Equity,18323.42,USD,Admin
+2024-04-25,Sales Revenue,Revenue,61843.76,USD,R&D
+2024-04-25,Marketing Expenses,Asset,75839.1,USD,Admin
+2024-04-25,R&D Costs,Revenue,24809.83,USD,R&D
+2024-04-25,Administrative,Revenue,19617.19,USD,Sales
+2024-04-25,Operations,Expense,37324.28,USD,Operations
+2024-04-26,Sales Revenue,Liability,83632.81,USD,Sales
+2024-04-26,Marketing Expenses,Liability,37827.78,USD,R&D
+2024-04-26,R&D Costs,Equity,79366.02,USD,R&D
+2024-04-26,Administrative,Revenue,14987.0,USD,Operations
+2024-04-26,Operations,Liability,41188.88,USD,Operations
+2024-04-27,Sales Revenue,Equity,182206.91,USD,Admin
+2024-04-27,Marketing Expenses,Equity,48601.09,USD,Admin
+2024-04-27,R&D Costs,Equity,40814.45,USD,Admin
+2024-04-27,Administrative,Asset,10832.91,USD,Sales
+2024-04-27,Operations,Asset,19274.16,USD,Sales
+2024-04-28,Sales Revenue,Equity,57668.6,USD,Admin
+2024-04-28,Marketing Expenses,Liability,34617.04,USD,Admin
+2024-04-28,R&D Costs,Asset,69861.26,USD,R&D
+2024-04-28,Administrative,Asset,11813.33,USD,Admin
+2024-04-28,Operations,Equity,10356.42,USD,Sales
+2024-04-29,Sales Revenue,Asset,186806.39,USD,Operations
+2024-04-29,Marketing Expenses,Equity,72376.07,USD,Admin
+2024-04-29,R&D Costs,Equity,25441.21,USD,Sales
+2024-04-29,Administrative,Revenue,29760.22,USD,Sales
+2024-04-29,Operations,Equity,30047.37,USD,Marketing
+2024-04-30,Sales Revenue,Revenue,73043.73,USD,Admin
+2024-04-30,Marketing Expenses,Expense,35081.46,USD,Operations
+2024-04-30,R&D Costs,Equity,44949.35,USD,R&D
+2024-04-30,Administrative,Expense,19180.01,USD,Operations
+2024-04-30,Operations,Asset,4684.26,USD,R&D
+2024-05-01,Sales Revenue,Asset,72235.32,USD,Operations
+2024-05-01,Marketing Expenses,Equity,32860.59,USD,Sales
+2024-05-01,R&D Costs,Equity,68521.56,USD,Marketing
+2024-05-01,Administrative,Asset,5164.39,USD,R&D
+2024-05-01,Operations,Revenue,38842.22,USD,Sales
+2024-05-02,Sales Revenue,Equity,79690.06,USD,Operations
+2024-05-02,Marketing Expenses,Liability,74145.76,USD,Admin
+2024-05-02,R&D Costs,Expense,43810.71,USD,Marketing
+2024-05-02,Administrative,Liability,9987.66,USD,Sales
+2024-05-02,Operations,Equity,9263.16,USD,Sales
+2024-05-03,Sales Revenue,Equity,170669.78,USD,Marketing
+2024-05-03,Marketing Expenses,Expense,71470.02,USD,Sales
+2024-05-03,R&D Costs,Asset,48114.55,USD,R&D
+2024-05-03,Administrative,Expense,17062.25,USD,Marketing
+2024-05-03,Operations,Equity,6499.59,USD,Sales
+2024-05-04,Sales Revenue,Asset,183350.19,USD,Sales
+2024-05-04,Marketing Expenses,Equity,22443.65,USD,Sales
+2024-05-04,R&D Costs,Asset,33530.12,USD,Sales
+2024-05-04,Administrative,Equity,35350.46,USD,Sales
+2024-05-04,Operations,Asset,12449.59,USD,Marketing
+2024-05-05,Sales Revenue,Asset,141883.98,USD,Admin
+2024-05-05,Marketing Expenses,Expense,35638.26,USD,Operations
+2024-05-05,R&D Costs,Revenue,79040.87,USD,Marketing
+2024-05-05,Administrative,Expense,7907.37,USD,Admin
+2024-05-05,Operations,Revenue,18522.88,USD,Admin
+2024-05-06,Sales Revenue,Expense,187984.75,USD,Sales
+2024-05-06,Marketing Expenses,Asset,65608.73,USD,Operations
+2024-05-06,R&D Costs,Asset,21766.52,USD,R&D
+2024-05-06,Administrative,Asset,15863.2,USD,R&D
+2024-05-06,Operations,Expense,5112.39,USD,Operations
+2024-05-07,Sales Revenue,Equity,59110.56,USD,Admin
+2024-05-07,Marketing Expenses,Equity,31470.33,USD,R&D
+2024-05-07,R&D Costs,Revenue,53161.12,USD,Operations
+2024-05-07,Administrative,Expense,37796.0,USD,Admin
+2024-05-07,Operations,Asset,34030.1,USD,R&D
+2024-05-08,Sales Revenue,Expense,157384.46,USD,R&D
+2024-05-08,Marketing Expenses,Revenue,39742.25,USD,R&D
+2024-05-08,R&D Costs,Asset,47636.12,USD,Sales
+2024-05-08,Administrative,Revenue,20997.26,USD,R&D
+2024-05-08,Operations,Revenue,7425.6,USD,Marketing
+2024-05-09,Sales Revenue,Expense,97960.89,USD,Operations
+2024-05-09,Marketing Expenses,Equity,68076.41,USD,Sales
+2024-05-09,R&D Costs,Expense,78740.92,USD,Sales
+2024-05-09,Administrative,Expense,41946.61,USD,Operations
+2024-05-09,Operations,Expense,43801.35,USD,R&D
+2024-05-10,Sales Revenue,Asset,119279.33,USD,Admin
+2024-05-10,Marketing Expenses,Revenue,36496.43,USD,Operations
+2024-05-10,R&D Costs,Equity,72178.28,USD,R&D
+2024-05-10,Administrative,Liability,24037.58,USD,Admin
+2024-05-10,Operations,Liability,38576.33,USD,Operations
+2024-05-11,Sales Revenue,Equity,86928.58,USD,R&D
+2024-05-11,Marketing Expenses,Equity,33885.7,USD,Admin
+2024-05-11,R&D Costs,Expense,38149.66,USD,R&D
+2024-05-11,Administrative,Revenue,48583.32,USD,Marketing
+2024-05-11,Operations,Asset,7150.93,USD,Admin
+2024-05-12,Sales Revenue,Equity,81560.23,USD,R&D
+2024-05-12,Marketing Expenses,Asset,10957.67,USD,Marketing
+2024-05-12,R&D Costs,Liability,32235.95,USD,R&D
+2024-05-12,Administrative,Expense,14270.21,USD,Sales
+2024-05-12,Operations,Equity,22572.98,USD,Marketing
+2024-05-13,Sales Revenue,Revenue,183840.14,USD,Sales
+2024-05-13,Marketing Expenses,Expense,61279.55,USD,Sales
+2024-05-13,R&D Costs,Liability,51582.42,USD,Admin
+2024-05-13,Administrative,Asset,29932.29,USD,Admin
+2024-05-13,Operations,Expense,28949.05,USD,Operations
+2024-05-14,Sales Revenue,Expense,119193.93,USD,Operations
+2024-05-14,Marketing Expenses,Liability,12657.22,USD,R&D
+2024-05-14,R&D Costs,Revenue,63289.87,USD,Operations
+2024-05-14,Administrative,Liability,41483.71,USD,Operations
+2024-05-14,Operations,Asset,46561.2,USD,Admin
+2024-05-15,Sales Revenue,Expense,124472.55,USD,Marketing
+2024-05-15,Marketing Expenses,Liability,51971.8,USD,Marketing
+2024-05-15,R&D Costs,Equity,41614.56,USD,Sales
+2024-05-15,Administrative,Expense,26697.51,USD,R&D
+2024-05-15,Operations,Expense,1806.9,USD,Operations
+2024-05-16,Sales Revenue,Equity,122760.84,USD,Marketing
+2024-05-16,Marketing Expenses,Asset,26596.83,USD,Admin
+2024-05-16,R&D Costs,Expense,11704.75,USD,R&D
+2024-05-16,Administrative,Liability,25246.25,USD,R&D
+2024-05-16,Operations,Revenue,11776.77,USD,Operations
+2024-05-17,Sales Revenue,Expense,106495.4,USD,Operations
+2024-05-17,Marketing Expenses,Asset,77789.33,USD,Operations
+2024-05-17,R&D Costs,Asset,57138.85,USD,Sales
+2024-05-17,Administrative,Liability,41803.97,USD,Operations
+2024-05-17,Operations,Revenue,43809.42,USD,R&D
+2024-05-18,Sales Revenue,Liability,99812.35,USD,Sales
+2024-05-18,Marketing Expenses,Equity,64122.63,USD,Sales
+2024-05-18,R&D Costs,Liability,10463.69,USD,Marketing
+2024-05-18,Administrative,Revenue,15366.82,USD,Sales
+2024-05-18,Operations,Equity,1929.96,USD,Sales
+2024-05-19,Sales Revenue,Expense,197671.25,USD,R&D
+2024-05-19,Marketing Expenses,Equity,71593.97,USD,Operations
+2024-05-19,R&D Costs,Liability,19883.68,USD,Marketing
+2024-05-19,Administrative,Asset,33081.21,USD,Sales
+2024-05-19,Operations,Revenue,36097.85,USD,R&D
+2024-05-20,Sales Revenue,Asset,97016.25,USD,Admin
+2024-05-20,Marketing Expenses,Revenue,33919.57,USD,Sales
+2024-05-20,R&D Costs,Expense,39596.93,USD,Sales
+2024-05-20,Administrative,Liability,26349.32,USD,Operations
+2024-05-20,Operations,Liability,46695.98,USD,Marketing
+2024-05-21,Sales Revenue,Asset,91155.11,USD,R&D
+2024-05-21,Marketing Expenses,Revenue,57965.14,USD,R&D
+2024-05-21,R&D Costs,Expense,54255.23,USD,Marketing
+2024-05-21,Administrative,Asset,6001.33,USD,Marketing
+2024-05-21,Operations,Equity,39315.11,USD,R&D
+2024-05-22,Sales Revenue,Liability,145008.7,USD,Sales
+2024-05-22,Marketing Expenses,Equity,54686.5,USD,Admin
+2024-05-22,R&D Costs,Equity,77021.77,USD,Marketing
+2024-05-22,Administrative,Revenue,21537.99,USD,Sales
+2024-05-22,Operations,Expense,35193.49,USD,Sales
+2024-05-23,Sales Revenue,Liability,107082.2,USD,Operations
+2024-05-23,Marketing Expenses,Expense,22141.15,USD,Sales
+2024-05-23,R&D Costs,Revenue,37783.77,USD,Marketing
+2024-05-23,Administrative,Revenue,18971.24,USD,Marketing
+2024-05-23,Operations,Expense,2408.5,USD,Marketing
+2024-05-24,Sales Revenue,Equity,103362.6,USD,Sales
+2024-05-24,Marketing Expenses,Expense,21180.58,USD,Operations
+2024-05-24,R&D Costs,Equity,41766.54,USD,Sales
+2024-05-24,Administrative,Equity,5092.8,USD,Sales
+2024-05-24,Operations,Liability,23036.04,USD,Marketing
+2024-05-25,Sales Revenue,Liability,188392.71,USD,Admin
+2024-05-25,Marketing Expenses,Expense,21662.49,USD,Marketing
+2024-05-25,R&D Costs,Revenue,15095.77,USD,Admin
+2024-05-25,Administrative,Revenue,15827.15,USD,Marketing
+2024-05-25,Operations,Expense,22893.14,USD,Operations
+2024-05-26,Sales Revenue,Equity,129939.04,USD,Admin
+2024-05-26,Marketing Expenses,Revenue,33978.79,USD,Operations
+2024-05-26,R&D Costs,Revenue,51149.23,USD,Operations
+2024-05-26,Administrative,Equity,6194.09,USD,Sales
+2024-05-26,Operations,Asset,47730.12,USD,Operations
+2024-05-27,Sales Revenue,Asset,63590.98,USD,Sales
+2024-05-27,Marketing Expenses,Liability,52097.66,USD,Operations
+2024-05-27,R&D Costs,Liability,39636.43,USD,Marketing
+2024-05-27,Administrative,Equity,20502.7,USD,R&D
+2024-05-27,Operations,Revenue,9273.59,USD,Sales
+2024-05-28,Sales Revenue,Liability,188203.02,USD,Sales
+2024-05-28,Marketing Expenses,Equity,65100.45,USD,Admin
+2024-05-28,R&D Costs,Asset,55578.8,USD,Sales
+2024-05-28,Administrative,Asset,22173.75,USD,R&D
+2024-05-28,Operations,Liability,37528.05,USD,Operations
+2024-05-29,Sales Revenue,Revenue,94403.05,USD,Admin
+2024-05-29,Marketing Expenses,Expense,62719.94,USD,R&D
+2024-05-29,R&D Costs,Revenue,57195.78,USD,Sales
+2024-05-29,Administrative,Liability,10678.67,USD,Marketing
+2024-05-29,Operations,Asset,26380.17,USD,R&D
+2024-05-30,Sales Revenue,Liability,177340.79,USD,R&D
+2024-05-30,Marketing Expenses,Equity,59431.66,USD,Marketing
+2024-05-30,R&D Costs,Expense,54534.2,USD,Marketing
+2024-05-30,Administrative,Revenue,18641.22,USD,Sales
+2024-05-30,Operations,Equity,38164.56,USD,Operations
+2024-05-31,Sales Revenue,Expense,68502.06,USD,Admin
+2024-05-31,Marketing Expenses,Asset,43111.58,USD,R&D
+2024-05-31,R&D Costs,Equity,71615.52,USD,Marketing
+2024-05-31,Administrative,Expense,5312.37,USD,R&D
+2024-05-31,Operations,Expense,4467.1,USD,R&D
+2024-06-01,Sales Revenue,Liability,102998.92800000001,USD,Admin
+2024-06-01,Marketing Expenses,Equity,28242.36,USD,Admin
+2024-06-01,R&D Costs,Equity,23388.24,USD,Operations
+2024-06-01,Administrative,Liability,33225.688,USD,R&D
+2024-06-01,Operations,Equity,14956.920000000002,USD,Sales
+2024-06-02,Sales Revenue,Equity,117624.40800000001,USD,R&D
+2024-06-02,Marketing Expenses,Expense,47919.544,USD,Marketing
+2024-06-02,R&D Costs,Equity,8962.152,USD,Operations
+2024-06-02,Administrative,Revenue,21541.984,USD,R&D
+2024-06-02,Operations,Liability,932.7520000000001,USD,Marketing
+2024-06-03,Sales Revenue,Equity,100671.248,USD,R&D
+2024-06-03,Marketing Expenses,Liability,54542.695999999996,USD,Operations
+2024-06-03,R&D Costs,Revenue,28194.248,USD,Marketing
+2024-06-03,Administrative,Equity,26140.264000000003,USD,Operations
+2024-06-03,Operations,Revenue,32892.656,USD,Marketing
+2024-06-04,Sales Revenue,Equity,124291.344,USD,Marketing
+2024-06-04,Marketing Expenses,Expense,23530.136,USD,Marketing
+2024-06-04,R&D Costs,Equity,8672.096000000001,USD,Marketing
+2024-06-04,Administrative,Liability,35760.552,USD,Admin
+2024-06-04,Operations,Revenue,7632.344000000001,USD,Admin
+2024-06-05,Sales Revenue,Revenue,141440.568,USD,R&D
+2024-06-05,Marketing Expenses,Revenue,24947.616,USD,Admin
+2024-06-05,R&D Costs,Equity,56975.200000000004,USD,Operations
+2024-06-05,Administrative,Revenue,14820.328000000001,USD,Marketing
+2024-06-05,Operations,Equity,2804.2560000000003,USD,Marketing
+2024-06-06,Sales Revenue,Liability,134878.44,USD,Sales
+2024-06-06,Marketing Expenses,Revenue,49330.008,USD,Operations
+2024-06-06,R&D Costs,Equity,52004.912000000004,USD,Operations
+2024-06-06,Administrative,Equity,8348.568,USD,R&D
+2024-06-06,Operations,Asset,37549.096000000005,USD,Admin
+2024-06-07,Sales Revenue,Expense,149432.848,USD,Operations
+2024-06-07,Marketing Expenses,Liability,17690.72,USD,Admin
+2024-06-07,R&D Costs,Liability,38794.368,USD,Marketing
+2024-06-07,Administrative,Asset,5644.352,USD,Operations
+2024-06-07,Operations,Expense,34540.656,USD,Sales
+2024-06-08,Sales Revenue,Asset,43026.088,USD,Admin
+2024-06-08,Marketing Expenses,Equity,44095.248,USD,Admin
+2024-06-08,R&D Costs,Revenue,47606.904,USD,Operations
+2024-06-08,Administrative,Asset,11437.792000000001,USD,Marketing
+2024-06-08,Operations,Equity,32424.432,USD,Marketing
+2024-06-09,Sales Revenue,Liability,131932.584,USD,Operations
+2024-06-09,Marketing Expenses,Revenue,16709.0,USD,Admin
+2024-06-09,R&D Costs,Asset,16075.720000000001,USD,R&D
+2024-06-09,Administrative,Liability,12538.424,USD,R&D
+2024-06-09,Operations,Liability,22312.112,USD,Admin
+2024-06-10,Sales Revenue,Revenue,72184.496,USD,Sales
+2024-06-10,Marketing Expenses,Asset,10518.288,USD,Sales
+2024-06-10,R&D Costs,Asset,17826.72,USD,Marketing
+2024-06-10,Administrative,Liability,7973.976,USD,Admin
+2024-06-10,Operations,Asset,21130.336,USD,Operations
+2024-06-11,Sales Revenue,Expense,59459.04000000001,USD,Marketing
+2024-06-11,Marketing Expenses,Equity,22096.496,USD,Operations
+2024-06-11,R&D Costs,Asset,9111.176,USD,Admin
+2024-06-11,Administrative,Revenue,36980.616,USD,Marketing
+2024-06-11,Operations,Expense,37437.912000000004,USD,Admin
+2024-06-12,Sales Revenue,Equity,62262.92,USD,Operations
+2024-06-12,Marketing Expenses,Expense,53681.119999999995,USD,Sales
+2024-06-12,R&D Costs,Revenue,29717.392,USD,Marketing
+2024-06-12,Administrative,Equity,37641.792,USD,Marketing
+2024-06-12,Operations,Liability,5568.8240000000005,USD,Sales
+2024-06-13,Sales Revenue,Equity,65132.32800000001,USD,Marketing
+2024-06-13,Marketing Expenses,Liability,45962.12,USD,R&D
+2024-06-13,R&D Costs,Expense,39252.92800000001,USD,Sales
+2024-06-13,Administrative,Liability,33358.752,USD,R&D
+2024-06-13,Operations,Expense,29020.72,USD,Sales
+2024-06-14,Sales Revenue,Revenue,138757.976,USD,Marketing
+2024-06-14,Marketing Expenses,Expense,12042.536,USD,Operations
+2024-06-14,R&D Costs,Expense,34269.12,USD,Marketing
+2024-06-14,Administrative,Liability,37706.592,USD,Operations
+2024-06-14,Operations,Liability,23173.136,USD,Operations
+2024-06-15,Sales Revenue,Revenue,87637.288,USD,R&D
+2024-06-15,Marketing Expenses,Expense,10401.92,USD,Operations
+2024-06-15,R&D Costs,Expense,46291.224,USD,Operations
+2024-06-15,Administrative,Expense,18171.632,USD,Marketing
+2024-06-15,Operations,Expense,14680.128,USD,Admin
+2024-06-16,Sales Revenue,Expense,127040.88,USD,Sales
+2024-06-16,Marketing Expenses,Expense,41699.920000000006,USD,Admin
+2024-06-16,R&D Costs,Liability,11004.976,USD,Operations
+2024-06-16,Administrative,Equity,36077.0,USD,Operations
+2024-06-16,Operations,Asset,22336.808,USD,Admin
+2024-06-17,Sales Revenue,Revenue,43258.648,USD,Admin
+2024-06-17,Marketing Expenses,Equity,34602.184,USD,Sales
+2024-06-17,R&D Costs,Expense,35638.488000000005,USD,Operations
+2024-06-17,Administrative,Equity,38021.384000000005,USD,R&D
+2024-06-17,Operations,Expense,29500.4,USD,Sales
+2024-06-18,Sales Revenue,Equity,135550.56000000003,USD,Operations
+2024-06-18,Marketing Expenses,Expense,8676.704,USD,R&D
+2024-06-18,R&D Costs,Liability,41659.04000000001,USD,Operations
+2024-06-18,Administrative,Liability,12557.296000000002,USD,Sales
+2024-06-18,Operations,Revenue,15951.416000000001,USD,Marketing
+2024-06-19,Sales Revenue,Liability,137272.424,USD,Admin
+2024-06-19,Marketing Expenses,Liability,13487.864000000001,USD,Operations
+2024-06-19,R&D Costs,Expense,34031.128000000004,USD,R&D
+2024-06-19,Administrative,Equity,39618.104,USD,Admin
+2024-06-19,Operations,Liability,6028.432000000001,USD,R&D
+2024-06-20,Sales Revenue,Asset,64297.536,USD,R&D
+2024-06-20,Marketing Expenses,Equity,19094.007999999998,USD,R&D
+2024-06-20,R&D Costs,Revenue,22976.584000000003,USD,R&D
+2024-06-20,Administrative,Expense,8125.008000000001,USD,R&D
+2024-06-20,Operations,Revenue,29172.36,USD,Sales
+2024-06-21,Sales Revenue,Equity,63968.0,USD,Sales
+2024-06-21,Marketing Expenses,Expense,29797.864,USD,Sales
+2024-06-21,R&D Costs,Revenue,17135.24,USD,Operations
+2024-06-21,Administrative,Asset,15926.288,USD,Sales
+2024-06-21,Operations,Equity,11738.400000000001,USD,Admin
+2024-06-22,Sales Revenue,Revenue,123722.65600000002,USD,R&D
+2024-06-22,Marketing Expenses,Liability,22119.568,USD,R&D
+2024-06-22,R&D Costs,Equity,22136.496,USD,Marketing
+2024-06-22,Administrative,Revenue,23913.704,USD,Sales
+2024-06-22,Operations,Revenue,17469.824,USD,Operations
+2024-06-23,Sales Revenue,Asset,116980.416,USD,Admin
+2024-06-23,Marketing Expenses,Liability,18062.312,USD,Marketing
+2024-06-23,R&D Costs,Expense,55729.184,USD,Operations
+2024-06-23,Administrative,Asset,5774.200000000001,USD,Sales
+2024-06-23,Operations,Liability,24386.944000000003,USD,Operations
+2024-06-24,Sales Revenue,Expense,47985.064000000006,USD,Sales
+2024-06-24,Marketing Expenses,Revenue,48082.544,USD,Marketing
+2024-06-24,R&D Costs,Asset,56432.288,USD,Sales
+2024-06-24,Administrative,Asset,27184.104,USD,Admin
+2024-06-24,Operations,Revenue,24877.800000000003,USD,Operations
+2024-06-25,Sales Revenue,Liability,97365.33600000001,USD,Sales
+2024-06-25,Marketing Expenses,Revenue,48269.744000000006,USD,Admin
+2024-06-25,R&D Costs,Revenue,45254.144,USD,Admin
+2024-06-25,Administrative,Expense,19033.768,USD,R&D
+2024-06-25,Operations,Asset,22471.024,USD,Sales
+2024-06-26,Sales Revenue,Liability,65755.072,USD,Marketing
+2024-06-26,Marketing Expenses,Revenue,16792.888000000003,USD,Operations
+2024-06-26,R&D Costs,Revenue,16854.392000000003,USD,Operations
+2024-06-26,Administrative,Revenue,4279.024,USD,R&D
+2024-06-26,Operations,Expense,19060.079999999998,USD,Operations
+2024-06-27,Sales Revenue,Expense,81008.76800000001,USD,R&D
+2024-06-27,Marketing Expenses,Asset,57554.296,USD,R&D
+2024-06-27,R&D Costs,Revenue,12909.68,USD,Sales
+2024-06-27,Administrative,Asset,29578.064000000002,USD,Admin
+2024-06-27,Operations,Equity,10517.760000000002,USD,Admin
+2024-06-28,Sales Revenue,Expense,139002.752,USD,Admin
+2024-06-28,Marketing Expenses,Equity,62273.296,USD,Sales
+2024-06-28,R&D Costs,Asset,50091.528000000006,USD,Admin
+2024-06-28,Administrative,Asset,37428.256,USD,Admin
+2024-06-28,Operations,Asset,25968.84,USD,Operations
+2024-06-29,Sales Revenue,Equity,104291.92,USD,Admin
+2024-06-29,Marketing Expenses,Revenue,13404.816,USD,Admin
+2024-06-29,R&D Costs,Expense,54171.50400000001,USD,Operations
+2024-06-29,Administrative,Liability,29008.552000000003,USD,R&D
+2024-06-29,Operations,Asset,30941.896000000004,USD,Marketing
+2024-06-30,Sales Revenue,Expense,121100.064,USD,Operations
+2024-06-30,Marketing Expenses,Revenue,41299.888000000006,USD,R&D
+2024-06-30,R&D Costs,Expense,23820.960000000003,USD,Operations
+2024-06-30,Administrative,Asset,10422.552000000001,USD,Admin
+2024-06-30,Operations,Asset,39309.464,USD,Operations
+2024-07-01,Sales Revenue,Revenue,101785.91200000001,USD,Sales
+2024-07-01,Marketing Expenses,Revenue,41115.89600000001,USD,Admin
+2024-07-01,R&D Costs,Asset,54285.936,USD,Operations
+2024-07-01,Administrative,Liability,30323.608000000004,USD,R&D
+2024-07-01,Operations,Equity,12385.544000000002,USD,R&D
+2024-07-02,Sales Revenue,Revenue,131539.864,USD,Admin
+2024-07-02,Marketing Expenses,Asset,27229.920000000002,USD,Sales
+2024-07-02,R&D Costs,Asset,51125.16,USD,Sales
+2024-07-02,Administrative,Equity,6967.856,USD,Marketing
+2024-07-02,Operations,Liability,15747.432,USD,Marketing
+2024-07-03,Sales Revenue,Liability,67733.36,USD,Sales
+2024-07-03,Marketing Expenses,Expense,58944.064000000006,USD,Sales
+2024-07-03,R&D Costs,Equity,19902.032000000003,USD,Marketing
+2024-07-03,Administrative,Liability,13951.464000000002,USD,Marketing
+2024-07-03,Operations,Liability,30871.440000000002,USD,R&D
+2024-07-04,Sales Revenue,Expense,143558.40800000002,USD,Operations
+2024-07-04,Marketing Expenses,Equity,24794.688000000002,USD,Sales
+2024-07-04,R&D Costs,Revenue,20499.488,USD,Sales
+2024-07-04,Administrative,Liability,10959.216,USD,Admin
+2024-07-04,Operations,Expense,32656.656000000003,USD,Marketing
+2024-07-05,Sales Revenue,Expense,148954.456,USD,R&D
+2024-07-05,Marketing Expenses,Equity,27342.16,USD,Operations
+2024-07-05,R&D Costs,Equity,56432.592000000004,USD,Operations
+2024-07-05,Administrative,Equity,7825.112,USD,Operations
+2024-07-05,Operations,Expense,16238.824,USD,Sales
+2024-07-06,Sales Revenue,Expense,110349.64,USD,Sales
+2024-07-06,Marketing Expenses,Equity,22521.848,USD,Sales
+2024-07-06,R&D Costs,Expense,14721.368,USD,R&D
+2024-07-06,Administrative,Expense,21417.696,USD,Sales
+2024-07-06,Operations,Asset,29871.056,USD,Operations
+2024-07-07,Sales Revenue,Equity,70313.216,USD,Admin
+2024-07-07,Marketing Expenses,Expense,8385.160000000002,USD,Admin
+2024-07-07,R&D Costs,Expense,14545.616000000002,USD,Admin
+2024-07-07,Administrative,Asset,5032.552,USD,Admin
+2024-07-07,Operations,Equity,23248.952,USD,Operations
+2024-07-08,Sales Revenue,Asset,109482.744,USD,Admin
+2024-07-08,Marketing Expenses,Equity,25014.496,USD,Sales
+2024-07-08,R&D Costs,Liability,31761.2,USD,Marketing
+2024-07-08,Administrative,Asset,11600.92,USD,R&D
+2024-07-08,Operations,Revenue,25004.784,USD,R&D
+2024-07-09,Sales Revenue,Expense,108493.288,USD,R&D
+2024-07-09,Marketing Expenses,Liability,42009.384000000005,USD,Operations
+2024-07-09,R&D Costs,Liability,29458.144,USD,Admin
+2024-07-09,Administrative,Asset,1405.352,USD,Sales
+2024-07-09,Operations,Equity,4341.400000000001,USD,Sales
+2024-07-10,Sales Revenue,Liability,129891.848,USD,Admin
+2024-07-10,Marketing Expenses,Asset,41049.912000000004,USD,Operations
+2024-07-10,R&D Costs,Equity,28065.600000000002,USD,Marketing
+2024-07-10,Administrative,Equity,807.1840000000001,USD,Marketing
+2024-07-10,Operations,Asset,37814.696,USD,Operations
+2024-07-11,Sales Revenue,Revenue,65125.312000000005,USD,R&D
+2024-07-11,Marketing Expenses,Equity,56593.888000000006,USD,R&D
+2024-07-11,R&D Costs,Liability,14909.104000000001,USD,Operations
+2024-07-11,Administrative,Asset,34099.592,USD,Sales
+2024-07-11,Operations,Liability,33625.064000000006,USD,Operations
+2024-07-12,Sales Revenue,Equity,95845.99200000001,USD,Operations
+2024-07-12,Marketing Expenses,Equity,58826.032,USD,Marketing
+2024-07-12,R&D Costs,Expense,47741.104,USD,R&D
+2024-07-12,Administrative,Liability,28604.336,USD,Admin
+2024-07-12,Operations,Expense,17776.600000000002,USD,Sales
+2024-07-13,Sales Revenue,Equity,89361.12,USD,Marketing
+2024-07-13,Marketing Expenses,Equity,23527.584000000003,USD,Admin
+2024-07-13,R&D Costs,Asset,10614.496000000001,USD,Admin
+2024-07-13,Administrative,Expense,11012.64,USD,Operations
+2024-07-13,Operations,Liability,21586.144,USD,Operations
+2024-07-14,Sales Revenue,Expense,41942.0,USD,Operations
+2024-07-14,Marketing Expenses,Revenue,35900.464,USD,Marketing
+2024-07-14,R&D Costs,Expense,55794.64000000001,USD,Operations
+2024-07-14,Administrative,Expense,17639.624,USD,Sales
+2024-07-14,Operations,Expense,32375.632,USD,Operations
+2024-07-15,Sales Revenue,Liability,50791.368,USD,Sales
+2024-07-15,Marketing Expenses,Asset,21793.568,USD,R&D
+2024-07-15,R&D Costs,Asset,15720.616000000002,USD,Operations
+2024-07-15,Administrative,Liability,30247.768,USD,Marketing
+2024-07-15,Operations,Liability,15410.328000000001,USD,Operations
+2024-07-16,Sales Revenue,Liability,148683.584,USD,Sales
+2024-07-16,Marketing Expenses,Equity,22532.352,USD,Marketing
+2024-07-16,R&D Costs,Asset,52803.39200000001,USD,R&D
+2024-07-16,Administrative,Liability,5325.568,USD,Admin
+2024-07-16,Operations,Liability,16751.608,USD,Admin
+2024-07-17,Sales Revenue,Expense,146168.128,USD,Operations
+2024-07-17,Marketing Expenses,Asset,14953.416000000001,USD,Sales
+2024-07-17,R&D Costs,Equity,14313.496,USD,R&D
+2024-07-17,Administrative,Liability,15756.36,USD,Operations
+2024-07-17,Operations,Revenue,33843.904,USD,Marketing
+2024-07-18,Sales Revenue,Expense,159278.816,USD,Admin
+2024-07-18,Marketing Expenses,Asset,42934.696,USD,Operations
+2024-07-18,R&D Costs,Expense,52303.536,USD,Marketing
+2024-07-18,Administrative,Equity,23200.04,USD,Operations
+2024-07-18,Operations,Equity,8300.248,USD,Admin
+2024-07-19,Sales Revenue,Revenue,45700.16,USD,Admin
+2024-07-19,Marketing Expenses,Equity,36205.624,USD,R&D
+2024-07-19,R&D Costs,Liability,40741.136,USD,Admin
+2024-07-19,Administrative,Equity,3996.8720000000003,USD,Operations
+2024-07-19,Operations,Revenue,23645.264000000003,USD,R&D
+2024-07-20,Sales Revenue,Liability,132062.48,USD,R&D
+2024-07-20,Marketing Expenses,Revenue,12677.976,USD,Sales
+2024-07-20,R&D Costs,Equity,59125.776000000005,USD,Admin
+2024-07-20,Administrative,Asset,1626.728,USD,Sales
+2024-07-20,Operations,Equity,11087.784,USD,Operations
+2024-07-21,Sales Revenue,Asset,95063.20000000001,USD,Marketing
+2024-07-21,Marketing Expenses,Asset,60183.240000000005,USD,Marketing
+2024-07-21,R&D Costs,Revenue,21190.944000000003,USD,Marketing
+2024-07-21,Administrative,Revenue,39793.144,USD,R&D
+2024-07-21,Operations,Asset,27123.184000000005,USD,R&D
+2024-07-22,Sales Revenue,Asset,128092.66399999999,USD,R&D
+2024-07-22,Marketing Expenses,Equity,29640.824,USD,Sales
+2024-07-22,R&D Costs,Revenue,35420.104,USD,Marketing
+2024-07-22,Administrative,Liability,32093.928000000004,USD,Admin
+2024-07-22,Operations,Revenue,29273.440000000002,USD,Operations
+2024-07-23,Sales Revenue,Liability,148370.352,USD,Sales
+2024-07-23,Marketing Expenses,Revenue,11125.224000000002,USD,R&D
+2024-07-23,R&D Costs,Asset,31743.08,USD,Operations
+2024-07-23,Administrative,Asset,15531.24,USD,Operations
+2024-07-23,Operations,Equity,19273.136,USD,Operations
+2024-07-24,Sales Revenue,Liability,81239.272,USD,Operations
+2024-07-24,Marketing Expenses,Asset,48526.17600000001,USD,Operations
+2024-07-24,R&D Costs,Expense,14025.192000000003,USD,Operations
+2024-07-24,Administrative,Revenue,17007.512,USD,Operations
+2024-07-24,Operations,Expense,19047.616,USD,Marketing
+2024-07-25,Sales Revenue,Asset,82616.584,USD,Operations
+2024-07-25,Marketing Expenses,Revenue,26177.568,USD,Operations
+2024-07-25,R&D Costs,Expense,15641.088000000002,USD,R&D
+2024-07-25,Administrative,Expense,14730.192000000003,USD,Admin
+2024-07-25,Operations,Equity,2038.512,USD,Operations
+2024-07-26,Sales Revenue,Asset,58699.848,USD,R&D
+2024-07-26,Marketing Expenses,Revenue,62237.224,USD,Admin
+2024-07-26,R&D Costs,Revenue,53858.336,USD,Admin
+2024-07-26,Administrative,Liability,24130.008,USD,Operations
+2024-07-26,Operations,Expense,33778.216,USD,Sales
+2024-07-27,Sales Revenue,Asset,52881.56800000001,USD,R&D
+2024-07-27,Marketing Expenses,Liability,29735.448,USD,R&D
+2024-07-27,R&D Costs,Expense,36829.96,USD,Admin
+2024-07-27,Administrative,Revenue,28880.592,USD,Marketing
+2024-07-27,Operations,Revenue,5406.024,USD,Admin
+2024-07-28,Sales Revenue,Revenue,45397.648,USD,Sales
+2024-07-28,Marketing Expenses,Liability,36172.12,USD,Marketing
+2024-07-28,R&D Costs,Asset,40116.18400000001,USD,Marketing
+2024-07-28,Administrative,Revenue,34629.78400000001,USD,Marketing
+2024-07-28,Operations,Expense,11031.864000000001,USD,R&D
+2024-07-29,Sales Revenue,Liability,67715.96,USD,Operations
+2024-07-29,Marketing Expenses,Liability,21307.0,USD,Marketing
+2024-07-29,R&D Costs,Equity,61571.008,USD,Admin
+2024-07-29,Administrative,Liability,25821.096,USD,Sales
+2024-07-29,Operations,Asset,5677.808000000001,USD,R&D
+2024-07-30,Sales Revenue,Expense,156177.728,USD,Marketing
+2024-07-30,Marketing Expenses,Asset,45910.872,USD,R&D
+2024-07-30,R&D Costs,Expense,33863.536,USD,Admin
+2024-07-30,Administrative,Revenue,12675.448,USD,R&D
+2024-07-30,Operations,Equity,31631.784000000003,USD,Marketing
+2024-07-31,Sales Revenue,Liability,122130.872,USD,Admin
+2024-07-31,Marketing Expenses,Expense,55613.75200000001,USD,Admin
+2024-07-31,R&D Costs,Asset,18458.0,USD,R&D
+2024-07-31,Administrative,Expense,25977.920000000002,USD,Admin
+2024-07-31,Operations,Liability,24917.248000000003,USD,Admin
+2024-08-01,Sales Revenue,Asset,107026.576,USD,Operations
+2024-08-01,Marketing Expenses,Liability,51174.736000000004,USD,Marketing
+2024-08-01,R&D Costs,Asset,39861.904,USD,Admin
+2024-08-01,Administrative,Liability,14890.288,USD,Operations
+2024-08-01,Operations,Asset,16071.552,USD,Sales
+2024-08-02,Sales Revenue,Revenue,96270.16,USD,Admin
+2024-08-02,Marketing Expenses,Liability,15092.184000000001,USD,Operations
+2024-08-02,R&D Costs,Asset,38944.888,USD,Sales
+2024-08-02,Administrative,Equity,5838.168000000001,USD,Sales
+2024-08-02,Operations,Expense,14202.312,USD,Operations
+2024-08-03,Sales Revenue,Liability,68815.408,USD,Admin
+2024-08-03,Marketing Expenses,Expense,43420.568,USD,R&D
+2024-08-03,R&D Costs,Revenue,44236.288,USD,Operations
+2024-08-03,Administrative,Asset,18628.264000000003,USD,Operations
+2024-08-03,Operations,Expense,16512.976000000002,USD,Marketing
+2024-08-04,Sales Revenue,Liability,115326.88,USD,Admin
+2024-08-04,Marketing Expenses,Equity,51740.144,USD,Operations
+2024-08-04,R&D Costs,Liability,25697.688000000002,USD,Operations
+2024-08-04,Administrative,Liability,26198.144,USD,Operations
+2024-08-04,Operations,Asset,38051.744,USD,Admin
+2024-08-05,Sales Revenue,Revenue,135570.10400000002,USD,Marketing
+2024-08-05,Marketing Expenses,Expense,63907.840000000004,USD,Admin
+2024-08-05,R&D Costs,Liability,24427.984,USD,R&D
+2024-08-05,Administrative,Liability,25761.744000000002,USD,R&D
+2024-08-05,Operations,Expense,20780.832000000002,USD,R&D
+2024-08-06,Sales Revenue,Expense,122494.85600000001,USD,R&D
+2024-08-06,Marketing Expenses,Asset,21131.320000000003,USD,R&D
+2024-08-06,R&D Costs,Equity,46951.456000000006,USD,Operations
+2024-08-06,Administrative,Liability,23549.472,USD,R&D
+2024-08-06,Operations,Asset,35225.912000000004,USD,Sales
+2024-08-07,Sales Revenue,Revenue,159061.336,USD,Operations
+2024-08-07,Marketing Expenses,Revenue,13794.072,USD,R&D
+2024-08-07,R&D Costs,Revenue,39399.49600000001,USD,R&D
+2024-08-07,Administrative,Expense,7417.7119999999995,USD,R&D
+2024-08-07,Operations,Revenue,15034.744,USD,Marketing
+2024-08-08,Sales Revenue,Liability,105949.96000000002,USD,Sales
+2024-08-08,Marketing Expenses,Expense,36222.704,USD,Sales
+2024-08-08,R&D Costs,Liability,50720.12,USD,Operations
+2024-08-08,Administrative,Equity,7484.192,USD,Sales
+2024-08-08,Operations,Asset,4517.536,USD,R&D
+2024-08-09,Sales Revenue,Liability,144078.416,USD,R&D
+2024-08-09,Marketing Expenses,Liability,60729.184,USD,Marketing
+2024-08-09,R&D Costs,Equity,56944.05600000001,USD,Marketing
+2024-08-09,Administrative,Revenue,30642.024,USD,Operations
+2024-08-09,Operations,Equity,24265.672000000002,USD,Admin
+2024-08-10,Sales Revenue,Asset,136429.368,USD,Marketing
+2024-08-10,Marketing Expenses,Asset,32158.744000000002,USD,R&D
+2024-08-10,R&D Costs,Asset,53254.64000000001,USD,Admin
+2024-08-10,Administrative,Liability,36339.808000000005,USD,Sales
+2024-08-10,Operations,Revenue,18921.952,USD,Sales
+2024-08-11,Sales Revenue,Equity,68771.68800000001,USD,Sales
+2024-08-11,Marketing Expenses,Equity,58910.144,USD,Sales
+2024-08-11,R&D Costs,Liability,31809.384000000005,USD,Admin
+2024-08-11,Administrative,Asset,15901.056,USD,Admin
+2024-08-11,Operations,Liability,22344.960000000003,USD,Sales
+2024-08-12,Sales Revenue,Asset,93632.816,USD,Marketing
+2024-08-12,Marketing Expenses,Liability,45066.424,USD,Marketing
+2024-08-12,R&D Costs,Equity,49809.96,USD,Sales
+2024-08-12,Administrative,Liability,27160.104,USD,Admin
+2024-08-12,Operations,Revenue,4035.0879999999997,USD,Sales
+2024-08-13,Sales Revenue,Revenue,118468.31200000002,USD,R&D
+2024-08-13,Marketing Expenses,Asset,49485.336,USD,Sales
+2024-08-13,R&D Costs,Expense,50256.92800000001,USD,R&D
+2024-08-13,Administrative,Equity,12976.216,USD,Sales
+2024-08-13,Operations,Revenue,30335.624,USD,Admin
+2024-08-14,Sales Revenue,Asset,94839.68000000001,USD,R&D
+2024-08-14,Marketing Expenses,Liability,17908.256,USD,Admin
+2024-08-14,R&D Costs,Asset,49390.624,USD,R&D
+2024-08-14,Administrative,Asset,13806.792000000001,USD,Sales
+2024-08-14,Operations,Liability,33279.592,USD,R&D
+2024-08-15,Sales Revenue,Liability,44175.056000000004,USD,Operations
+2024-08-15,Marketing Expenses,Liability,41878.016,USD,Sales
+2024-08-15,R&D Costs,Equity,32271.192,USD,Operations
+2024-08-15,Administrative,Asset,2742.88,USD,Operations
+2024-08-15,Operations,Equity,32187.784000000003,USD,Admin
+2024-08-16,Sales Revenue,Equity,138521.968,USD,Sales
+2024-08-16,Marketing Expenses,Asset,52074.816,USD,Sales
+2024-08-16,R&D Costs,Revenue,28013.408000000003,USD,Admin
+2024-08-16,Administrative,Revenue,27576.488,USD,Sales
+2024-08-16,Operations,Expense,28721.816,USD,Operations
+2024-08-17,Sales Revenue,Asset,109207.48000000001,USD,Admin
+2024-08-17,Marketing Expenses,Asset,26881.088000000003,USD,Admin
+2024-08-17,R&D Costs,Revenue,11728.624000000002,USD,R&D
+2024-08-17,Administrative,Expense,12952.408000000001,USD,R&D
+2024-08-17,Operations,Equity,17057.600000000002,USD,Operations
+2024-08-18,Sales Revenue,Revenue,74788.336,USD,Admin
+2024-08-18,Marketing Expenses,Equity,38801.248,USD,Sales
+2024-08-18,R&D Costs,Equity,39222.944,USD,Sales
+2024-08-18,Administrative,Equity,28428.736,USD,Admin
+2024-08-18,Operations,Liability,38263.864,USD,Operations
+2024-08-19,Sales Revenue,Revenue,50499.152,USD,Marketing
+2024-08-19,Marketing Expenses,Equity,16886.704,USD,Sales
+2024-08-19,R&D Costs,Liability,43188.096000000005,USD,Marketing
+2024-08-19,Administrative,Asset,17534.536,USD,Marketing
+2024-08-19,Operations,Expense,34409.504,USD,Sales
+2024-08-20,Sales Revenue,Liability,111804.792,USD,Marketing
+2024-08-20,Marketing Expenses,Liability,61654.32800000001,USD,Operations
+2024-08-20,R&D Costs,Revenue,29481.632,USD,Admin
+2024-08-20,Administrative,Asset,39009.064000000006,USD,Admin
+2024-08-20,Operations,Expense,16123.752,USD,Sales
+2024-08-21,Sales Revenue,Liability,82640.176,USD,Admin
+2024-08-21,Marketing Expenses,Asset,45862.128000000004,USD,R&D
+2024-08-21,R&D Costs,Liability,63207.39200000001,USD,Admin
+2024-08-21,Administrative,Liability,27132.632,USD,Marketing
+2024-08-21,Operations,Liability,18020.152,USD,Operations
+2024-08-22,Sales Revenue,Equity,124144.992,USD,R&D
+2024-08-22,Marketing Expenses,Equity,42224.12,USD,Admin
+2024-08-22,R&D Costs,Liability,34780.952000000005,USD,Operations
+2024-08-22,Administrative,Expense,38326.376000000004,USD,Admin
+2024-08-22,Operations,Expense,17817.528000000002,USD,Sales
+2024-08-23,Sales Revenue,Expense,67455.464,USD,Admin
+2024-08-23,Marketing Expenses,Revenue,28710.136,USD,Marketing
+2024-08-23,R&D Costs,Asset,50543.888000000006,USD,R&D
+2024-08-23,Administrative,Asset,26108.184,USD,Marketing
+2024-08-23,Operations,Liability,19041.24,USD,Operations
+2024-08-24,Sales Revenue,Equity,106379.44,USD,R&D
+2024-08-24,Marketing Expenses,Asset,12315.896,USD,Marketing
+2024-08-24,R&D Costs,Liability,49910.36,USD,Marketing
+2024-08-24,Administrative,Liability,17470.496,USD,Sales
+2024-08-24,Operations,Liability,33080.392,USD,R&D
+2024-08-25,Sales Revenue,Equity,42569.49600000001,USD,Operations
+2024-08-25,Marketing Expenses,Equity,47141.744000000006,USD,Operations
+2024-08-25,R&D Costs,Asset,53409.39200000001,USD,Admin
+2024-08-25,Administrative,Expense,37313.456,USD,Operations
+2024-08-25,Operations,Asset,32250.184000000005,USD,Admin
+2024-08-26,Sales Revenue,Asset,156657.25600000002,USD,Operations
+2024-08-26,Marketing Expenses,Revenue,17956.296,USD,Admin
+2024-08-26,R&D Costs,Expense,40147.488000000005,USD,Marketing
+2024-08-26,Administrative,Expense,16692.192000000003,USD,Marketing
+2024-08-26,Operations,Asset,21162.224000000002,USD,Sales
+2024-08-27,Sales Revenue,Expense,114815.23999999999,USD,Sales
+2024-08-27,Marketing Expenses,Asset,30644.88,USD,Sales
+2024-08-27,R&D Costs,Equity,36623.864,USD,Operations
+2024-08-27,Administrative,Expense,15301.768,USD,Marketing
+2024-08-27,Operations,Equity,21009.072,USD,Admin
+2024-08-28,Sales Revenue,Equity,122235.68000000001,USD,R&D
+2024-08-28,Marketing Expenses,Equity,12272.048,USD,R&D
+2024-08-28,R&D Costs,Revenue,59583.888000000006,USD,R&D
+2024-08-28,Administrative,Asset,11373.008000000002,USD,Marketing
+2024-08-28,Operations,Liability,2352.944,USD,Operations
+2024-08-29,Sales Revenue,Liability,93067.35200000001,USD,R&D
+2024-08-29,Marketing Expenses,Equity,25211.984,USD,Operations
+2024-08-29,R&D Costs,Asset,23761.312,USD,Admin
+2024-08-29,Administrative,Expense,38682.792,USD,Marketing
+2024-08-29,Operations,Liability,13139.616000000002,USD,R&D
+2024-08-30,Sales Revenue,Equity,114686.072,USD,Marketing
+2024-08-30,Marketing Expenses,Equity,40525.552,USD,Marketing
+2024-08-30,R&D Costs,Asset,22986.84,USD,Marketing
+2024-08-30,Administrative,Equity,12815.184000000001,USD,R&D
+2024-08-30,Operations,Equity,12500.68,USD,Operations
+2024-08-31,Sales Revenue,Revenue,135594.6,USD,R&D
+2024-08-31,Marketing Expenses,Equity,28549.344,USD,Marketing
+2024-08-31,R&D Costs,Equity,21773.608,USD,Operations
+2024-08-31,Administrative,Equity,21686.496,USD,Marketing
+2024-08-31,Operations,Liability,24346.144,USD,Marketing
+2024-09-01,Sales Revenue,Liability,145868.68,USD,Marketing
+2024-09-01,Marketing Expenses,Expense,68399.58,USD,R&D
+2024-09-01,R&D Costs,Revenue,31445.32,USD,Operations
+2024-09-01,Administrative,Expense,33432.15,USD,Sales
+2024-09-01,Operations,Asset,28157.66,USD,Operations
+2024-09-02,Sales Revenue,Equity,79538.81,USD,Sales
+2024-09-02,Marketing Expenses,Equity,38074.41,USD,Admin
+2024-09-02,R&D Costs,Equity,26521.85,USD,Operations
+2024-09-02,Administrative,Liability,37732.45,USD,R&D
+2024-09-02,Operations,Liability,5107.13,USD,Operations
+2024-09-03,Sales Revenue,Revenue,180947.35,USD,Marketing
+2024-09-03,Marketing Expenses,Equity,39373.29,USD,Sales
+2024-09-03,R&D Costs,Liability,69372.84,USD,R&D
+2024-09-03,Administrative,Liability,12442.4,USD,Sales
+2024-09-03,Operations,Expense,7097.33,USD,Admin
+2024-09-04,Sales Revenue,Equity,134616.51,USD,R&D
+2024-09-04,Marketing Expenses,Liability,47183.51,USD,R&D
+2024-09-04,R&D Costs,Asset,56784.47,USD,Admin
+2024-09-04,Administrative,Asset,4399.09,USD,Marketing
+2024-09-04,Operations,Expense,15117.47,USD,Operations
+2024-09-05,Sales Revenue,Liability,198003.74,USD,R&D
+2024-09-05,Marketing Expenses,Equity,53856.98,USD,R&D
+2024-09-05,R&D Costs,Expense,51324.88,USD,Marketing
+2024-09-05,Administrative,Asset,48033.53,USD,Operations
+2024-09-05,Operations,Asset,29532.71,USD,Admin
+2024-09-06,Sales Revenue,Revenue,62072.09,USD,R&D
+2024-09-06,Marketing Expenses,Revenue,73663.77,USD,R&D
+2024-09-06,R&D Costs,Expense,21361.92,USD,Sales
+2024-09-06,Administrative,Asset,34734.48,USD,Admin
+2024-09-06,Operations,Equity,30825.87,USD,Operations
+2024-09-07,Sales Revenue,Expense,96211.88,USD,Marketing
+2024-09-07,Marketing Expenses,Asset,47936.14,USD,R&D
+2024-09-07,R&D Costs,Asset,18023.92,USD,Sales
+2024-09-07,Administrative,Revenue,13975.74,USD,Sales
+2024-09-07,Operations,Expense,45734.28,USD,Admin
+2024-09-08,Sales Revenue,Asset,178690.54,USD,Marketing
+2024-09-08,Marketing Expenses,Liability,52734.35,USD,Admin
+2024-09-08,R&D Costs,Equity,79803.81,USD,Marketing
+2024-09-08,Administrative,Revenue,3013.92,USD,Admin
+2024-09-08,Operations,Asset,9594.14,USD,Operations
+2024-09-09,Sales Revenue,Asset,132431.66,USD,R&D
+2024-09-09,Marketing Expenses,Expense,16861.6,USD,Marketing
+2024-09-09,R&D Costs,Liability,39837.24,USD,Sales
+2024-09-09,Administrative,Revenue,43627.33,USD,R&D
+2024-09-09,Operations,Equity,10180.16,USD,Operations
+2024-09-10,Sales Revenue,Asset,191431.79,USD,R&D
+2024-09-10,Marketing Expenses,Asset,43546.55,USD,Operations
+2024-09-10,R&D Costs,Asset,73888.96,USD,Marketing
+2024-09-10,Administrative,Asset,3702.2,USD,Admin
+2024-09-10,Operations,Equity,26000.02,USD,Sales
+2024-09-11,Sales Revenue,Revenue,154644.64,USD,Operations
+2024-09-11,Marketing Expenses,Liability,72766.08,USD,Sales
+2024-09-11,R&D Costs,Equity,69020.1,USD,R&D
+2024-09-11,Administrative,Asset,21014.89,USD,R&D
+2024-09-11,Operations,Equity,6702.63,USD,R&D
+2024-09-12,Sales Revenue,Asset,176431.5,USD,Operations
+2024-09-12,Marketing Expenses,Liability,63715.17,USD,Admin
+2024-09-12,R&D Costs,Equity,39837.97,USD,Sales
+2024-09-12,Administrative,Asset,25121.02,USD,Marketing
+2024-09-12,Operations,Expense,13269.91,USD,Marketing
+2024-09-13,Sales Revenue,Asset,144897.02,USD,R&D
+2024-09-13,Marketing Expenses,Liability,53775.69,USD,Sales
+2024-09-13,R&D Costs,Expense,43470.58,USD,Admin
+2024-09-13,Administrative,Expense,45021.86,USD,Marketing
+2024-09-13,Operations,Expense,39374.25,USD,Operations
+2024-09-14,Sales Revenue,Expense,139628.51,USD,Admin
+2024-09-14,Marketing Expenses,Asset,29228.34,USD,Marketing
+2024-09-14,R&D Costs,Asset,53498.83,USD,Admin
+2024-09-14,Administrative,Asset,7820.93,USD,Sales
+2024-09-14,Operations,Asset,30553.85,USD,Marketing
+2024-09-15,Sales Revenue,Asset,146881.4,USD,R&D
+2024-09-15,Marketing Expenses,Equity,52764.33,USD,R&D
+2024-09-15,R&D Costs,Liability,18523.05,USD,R&D
+2024-09-15,Administrative,Equity,24761.02,USD,Operations
+2024-09-15,Operations,Liability,2298.39,USD,Operations
+2024-09-16,Sales Revenue,Liability,162226.89,USD,Operations
+2024-09-16,Marketing Expenses,Asset,43311.26,USD,Operations
+2024-09-16,R&D Costs,Asset,48046.38,USD,Marketing
+2024-09-16,Administrative,Liability,3374.7,USD,Marketing
+2024-09-16,Operations,Liability,25463.59,USD,Marketing
+2024-09-17,Sales Revenue,Liability,169080.9,USD,Operations
+2024-09-17,Marketing Expenses,Equity,31863.35,USD,Sales
+2024-09-17,R&D Costs,Asset,62803.25,USD,Sales
+2024-09-17,Administrative,Equity,47486.01,USD,Marketing
+2024-09-17,Operations,Equity,30053.94,USD,Admin
+2024-09-18,Sales Revenue,Liability,57879.85,USD,Marketing
+2024-09-18,Marketing Expenses,Liability,60968.89,USD,Marketing
+2024-09-18,R&D Costs,Equity,23282.82,USD,Sales
+2024-09-18,Administrative,Asset,36103.39,USD,R&D
+2024-09-18,Operations,Equity,6048.83,USD,Sales
+2024-09-19,Sales Revenue,Equity,127599.88,USD,Admin
+2024-09-19,Marketing Expenses,Expense,78587.82,USD,Admin
+2024-09-19,R&D Costs,Asset,14676.72,USD,Marketing
+2024-09-19,Administrative,Revenue,48636.86,USD,Operations
+2024-09-19,Operations,Equity,22186.42,USD,R&D
+2024-09-20,Sales Revenue,Liability,108255.77,USD,Marketing
+2024-09-20,Marketing Expenses,Asset,55229.45,USD,Sales
+2024-09-20,R&D Costs,Asset,67006.49,USD,Marketing
+2024-09-20,Administrative,Expense,23798.84,USD,R&D
+2024-09-20,Operations,Liability,15781.69,USD,Operations
+2024-09-21,Sales Revenue,Equity,177952.07,USD,Operations
+2024-09-21,Marketing Expenses,Liability,24622.04,USD,Sales
+2024-09-21,R&D Costs,Equity,73657.42,USD,R&D
+2024-09-21,Administrative,Revenue,34455.47,USD,R&D
+2024-09-21,Operations,Expense,7268.36,USD,Admin
+2024-09-22,Sales Revenue,Liability,60618.93,USD,Marketing
+2024-09-22,Marketing Expenses,Liability,37647.72,USD,Admin
+2024-09-22,R&D Costs,Asset,46293.39,USD,Admin
+2024-09-22,Administrative,Expense,32404.48,USD,Marketing
+2024-09-22,Operations,Asset,42293.99,USD,Admin
+2024-09-23,Sales Revenue,Expense,138105.57,USD,Marketing
+2024-09-23,Marketing Expenses,Expense,51008.41,USD,Admin
+2024-09-23,R&D Costs,Liability,40013.55,USD,R&D
+2024-09-23,Administrative,Liability,25763.21,USD,Marketing
+2024-09-23,Operations,Expense,35704.57,USD,Operations
+2024-09-24,Sales Revenue,Expense,184359.9,USD,Marketing
+2024-09-24,Marketing Expenses,Liability,16767.09,USD,Operations
+2024-09-24,R&D Costs,Equity,30566.85,USD,Sales
+2024-09-24,Administrative,Revenue,12609.29,USD,Sales
+2024-09-24,Operations,Asset,16256.38,USD,Admin
+2024-09-25,Sales Revenue,Equity,108723.89,USD,Marketing
+2024-09-25,Marketing Expenses,Liability,26779.24,USD,Admin
+2024-09-25,R&D Costs,Expense,31872.35,USD,Sales
+2024-09-25,Administrative,Liability,18152.49,USD,R&D
+2024-09-25,Operations,Equity,15400.78,USD,R&D
+2024-09-26,Sales Revenue,Asset,51643.2,USD,Sales
+2024-09-26,Marketing Expenses,Equity,54437.39,USD,Operations
+2024-09-26,R&D Costs,Liability,70793.43,USD,Operations
+2024-09-26,Administrative,Liability,5617.06,USD,Marketing
+2024-09-26,Operations,Revenue,27581.02,USD,Sales
+2024-09-27,Sales Revenue,Expense,181633.83,USD,Operations
+2024-09-27,Marketing Expenses,Liability,12565.39,USD,R&D
+2024-09-27,R&D Costs,Asset,65002.89,USD,Admin
+2024-09-27,Administrative,Expense,33563.01,USD,Operations
+2024-09-27,Operations,Revenue,47379.16,USD,R&D
+2024-09-28,Sales Revenue,Equity,159574.79,USD,Admin
+2024-09-28,Marketing Expenses,Equity,27137.21,USD,Operations
+2024-09-28,R&D Costs,Revenue,17081.76,USD,Marketing
+2024-09-28,Administrative,Revenue,16667.07,USD,Operations
+2024-09-28,Operations,Equity,19038.48,USD,Operations
+2024-09-29,Sales Revenue,Expense,140250.18,USD,Marketing
+2024-09-29,Marketing Expenses,Revenue,36372.2,USD,R&D
+2024-09-29,R&D Costs,Expense,52893.85,USD,Admin
+2024-09-29,Administrative,Equity,11779.79,USD,Operations
+2024-09-29,Operations,Expense,28955.92,USD,Sales
+2024-09-30,Sales Revenue,Equity,111737.02,USD,Operations
+2024-09-30,Marketing Expenses,Equity,49147.24,USD,Marketing
+2024-09-30,R&D Costs,Expense,52783.04,USD,Marketing
+2024-09-30,Administrative,Equity,11400.16,USD,Sales
+2024-09-30,Operations,Liability,36492.42,USD,Marketing
+2024-10-01,Sales Revenue,Equity,118789.58,USD,R&D
+2024-10-01,Marketing Expenses,Revenue,57412.12,USD,Sales
+2024-10-01,R&D Costs,Revenue,78586.24,USD,Sales
+2024-10-01,Administrative,Equity,24854.67,USD,Operations
+2024-10-01,Operations,Expense,46645.89,USD,Admin
+2024-10-02,Sales Revenue,Equity,150786.82,USD,Sales
+2024-10-02,Marketing Expenses,Asset,20957.57,USD,Marketing
+2024-10-02,R&D Costs,Asset,55776.88,USD,Operations
+2024-10-02,Administrative,Liability,17843.13,USD,Marketing
+2024-10-02,Operations,Equity,32217.9,USD,Sales
+2024-10-03,Sales Revenue,Liability,199366.67,USD,Operations
+2024-10-03,Marketing Expenses,Equity,16372.06,USD,R&D
+2024-10-03,R&D Costs,Liability,36879.7,USD,Marketing
+2024-10-03,Administrative,Revenue,33366.74,USD,R&D
+2024-10-03,Operations,Expense,44010.77,USD,R&D
+2024-10-04,Sales Revenue,Liability,142620.23,USD,R&D
+2024-10-04,Marketing Expenses,Liability,70316.08,USD,Marketing
+2024-10-04,R&D Costs,Expense,69292.14,USD,R&D
+2024-10-04,Administrative,Equity,15067.6,USD,Operations
+2024-10-04,Operations,Equity,13580.04,USD,Operations
+2024-10-05,Sales Revenue,Expense,171085.92,USD,R&D
+2024-10-05,Marketing Expenses,Equity,13555.38,USD,Admin
+2024-10-05,R&D Costs,Expense,46954.59,USD,R&D
+2024-10-05,Administrative,Liability,43695.58,USD,Sales
+2024-10-05,Operations,Revenue,10116.44,USD,Admin
+2024-10-06,Sales Revenue,Equity,188732.42,USD,R&D
+2024-10-06,Marketing Expenses,Expense,58382.75,USD,R&D
+2024-10-06,R&D Costs,Expense,25120.03,USD,Operations
+2024-10-06,Administrative,Expense,44700.09,USD,R&D
+2024-10-06,Operations,Liability,4972.85,USD,Admin
+2024-10-07,Sales Revenue,Revenue,189623.91,USD,Operations
+2024-10-07,Marketing Expenses,Liability,64366.77,USD,Marketing
+2024-10-07,R&D Costs,Liability,42548.06,USD,Operations
+2024-10-07,Administrative,Liability,45221.43,USD,Admin
+2024-10-07,Operations,Asset,11603.09,USD,Admin
+2024-10-08,Sales Revenue,Expense,189508.11,USD,Sales
+2024-10-08,Marketing Expenses,Liability,32914.07,USD,Admin
+2024-10-08,R&D Costs,Asset,38245.67,USD,Sales
+2024-10-08,Administrative,Asset,9293.86,USD,Operations
+2024-10-08,Operations,Expense,48668.03,USD,R&D
+2024-10-09,Sales Revenue,Asset,138334.0,USD,Marketing
+2024-10-09,Marketing Expenses,Liability,38352.02,USD,Admin
+2024-10-09,R&D Costs,Liability,59565.43,USD,Marketing
+2024-10-09,Administrative,Equity,44970.65,USD,Sales
+2024-10-09,Operations,Liability,28781.71,USD,Marketing
+2024-10-10,Sales Revenue,Expense,76613.46,USD,Operations
+2024-10-10,Marketing Expenses,Equity,67405.94,USD,Sales
+2024-10-10,R&D Costs,Liability,33558.11,USD,Operations
+2024-10-10,Administrative,Expense,26293.83,USD,Sales
+2024-10-10,Operations,Liability,11441.26,USD,Admin
+2024-10-11,Sales Revenue,Asset,66742.3,USD,Operations
+2024-10-11,Marketing Expenses,Revenue,42233.31,USD,Operations
+2024-10-11,R&D Costs,Liability,33225.85,USD,Operations
+2024-10-11,Administrative,Asset,15568.89,USD,Admin
+2024-10-11,Operations,Revenue,23226.0,USD,Marketing
+2024-10-12,Sales Revenue,Expense,118777.41,USD,Marketing
+2024-10-12,Marketing Expenses,Equity,72974.81,USD,Operations
+2024-10-12,R&D Costs,Equity,20280.24,USD,Operations
+2024-10-12,Administrative,Asset,15124.37,USD,R&D
+2024-10-12,Operations,Asset,42920.68,USD,Operations
+2024-10-13,Sales Revenue,Liability,199657.73,USD,R&D
+2024-10-13,Marketing Expenses,Asset,45205.9,USD,Admin
+2024-10-13,R&D Costs,Revenue,72527.68,USD,R&D
+2024-10-13,Administrative,Asset,34126.24,USD,R&D
+2024-10-13,Operations,Revenue,5883.8,USD,Admin
+2024-10-14,Sales Revenue,Asset,149424.44,USD,R&D
+2024-10-14,Marketing Expenses,Expense,20676.54,USD,Marketing
+2024-10-14,R&D Costs,Expense,16551.51,USD,R&D
+2024-10-14,Administrative,Liability,23900.93,USD,Operations
+2024-10-14,Operations,Equity,2548.97,USD,Marketing
+2024-10-15,Sales Revenue,Asset,140335.76,USD,Operations
+2024-10-15,Marketing Expenses,Equity,42408.55,USD,R&D
+2024-10-15,R&D Costs,Expense,33018.84,USD,Marketing
+2024-10-15,Administrative,Revenue,37326.65,USD,Marketing
+2024-10-15,Operations,Equity,2438.48,USD,R&D
+2024-10-16,Sales Revenue,Equity,120862.91,USD,R&D
+2024-10-16,Marketing Expenses,Expense,52021.12,USD,Sales
+2024-10-16,R&D Costs,Equity,11269.43,USD,Admin
+2024-10-16,Administrative,Equity,14456.83,USD,Sales
+2024-10-16,Operations,Equity,24896.5,USD,Sales
+2024-10-17,Sales Revenue,Expense,58075.85,USD,Sales
+2024-10-17,Marketing Expenses,Revenue,52040.64,USD,R&D
+2024-10-17,R&D Costs,Asset,44974.15,USD,R&D
+2024-10-17,Administrative,Expense,38817.25,USD,Sales
+2024-10-17,Operations,Revenue,13604.78,USD,Admin
+2024-10-18,Sales Revenue,Asset,76677.94,USD,Sales
+2024-10-18,Marketing Expenses,Liability,70695.31,USD,Sales
+2024-10-18,R&D Costs,Equity,68428.96,USD,Sales
+2024-10-18,Administrative,Expense,3624.71,USD,Operations
+2024-10-18,Operations,Asset,34201.72,USD,R&D
+2024-10-19,Sales Revenue,Revenue,104083.27,USD,Marketing
+2024-10-19,Marketing Expenses,Expense,77190.27,USD,R&D
+2024-10-19,R&D Costs,Equity,27420.87,USD,R&D
+2024-10-19,Administrative,Expense,26342.65,USD,R&D
+2024-10-19,Operations,Asset,34198.49,USD,Admin
+2024-10-20,Sales Revenue,Liability,186814.93,USD,Operations
+2024-10-20,Marketing Expenses,Expense,26212.82,USD,Sales
+2024-10-20,R&D Costs,Asset,71626.73,USD,Marketing
+2024-10-20,Administrative,Expense,10624.36,USD,Operations
+2024-10-20,Operations,Expense,20127.85,USD,Sales
+2024-10-21,Sales Revenue,Revenue,183390.05,USD,Admin
+2024-10-21,Marketing Expenses,Asset,23806.47,USD,Marketing
+2024-10-21,R&D Costs,Equity,41937.74,USD,Marketing
+2024-10-21,Administrative,Asset,39193.91,USD,Admin
+2024-10-21,Operations,Liability,49562.81,USD,Marketing
+2024-10-22,Sales Revenue,Equity,131301.26,USD,Admin
+2024-10-22,Marketing Expenses,Revenue,57891.28,USD,Marketing
+2024-10-22,R&D Costs,Revenue,31671.98,USD,Admin
+2024-10-22,Administrative,Equity,49849.89,USD,Sales
+2024-10-22,Operations,Liability,42461.52,USD,Admin
+2024-10-23,Sales Revenue,Asset,79315.12,USD,Admin
+2024-10-23,Marketing Expenses,Asset,20080.63,USD,Sales
+2024-10-23,R&D Costs,Asset,27870.31,USD,Operations
+2024-10-23,Administrative,Liability,22184.38,USD,R&D
+2024-10-23,Operations,Asset,35807.55,USD,Operations
+2024-10-24,Sales Revenue,Asset,161678.08,USD,Operations
+2024-10-24,Marketing Expenses,Revenue,57626.53,USD,Sales
+2024-10-24,R&D Costs,Liability,48688.79,USD,Admin
+2024-10-24,Administrative,Revenue,12293.82,USD,Operations
+2024-10-24,Operations,Asset,35789.54,USD,Sales
+2024-10-25,Sales Revenue,Liability,57850.88,USD,Admin
+2024-10-25,Marketing Expenses,Expense,31507.64,USD,Admin
+2024-10-25,R&D Costs,Revenue,77485.45,USD,Sales
+2024-10-25,Administrative,Asset,19947.71,USD,R&D
+2024-10-25,Operations,Expense,36149.09,USD,Operations
+2024-10-26,Sales Revenue,Revenue,143383.87,USD,Sales
+2024-10-26,Marketing Expenses,Liability,73632.99,USD,Operations
+2024-10-26,R&D Costs,Revenue,42738.48,USD,Operations
+2024-10-26,Administrative,Asset,42676.52,USD,Admin
+2024-10-26,Operations,Equity,14425.75,USD,Operations
+2024-10-27,Sales Revenue,Expense,79102.29,USD,Sales
+2024-10-27,Marketing Expenses,Asset,36733.87,USD,Marketing
+2024-10-27,R&D Costs,Equity,56393.53,USD,Marketing
+2024-10-27,Administrative,Revenue,21518.3,USD,Admin
+2024-10-27,Operations,Equity,37841.2,USD,Marketing
+2024-10-28,Sales Revenue,Equity,140946.68,USD,Sales
+2024-10-28,Marketing Expenses,Asset,61181.51,USD,Operations
+2024-10-28,R&D Costs,Expense,76871.77,USD,Admin
+2024-10-28,Administrative,Equity,27283.92,USD,Operations
+2024-10-28,Operations,Expense,39728.88,USD,Admin
+2024-10-29,Sales Revenue,Revenue,181023.93,USD,Admin
+2024-10-29,Marketing Expenses,Revenue,20994.64,USD,Operations
+2024-10-29,R&D Costs,Equity,50790.17,USD,Marketing
+2024-10-29,Administrative,Equity,20669.78,USD,R&D
+2024-10-29,Operations,Asset,24562.19,USD,Admin
+2024-10-30,Sales Revenue,Liability,116681.06,USD,Sales
+2024-10-30,Marketing Expenses,Asset,68693.21,USD,Marketing
+2024-10-30,R&D Costs,Revenue,10159.33,USD,R&D
+2024-10-30,Administrative,Asset,31619.64,USD,Marketing
+2024-10-30,Operations,Equity,49929.82,USD,Operations
+2024-10-31,Sales Revenue,Expense,188182.09,USD,Sales
+2024-10-31,Marketing Expenses,Equity,66014.91,USD,Sales
+2024-10-31,R&D Costs,Equity,34473.67,USD,Marketing
+2024-10-31,Administrative,Asset,48057.51,USD,Marketing
+2024-10-31,Operations,Asset,21829.39,USD,Admin
+2024-11-01,Sales Revenue,Revenue,131298.414,USD,R&D
+2024-11-01,Marketing Expenses,Expense,59463.69,USD,Sales
+2024-11-01,R&D Costs,Revenue,81755.726,USD,Operations
+2024-11-01,Administrative,Equity,3013.5950000000003,USD,Admin
+2024-11-01,Operations,Asset,35061.520000000004,USD,Admin
+2024-11-02,Sales Revenue,Asset,231670.738,USD,Sales
+2024-11-02,Marketing Expenses,Liability,40567.865,USD,Admin
+2024-11-02,R&D Costs,Equity,13710.593,USD,Sales
+2024-11-02,Administrative,Expense,11089.416,USD,Admin
+2024-11-02,Operations,Equity,12833.938,USD,Marketing
+2024-11-03,Sales Revenue,Asset,89306.04800000001,USD,R&D
+2024-11-03,Marketing Expenses,Expense,64181.0,USD,R&D
+2024-11-03,R&D Costs,Equity,50290.38300000001,USD,Sales
+2024-11-03,Administrative,Liability,32870.929000000004,USD,Admin
+2024-11-03,Operations,Expense,56336.020000000004,USD,Sales
+2024-11-04,Sales Revenue,Liability,103915.383,USD,R&D
+2024-11-04,Marketing Expenses,Revenue,71693.95999999999,USD,Admin
+2024-11-04,R&D Costs,Asset,96607.16,USD,Admin
+2024-11-04,Administrative,Equity,20817.537,USD,Admin
+2024-11-04,Operations,Expense,17998.747000000003,USD,Operations
+2024-11-05,Sales Revenue,Equity,113794.213,USD,Sales
+2024-11-05,Marketing Expenses,Revenue,57298.93,USD,Operations
+2024-11-05,R&D Costs,Liability,18737.745,USD,Sales
+2024-11-05,Administrative,Expense,28946.606,USD,Marketing
+2024-11-05,Operations,Asset,53305.46,USD,Marketing
+2024-11-06,Sales Revenue,Equity,180237.954,USD,Operations
+2024-11-06,Marketing Expenses,Asset,46474.207,USD,Sales
+2024-11-06,R&D Costs,Liability,72837.232,USD,Operations
+2024-11-06,Administrative,Equity,37026.743,USD,Marketing
+2024-11-06,Operations,Asset,20798.972999999998,USD,R&D
+2024-11-07,Sales Revenue,Asset,137669.48,USD,Admin
+2024-11-07,Marketing Expenses,Equity,93615.691,USD,Marketing
+2024-11-07,R&D Costs,Revenue,101180.274,USD,Marketing
+2024-11-07,Administrative,Equity,52606.541000000005,USD,Marketing
+2024-11-07,Operations,Revenue,57562.245,USD,Operations
+2024-11-08,Sales Revenue,Revenue,99778.88700000002,USD,Operations
+2024-11-08,Marketing Expenses,Liability,79124.175,USD,Sales
+2024-11-08,R&D Costs,Liability,67854.30600000001,USD,Sales
+2024-11-08,Administrative,Revenue,6140.706,USD,Marketing
+2024-11-08,Operations,Asset,49838.711,USD,Marketing
+2024-11-09,Sales Revenue,Revenue,214173.986,USD,Marketing
+2024-11-09,Marketing Expenses,Equity,101027.10800000001,USD,Sales
+2024-11-09,R&D Costs,Equity,77466.064,USD,R&D
+2024-11-09,Administrative,Equity,31812.56,USD,R&D
+2024-11-09,Operations,Equity,24196.913,USD,Sales
+2024-11-10,Sales Revenue,Expense,113612.95400000001,USD,Sales
+2024-11-10,Marketing Expenses,Expense,23944.297,USD,Sales
+2024-11-10,R&D Costs,Expense,79931.63100000001,USD,Admin
+2024-11-10,Administrative,Liability,32673.849000000002,USD,Sales
+2024-11-10,Operations,Revenue,44927.311,USD,R&D
+2024-11-11,Sales Revenue,Expense,258081.967,USD,Marketing
+2024-11-11,Marketing Expenses,Asset,81722.92700000001,USD,Operations
+2024-11-11,R&D Costs,Revenue,49987.820999999996,USD,R&D
+2024-11-11,Administrative,Liability,9912.24,USD,R&D
+2024-11-11,Operations,Asset,41280.733,USD,R&D
+2024-11-12,Sales Revenue,Asset,163582.393,USD,Admin
+2024-11-12,Marketing Expenses,Expense,22400.612000000005,USD,Operations
+2024-11-12,R&D Costs,Equity,76040.952,USD,Sales
+2024-11-12,Administrative,Asset,24278.371,USD,R&D
+2024-11-12,Operations,Expense,26025.935,USD,Marketing
+2024-11-13,Sales Revenue,Revenue,142964.094,USD,Sales
+2024-11-13,Marketing Expenses,Liability,51773.8,USD,R&D
+2024-11-13,R&D Costs,Liability,22776.832,USD,R&D
+2024-11-13,Administrative,Equity,48615.671,USD,Operations
+2024-11-13,Operations,Asset,19121.102000000003,USD,Admin
+2024-11-14,Sales Revenue,Expense,94648.90500000001,USD,Admin
+2024-11-14,Marketing Expenses,Revenue,74261.889,USD,R&D
+2024-11-14,R&D Costs,Asset,66306.87700000001,USD,R&D
+2024-11-14,Administrative,Equity,49101.169,USD,Sales
+2024-11-14,Operations,Expense,21094.32,USD,Marketing
+2024-11-15,Sales Revenue,Revenue,231552.568,USD,R&D
+2024-11-15,Marketing Expenses,Liability,21665.111,USD,R&D
+2024-11-15,R&D Costs,Revenue,86941.03600000001,USD,R&D
+2024-11-15,Administrative,Asset,39689.520000000004,USD,R&D
+2024-11-15,Operations,Liability,13854.373,USD,R&D
+2024-11-16,Sales Revenue,Revenue,94017.79400000001,USD,Marketing
+2024-11-16,Marketing Expenses,Asset,14840.306000000002,USD,Admin
+2024-11-16,R&D Costs,Asset,14933.230000000001,USD,Admin
+2024-11-16,Administrative,Expense,2778.8150000000005,USD,Operations
+2024-11-16,Operations,Asset,30414.93,USD,Operations
+2024-11-17,Sales Revenue,Liability,136960.81100000002,USD,Operations
+2024-11-17,Marketing Expenses,Liability,80164.578,USD,Sales
+2024-11-17,R&D Costs,Liability,31476.055,USD,Sales
+2024-11-17,Administrative,Revenue,58380.062,USD,R&D
+2024-11-17,Operations,Equity,26962.247,USD,Operations
+2024-11-18,Sales Revenue,Liability,256556.729,USD,Sales
+2024-11-18,Marketing Expenses,Revenue,78405.57400000001,USD,Sales
+2024-11-18,R&D Costs,Liability,35186.086,USD,Marketing
+2024-11-18,Administrative,Equity,4544.93,USD,Marketing
+2024-11-18,Operations,Expense,10942.633,USD,Admin
+2024-11-19,Sales Revenue,Revenue,121459.35100000001,USD,Marketing
+2024-11-19,Marketing Expenses,Expense,86741.52500000001,USD,Admin
+2024-11-19,R&D Costs,Expense,96622.08399999999,USD,Sales
+2024-11-19,Administrative,Expense,18197.114,USD,Marketing
+2024-11-19,Operations,Revenue,15912.104000000001,USD,Operations
+2024-11-20,Sales Revenue,Revenue,196846.247,USD,Admin
+2024-11-20,Marketing Expenses,Liability,38778.766,USD,Admin
+2024-11-20,R&D Costs,Expense,62897.627,USD,Marketing
+2024-11-20,Administrative,Expense,52505.531,USD,Admin
+2024-11-20,Operations,Asset,48949.159999999996,USD,Marketing
+2024-11-21,Sales Revenue,Expense,217330.55500000002,USD,R&D
+2024-11-21,Marketing Expenses,Expense,59996.469,USD,R&D
+2024-11-21,R&D Costs,Liability,39711.178,USD,Operations
+2024-11-21,Administrative,Revenue,23830.248,USD,Marketing
+2024-11-21,Operations,Liability,25220.936,USD,R&D
+2024-11-22,Sales Revenue,Equity,225765.501,USD,Operations
+2024-11-22,Marketing Expenses,Asset,59912.372,USD,Admin
+2024-11-22,R&D Costs,Liability,93222.41500000001,USD,Marketing
+2024-11-22,Administrative,Equity,64060.659,USD,Admin
+2024-11-22,Operations,Expense,16251.794,USD,Marketing
+2024-11-23,Sales Revenue,Expense,195055.003,USD,Admin
+2024-11-23,Marketing Expenses,Asset,61668.94500000001,USD,Admin
+2024-11-23,R&D Costs,Equity,93803.45,USD,Operations
+2024-11-23,Administrative,Expense,53432.184,USD,Admin
+2024-11-23,Operations,Equity,46095.477999999996,USD,R&D
+2024-11-24,Sales Revenue,Revenue,76427.819,USD,Sales
+2024-11-24,Marketing Expenses,Asset,60928.283,USD,Operations
+2024-11-24,R&D Costs,Equity,90113.322,USD,Sales
+2024-11-24,Administrative,Equity,22842.625,USD,Marketing
+2024-11-24,Operations,Expense,41729.116,USD,Sales
+2024-11-25,Sales Revenue,Liability,158489.032,USD,Marketing
+2024-11-25,Marketing Expenses,Revenue,44741.138000000006,USD,Sales
+2024-11-25,R&D Costs,Liability,97634.88799999999,USD,Admin
+2024-11-25,Administrative,Liability,19018.038,USD,Sales
+2024-11-25,Operations,Liability,38405.016,USD,Admin
+2024-11-26,Sales Revenue,Liability,243704.383,USD,Sales
+2024-11-26,Marketing Expenses,Liability,93919.189,USD,Sales
+2024-11-26,R&D Costs,Expense,102968.567,USD,Operations
+2024-11-26,Administrative,Liability,4787.419,USD,Sales
+2024-11-26,Operations,Liability,6576.375,USD,R&D
+2024-11-27,Sales Revenue,Asset,145000.063,USD,Marketing
+2024-11-27,Marketing Expenses,Equity,51269.69900000001,USD,Sales
+2024-11-27,R&D Costs,Revenue,52596.47900000001,USD,Admin
+2024-11-27,Administrative,Expense,62015.707,USD,Operations
+2024-11-27,Operations,Liability,16920.423,USD,Admin
+2024-11-28,Sales Revenue,Liability,137876.583,USD,Sales
+2024-11-28,Marketing Expenses,Liability,63510.902,USD,R&D
+2024-11-28,R&D Costs,Revenue,97174.571,USD,R&D
+2024-11-28,Administrative,Revenue,9967.36,USD,Admin
+2024-11-28,Operations,Asset,16266.926000000001,USD,R&D
+2024-11-29,Sales Revenue,Liability,203168.589,USD,Marketing
+2024-11-29,Marketing Expenses,Liability,77610.975,USD,Admin
+2024-11-29,R&D Costs,Liability,74072.297,USD,Operations
+2024-11-29,Administrative,Expense,54170.922000000006,USD,Operations
+2024-11-29,Operations,Liability,29801.862999999998,USD,Admin
+2024-11-30,Sales Revenue,Equity,162722.105,USD,R&D
+2024-11-30,Marketing Expenses,Asset,20818.252,USD,Operations
+2024-11-30,R&D Costs,Expense,93191.03300000001,USD,Operations
+2024-11-30,Administrative,Asset,62082.436,USD,Admin
+2024-11-30,Operations,Asset,16131.726,USD,Sales
+2024-12-01,Sales Revenue,Liability,78062.348,USD,Marketing
+2024-12-01,Marketing Expenses,Asset,55815.98100000001,USD,Admin
+2024-12-01,R&D Costs,Expense,69993.716,USD,R&D
+2024-12-01,Administrative,Revenue,21920.067000000003,USD,Marketing
+2024-12-01,Operations,Revenue,31116.085000000003,USD,R&D
+2024-12-02,Sales Revenue,Asset,226807.386,USD,R&D
+2024-12-02,Marketing Expenses,Liability,44075.784999999996,USD,Admin
+2024-12-02,R&D Costs,Equity,14552.759,USD,Marketing
+2024-12-02,Administrative,Equity,6547.398,USD,Marketing
+2024-12-02,Operations,Equity,62306.205,USD,R&D
+2024-12-03,Sales Revenue,Equity,250503.734,USD,Marketing
+2024-12-03,Marketing Expenses,Asset,83744.557,USD,Admin
+2024-12-03,R&D Costs,Asset,17612.387,USD,R&D
+2024-12-03,Administrative,Equity,55785.392,USD,R&D
+2024-12-03,Operations,Asset,64947.81800000001,USD,Admin
+2024-12-04,Sales Revenue,Revenue,80723.981,USD,Operations
+2024-12-04,Marketing Expenses,Liability,61664.200000000004,USD,Admin
+2024-12-04,R&D Costs,Asset,77349.23300000001,USD,Admin
+2024-12-04,Administrative,Equity,43013.737,USD,Sales
+2024-12-04,Operations,Revenue,38144.067,USD,Sales
+2024-12-05,Sales Revenue,Liability,85418.918,USD,Operations
+2024-12-05,Marketing Expenses,Equity,97245.174,USD,Marketing
+2024-12-05,R&D Costs,Asset,53941.537,USD,Operations
+2024-12-05,Administrative,Asset,59408.297000000006,USD,Operations
+2024-12-05,Operations,Equity,51348.882,USD,R&D
+2024-12-06,Sales Revenue,Liability,124873.177,USD,Operations
+2024-12-06,Marketing Expenses,Revenue,55017.69,USD,Marketing
+2024-12-06,R&D Costs,Equity,27390.285000000003,USD,Marketing
+2024-12-06,Administrative,Liability,55258.658,USD,Operations
+2024-12-06,Operations,Equity,40542.606,USD,Sales
+2024-12-07,Sales Revenue,Asset,196868.65899999999,USD,Sales
+2024-12-07,Marketing Expenses,Expense,17540.653,USD,Sales
+2024-12-07,R&D Costs,Equity,47078.590000000004,USD,Operations
+2024-12-07,Administrative,Asset,12251.551000000001,USD,Operations
+2024-12-07,Operations,Expense,28106.728000000003,USD,Operations
+2024-12-08,Sales Revenue,Asset,76264.747,USD,Admin
+2024-12-08,Marketing Expenses,Liability,72056.855,USD,Marketing
+2024-12-08,R&D Costs,Expense,49610.534999999996,USD,Operations
+2024-12-08,Administrative,Revenue,54139.904,USD,Marketing
+2024-12-08,Operations,Expense,56431.427,USD,Admin
+2024-12-09,Sales Revenue,Expense,103782.289,USD,Sales
+2024-12-09,Marketing Expenses,Revenue,42900.754,USD,R&D
+2024-12-09,R&D Costs,Equity,33785.414,USD,R&D
+2024-12-09,Administrative,Asset,30190.069000000003,USD,Marketing
+2024-12-09,Operations,Expense,54200.770000000004,USD,Sales
+2024-12-10,Sales Revenue,Asset,229540.35,USD,R&D
+2024-12-10,Marketing Expenses,Expense,40639.274,USD,Operations
+2024-12-10,R&D Costs,Expense,77233.195,USD,Sales
+2024-12-10,Administrative,Liability,3545.035,USD,Marketing
+2024-12-10,Operations,Asset,46180.004,USD,Operations
+2024-12-11,Sales Revenue,Expense,122854.29000000001,USD,Sales
+2024-12-11,Marketing Expenses,Liability,40822.522,USD,R&D
+2024-12-11,R&D Costs,Liability,88545.83399999999,USD,R&D
+2024-12-11,Administrative,Revenue,64340.211,USD,R&D
+2024-12-11,Operations,Expense,63607.05,USD,Admin
+2024-12-12,Sales Revenue,Revenue,102374.01200000002,USD,R&D
+2024-12-12,Marketing Expenses,Expense,25892.282,USD,Admin
+2024-12-12,R&D Costs,Asset,49760.16500000001,USD,Admin
+2024-12-12,Administrative,Asset,19929.611,USD,Admin
+2024-12-12,Operations,Asset,34069.867,USD,Sales
+2024-12-13,Sales Revenue,Expense,167696.24300000002,USD,Sales
+2024-12-13,Marketing Expenses,Asset,39350.818,USD,Admin
+2024-12-13,R&D Costs,Equity,99345.35,USD,Operations
+2024-12-13,Administrative,Asset,26816.283,USD,Admin
+2024-12-13,Operations,Asset,50078.873,USD,Marketing
+2024-12-14,Sales Revenue,Equity,133206.788,USD,Admin
+2024-12-14,Marketing Expenses,Asset,18038.033,USD,R&D
+2024-12-14,R&D Costs,Asset,55267.84900000001,USD,Sales
+2024-12-14,Administrative,Asset,24886.121,USD,R&D
+2024-12-14,Operations,Equity,44444.595,USD,Sales
+2024-12-15,Sales Revenue,Asset,247301.678,USD,Operations
+2024-12-15,Marketing Expenses,Asset,25204.218,USD,R&D
+2024-12-15,R&D Costs,Liability,57855.486000000004,USD,R&D
+2024-12-15,Administrative,Liability,49887.123,USD,Marketing
+2024-12-15,Operations,Equity,51606.867,USD,Marketing
+2024-12-16,Sales Revenue,Expense,123828.38,USD,Admin
+2024-12-16,Marketing Expenses,Asset,42666.533,USD,R&D
+2024-12-16,R&D Costs,Expense,74760.673,USD,Marketing
+2024-12-16,Administrative,Expense,8189.558,USD,Operations
+2024-12-16,Operations,Asset,48912.188,USD,Sales
+2024-12-17,Sales Revenue,Equity,232610.872,USD,Marketing
+2024-12-17,Marketing Expenses,Expense,82403.62000000001,USD,Sales
+2024-12-17,R&D Costs,Expense,71919.107,USD,R&D
+2024-12-17,Administrative,Revenue,41970.097,USD,Admin
+2024-12-17,Operations,Expense,56896.775,USD,R&D
+2024-12-18,Sales Revenue,Equity,212312.139,USD,Sales
+2024-12-18,Marketing Expenses,Equity,67298.49100000001,USD,R&D
+2024-12-18,R&D Costs,Expense,31228.626,USD,Operations
+2024-12-18,Administrative,Equity,33450.378000000004,USD,Operations
+2024-12-18,Operations,Liability,49098.009999999995,USD,R&D
+2024-12-19,Sales Revenue,Equity,79916.889,USD,R&D
+2024-12-19,Marketing Expenses,Equity,42846.47900000001,USD,Operations
+2024-12-19,R&D Costs,Revenue,30976.101000000002,USD,Marketing
+2024-12-19,Administrative,Equity,8005.8550000000005,USD,Admin
+2024-12-19,Operations,Liability,13426.257,USD,Operations
+2024-12-20,Sales Revenue,Expense,232860.589,USD,Marketing
+2024-12-20,Marketing Expenses,Equity,43785.144,USD,Admin
+2024-12-20,R&D Costs,Revenue,45933.355,USD,R&D
+2024-12-20,Administrative,Liability,36473.788,USD,Marketing
+2024-12-20,Operations,Expense,13791.648,USD,Operations
+2024-12-21,Sales Revenue,Liability,194703.678,USD,Sales
+2024-12-21,Marketing Expenses,Expense,19165.341,USD,R&D
+2024-12-21,R&D Costs,Revenue,54885.570999999996,USD,Operations
+2024-12-21,Administrative,Liability,62653.318,USD,Sales
+2024-12-21,Operations,Expense,55695.041999999994,USD,R&D
+2024-12-22,Sales Revenue,Revenue,96392.02300000002,USD,R&D
+2024-12-22,Marketing Expenses,Expense,37354.304000000004,USD,Sales
+2024-12-22,R&D Costs,Asset,67920.996,USD,Marketing
+2024-12-22,Administrative,Liability,40353.404,USD,Marketing
+2024-12-22,Operations,Liability,53184.079000000005,USD,Marketing
+2024-12-23,Sales Revenue,Expense,155718.97900000002,USD,Operations
+2024-12-23,Marketing Expenses,Liability,82458.571,USD,R&D
+2024-12-23,R&D Costs,Asset,33527.611000000004,USD,R&D
+2024-12-23,Administrative,Asset,53228.045000000006,USD,Sales
+2024-12-23,Operations,Equity,49770.656,USD,R&D
+2024-12-24,Sales Revenue,Equity,221133.497,USD,Marketing
+2024-12-24,Marketing Expenses,Revenue,43956.44500000001,USD,Operations
+2024-12-24,R&D Costs,Liability,76708.944,USD,Operations
+2024-12-24,Administrative,Expense,54486.549000000006,USD,Operations
+2024-12-24,Operations,Asset,59922.53800000001,USD,Admin
+2024-12-25,Sales Revenue,Liability,202736.48200000002,USD,R&D
+2024-12-25,Marketing Expenses,Liability,91298.389,USD,R&D
+2024-12-25,R&D Costs,Revenue,82004.169,USD,R&D
+2024-12-25,Administrative,Equity,4989.803,USD,Sales
+2024-12-25,Operations,Expense,13614.458,USD,Operations
+2024-12-26,Sales Revenue,Revenue,155042.953,USD,Operations
+2024-12-26,Marketing Expenses,Revenue,71436.43000000001,USD,R&D
+2024-12-26,R&D Costs,Asset,51033.658,USD,Marketing
+2024-12-26,Administrative,Equity,23111.088,USD,R&D
+2024-12-26,Operations,Asset,40628.874,USD,R&D
+2024-12-27,Sales Revenue,Expense,215651.826,USD,Sales
+2024-12-27,Marketing Expenses,Liability,74104.992,USD,R&D
+2024-12-27,R&D Costs,Revenue,19962.397,USD,Operations
+2024-12-27,Administrative,Revenue,17505.124,USD,Admin
+2024-12-27,Operations,Revenue,35866.636000000006,USD,Marketing
+2024-12-28,Sales Revenue,Revenue,78799.344,USD,Admin
+2024-12-28,Marketing Expenses,Expense,61500.465000000004,USD,Sales
+2024-12-28,R&D Costs,Revenue,45162.169,USD,Operations
+2024-12-28,Administrative,Equity,38335.518000000004,USD,Sales
+2024-12-28,Operations,Asset,55388.801,USD,Marketing
+2024-12-29,Sales Revenue,Liability,233865.26799999998,USD,Admin
+2024-12-29,Marketing Expenses,Liability,58505.122,USD,Operations
+2024-12-29,R&D Costs,Expense,37960.078,USD,Sales
+2024-12-29,Administrative,Revenue,22713.743000000002,USD,Operations
+2024-12-29,Operations,Equity,4393.051,USD,Sales
+2024-12-30,Sales Revenue,Revenue,101561.04400000001,USD,R&D
+2024-12-30,Marketing Expenses,Revenue,52937.573000000004,USD,R&D
+2024-12-30,R&D Costs,Equity,67971.605,USD,Sales
+2024-12-30,Administrative,Equity,27422.304000000004,USD,Admin
+2024-12-30,Operations,Expense,25351.482,USD,R&D

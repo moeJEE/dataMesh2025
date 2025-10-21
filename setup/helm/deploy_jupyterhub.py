@@ -52,26 +52,13 @@ def main():
         print("❌ Cannot connect to Kubernetes cluster")
         return 1
     
-    # 2. Build custom Docker image
-    print_header("Step 2/5: Building Custom JupyterHub Image")
+    # 2. Use default image (skip custom build)
+    print_header("Step 2/5: Configuring JupyterHub Image")
     
-    dockerfile_path = os.path.join(project_root, "setup", "docker", "Dockerfile.jupyterhub-dbt")
-    
-    if not os.path.exists(dockerfile_path):
-        print(f"⚠️  Dockerfile not found at {dockerfile_path}")
-        print("   Using default JupyterHub image instead")
-        image_name = "jupyter/datascience-notebook:latest"
-    else:
-        print(f"🐳 Building Docker image from {dockerfile_path}")
-        
-        # Build image
-        build_cmd = f"docker build -f {dockerfile_path} -t jupyterhub-dbt:latest {os.path.dirname(dockerfile_path)}"
-        if not run_command(build_cmd):
-            print("⚠️  Failed to build custom image, using default")
-            image_name = "jupyter/datascience-notebook:latest"
-        else:
-            print("✅ Custom image built successfully")
-            image_name = "jupyterhub-dbt:latest"
+    print("📦 Using default Jupyter image (no custom build)")
+    print("   Image: jupyter/datascience-notebook:latest")
+    print("   💡 Install DBT/Trino packages manually after deployment")
+    image_name = "jupyter/datascience-notebook:latest"
     
     # 3. Create namespace
     print_header("Step 3/5: Creating Namespace")
@@ -88,6 +75,10 @@ def main():
     values_content = f"""# JupyterHub Helm Values - DataMeesh
 proxy:
   secretToken: "{token}"
+  service:
+    type: NodePort
+    nodePorts:
+      http: 30080
 
 hub:
   config:
@@ -111,7 +102,7 @@ singleuser:
   image:
     name: {image_name.split(":")[0]}
     tag: {image_name.split(":")[1] if ":" in image_name else "latest"}
-    pullPolicy: {"Never" if "jupyterhub-dbt" in image_name else "IfNotPresent"}
+    pullPolicy: IfNotPresent
   cpu:
     limit: 0.5
     guarantee: 0.1
