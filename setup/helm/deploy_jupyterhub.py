@@ -85,6 +85,8 @@ hub:
     JupyterHub:
       admin_users:
         - admin
+    ConfigurableHTTPProxy:
+      api_url: "http://proxy-api:8001"
     DummyAuthenticator:
       password: "datamesh2024"
     Authenticator:

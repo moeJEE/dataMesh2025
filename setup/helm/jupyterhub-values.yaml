@@ -1,6 +1,6 @@
 # JupyterHub Helm Values - DataMeesh
 proxy:
-  secretToken: "d4ec6cb37f22e4ba65c2a5b9dcae5ca25661d742dd86d9e02ca013b2c1e78d24"
+  secretToken: "9581429d57f41cad7dfcca5b4d7b11bad316edcb48317e6dc3f6845c69ff03b1"
   service:
     type: NodePort
     nodePorts:
@@ -11,6 +11,8 @@ hub:
     JupyterHub:
       admin_users:
         - admin
+    ConfigurableHTTPProxy:
+      api_url: "http://proxy-api:8001"
     DummyAuthenticator:
       password: "datamesh2024"
     Authenticator:
